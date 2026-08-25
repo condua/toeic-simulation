@@ -4520,4 +4520,2474 @@ export const QUESTION_BANK = [
     ],
     tags: ["adverbs", "word form"],
   },
+  {
+    id: "q121",
+    sentence:
+      "The corporate headquarters will ______ to a larger building in the downtown area next year.",
+    options: ["relocate", "relocates", "relocated", "relocating"],
+    correctAnswer: 0,
+    translation:
+      "Trụ sở chính của công ty sẽ chuyển đến một tòa nhà lớn hơn ở khu vực trung tâm vào năm tới.",
+    explanation: {
+      correctAnswer: "relocate",
+      grammarRule: "Modal Verbs",
+      sentenceStructure: "will + base verb",
+      whyCorrect:
+        "The modal verb 'will' requires the base form of the verb to express a future action.",
+      whyOthersWrong: [
+        "B. relocates: 3rd person singular present.",
+        "C. relocated: Past tense.",
+        "D. relocating: Present participle / Gerund.",
+      ],
+      toeicTip:
+        "Will, can, could, should, must ALWAYS take a bare infinitive (verb without 'to').",
+    },
+    category: "Grammar",
+    subcategory: "Verb Tenses",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "relocate",
+        ipa: "/ˌriːˈloʊkeɪt/",
+        pos: "verb",
+        meaning: "chuyển địa điểm",
+        example: "The company is planning to relocate to Asia.",
+      },
+    ],
+    tags: ["verbs", "modals"],
+  },
+  {
+    id: "q122",
+    sentence:
+      "The new interns must complete the training modules by ______, without any assistance.",
+    options: ["them", "their", "theirs", "themselves"],
+    correctAnswer: 3,
+    translation:
+      "Các thực tập sinh mới phải tự mình hoàn thành các mô-đun đào tạo mà không cần bất kỳ sự trợ giúp nào.",
+    explanation: {
+      correctAnswer: "themselves",
+      grammarRule: "Reflexive Pronouns",
+      sentenceStructure: "by + reflexive pronoun",
+      whyCorrect:
+        "The phrase 'by themselves' means 'alone' or 'without help', which matches the context of 'without any assistance'.",
+      whyOthersWrong: [
+        "A. them: Object pronoun (requires a different preposition like 'with them').",
+        "B. their: Possessive adjective (requires a noun).",
+        "C. theirs: Possessive pronoun.",
+      ],
+      toeicTip:
+        "Memorize: by myself = on my own; by themselves = on their own.",
+    },
+    category: "Grammar",
+    subcategory: "Pronouns",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "assistance",
+        ipa: "/əˈsɪstəns/",
+        pos: "noun",
+        meaning: "sự giúp đỡ",
+        example: "Do you need any assistance?",
+      },
+    ],
+    tags: ["pronouns", "reflexive"],
+  },
+  {
+    id: "q123",
+    sentence:
+      "To remain ______ in the global market, the company must invest heavily in research and development.",
+    options: ["compete", "competitor", "competitive", "competitively"],
+    correctAnswer: 2,
+    translation:
+      "Để duy trì tính cạnh tranh trên thị trường toàn cầu, công ty phải đầu tư mạnh vào nghiên cứu và phát triển.",
+    explanation: {
+      correctAnswer: "competitive",
+      grammarRule: "Adjective after linking verb",
+      sentenceStructure: "remain + Adjective",
+      whyCorrect:
+        "The verb 'remain' is a linking verb and must be followed by an adjective.",
+      whyOthersWrong: [
+        "A. compete: Verb.",
+        "B. competitor: Noun (person).",
+        "D. competitively: Adverb.",
+      ],
+      toeicTip:
+        "Linking verbs (remain, become, seem, look, appear) are always followed by adjectives.",
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "competitive",
+        ipa: "/kəmˈpetətɪv/",
+        pos: "adj",
+        meaning: "có tính cạnh tranh",
+        example: "We offer highly competitive prices.",
+      },
+    ],
+    tags: ["adjectives", "word form"],
+  },
+  {
+    id: "q124",
+    sentence:
+      "The security guards patrol the premises ______ the night to ensure the safety of the facility.",
+    options: ["over", "throughout", "between", "among"],
+    correctAnswer: 1,
+    translation:
+      "Nhân viên bảo vệ tuần tra khuôn viên xuyên suốt đêm để đảm bảo an toàn cho cơ sở.",
+    explanation: {
+      correctAnswer: "throughout",
+      grammarRule: "Prepositions of Time",
+      sentenceStructure: "throughout + time period",
+      whyCorrect:
+        "'Throughout' means in every part of a period of time, fitting the context of patrolling all night.",
+      whyOthersWrong: [
+        "A. over: Can mean during, but 'throughout' is more precise for continuous action.",
+        "C. between: Requires two time points (between 9 and 5).",
+        "D. among: Used for groups of things/people.",
+      ],
+      toeicTip:
+        "Throughout the year / throughout the day / throughout the night are common TOEIC collocations.",
+    },
+    category: "Grammar",
+    subcategory: "Prepositions",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 650,
+    vocabulary: [
+      {
+        word: "premise",
+        ipa: "/ˈpremɪs/",
+        pos: "noun",
+        meaning: "cơ sở, khuôn viên",
+        example: "Alcohol is not allowed on the premises.",
+      },
+    ],
+    tags: ["prepositions", "time"],
+  },
+  {
+    id: "q125",
+    sentence:
+      "Mr. Lin ______ as the head of the marketing department since the company was founded.",
+    options: ["works", "is working", "has been working", "worked"],
+    correctAnswer: 2,
+    translation:
+      "Ông Lin đã và đang làm việc với tư cách là trưởng phòng tiếp thị kể từ khi công ty được thành lập.",
+    explanation: {
+      correctAnswer: "has been working",
+      grammarRule: "Present Perfect Continuous",
+      sentenceStructure:
+        "Subject + has/have been + V-ing + since + Past Clause",
+      whyCorrect:
+        "The keyword 'since' indicates an action starting in the past and continuing to the present. Present perfect or present perfect continuous is required.",
+      whyOthersWrong: [
+        "A. works: Present simple.",
+        "B. is working: Present continuous.",
+        "D. worked: Past simple.",
+      ],
+      toeicTip:
+        "When you see 'since' followed by a past time or clause, look for 'has/have + V3' or 'has/have been + V-ing'.",
+    },
+    category: "Grammar",
+    subcategory: "Verb Tenses",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "found",
+        ipa: "/faʊnd/",
+        pos: "verb",
+        meaning: "thành lập",
+        example: "The company was founded in 1990.",
+      },
+    ],
+    tags: ["verbs", "present perfect"],
+  },
+  {
+    id: "q126",
+    sentence:
+      "The company encourages all employees ______ in the annual charity run.",
+    options: ["participate", "participating", "to participate", "participated"],
+    correctAnswer: 2,
+    translation:
+      "Công ty khuyến khích tất cả nhân viên tham gia vào giải chạy từ thiện hàng năm.",
+    explanation: {
+      correctAnswer: "to participate",
+      grammarRule: "Verbs followed by Infinitives",
+      sentenceStructure: "encourage + Object + to-infinitive",
+      whyCorrect:
+        "The verb 'encourage' takes an object followed by a 'to-infinitive'.",
+      whyOthersWrong: [
+        "A. participate: Base verb.",
+        "B. participating: Gerund.",
+        "D. participated: Past tense.",
+      ],
+      toeicTip:
+        "Memorize verbs taking Object + to V: encourage, allow, force, require, ask, tell, invite.",
+    },
+    category: "Grammar",
+    subcategory: "Infinitives",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 500,
+    vocabulary: [
+      {
+        word: "participate",
+        ipa: "/pɑːrˈtɪsɪpeɪt/",
+        pos: "verb",
+        meaning: "tham gia",
+        example: "Everyone is welcome to participate.",
+      },
+    ],
+    tags: ["infinitives", "verbs"],
+  },
+  {
+    id: "q127",
+    sentence:
+      "You will not be allowed to enter the laboratory ______ you wear the proper protective eyewear.",
+    options: ["unless", "if", "therefore", "because"],
+    correctAnswer: 0,
+    translation:
+      "Bạn sẽ không được phép vào phòng thí nghiệm trừ khi bạn đeo kính bảo hộ thích hợp.",
+    explanation: {
+      correctAnswer: "unless",
+      grammarRule: "Conditional Conjunctions",
+      sentenceStructure: "Negative Main Clause + unless + Affirmative Clause",
+      whyCorrect:
+        "'Unless' means 'if not' (If you do not wear...). It perfectly provides the negative condition for the main clause.",
+      whyOthersWrong: [
+        "B. if: Would mean you can't enter IF you wear it (illogical).",
+        "C. therefore: Adverb of result.",
+        "D. because: Illogical cause.",
+      ],
+      toeicTip:
+        "'Unless' is frequently tested. Think of it as 'trừ khi'. If the main clause is negative (will not), 'unless' is very likely.",
+    },
+    category: "Grammar",
+    subcategory: "Conjunctions",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 650,
+    vocabulary: [
+      {
+        word: "eyewear",
+        ipa: "/ˈaɪwer/",
+        pos: "noun",
+        meaning: "kính mắt, đồ bảo vệ mắt",
+        example: "Protective eyewear is required here.",
+      },
+    ],
+    tags: ["conjunctions", "conditionals"],
+  },
+  {
+    id: "q128",
+    sentence:
+      "Only personnel with written ______ from the director can access the server room.",
+    options: ["authorize", "authorizes", "authorization", "authorized"],
+    correctAnswer: 2,
+    translation:
+      "Chỉ những nhân viên có văn bản ủy quyền từ giám đốc mới được phép vào phòng máy chủ.",
+    explanation: {
+      correctAnswer: "authorization",
+      grammarRule: "Noun Form",
+      sentenceStructure: "Adjective (written) + Noun",
+      whyCorrect: "The adjective 'written' must be followed by a noun.",
+      whyOthersWrong: [
+        "A. authorize: Verb.",
+        "B. authorizes: Verb.",
+        "D. authorized: Adjective / Past Participle.",
+      ],
+      toeicTip:
+        "'Written authorization' and 'written permission' are standard business collocations.",
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "authorization",
+        ipa: "/ˌɔːθərəˈzeɪʃn/",
+        pos: "noun",
+        meaning: "sự cho phép, sự ủy quyền",
+        example: "You need authorization to enter this room.",
+      },
+    ],
+    tags: ["nouns", "word form"],
+  },
+  {
+    id: "q129",
+    sentence:
+      "Of all the suppliers we evaluated, Apex Logistics proved to be ______.",
+    options: [
+      "reliable",
+      "more reliable",
+      "most reliable",
+      "the most reliable",
+    ],
+    correctAnswer: 3,
+    translation:
+      "Trong số tất cả các nhà cung cấp mà chúng tôi đánh giá, Apex Logistics chứng tỏ là đáng tin cậy nhất.",
+    explanation: {
+      correctAnswer: "the most reliable",
+      grammarRule: "Superlatives",
+      sentenceStructure:
+        "Of all + Noun, Subject + Verb + the + most + Adjective",
+      whyCorrect:
+        "The phrase 'Of all the suppliers' sets up a comparison among more than two entities, requiring a superlative form with 'the'.",
+      whyOthersWrong: [
+        "A. reliable: Base adjective.",
+        "B. more reliable: Comparative (used for comparing two things).",
+        "C. most reliable: Missing the article 'the'.",
+      ],
+      toeicTip:
+        "When a sentence starts with 'Of all the...' or 'Among the...', always look for the superlative (the most / the -est).",
+    },
+    category: "Grammar",
+    subcategory: "Comparisons",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "reliable",
+        ipa: "/rɪˈlaɪəbl/",
+        pos: "adj",
+        meaning: "đáng tin cậy",
+        example: "We need a reliable transportation system.",
+      },
+    ],
+    tags: ["comparisons", "superlatives"],
+  },
+  {
+    id: "q130",
+    sentence:
+      "The new accounting software was installed ______ compliance with the latest tax regulations.",
+    options: ["in", "on", "at", "by"],
+    correctAnswer: 0,
+    translation:
+      "Phần mềm kế toán mới được cài đặt tuân thủ theo các quy định thuế mới nhất.",
+    explanation: {
+      correctAnswer: "in",
+      grammarRule: "Prepositional Phrases",
+      sentenceStructure: "in compliance with",
+      whyCorrect:
+        "'In compliance with' is a fixed prepositional phrase meaning 'obeying a rule or law'.",
+      whyOthersWrong: [
+        "B. on: Incorrect collocation.",
+        "C. at: Incorrect collocation.",
+        "D. by: Incorrect collocation.",
+      ],
+      toeicTip:
+        "Memorize legal/formal phrases: in compliance with, in accordance with, in violation of.",
+    },
+    category: "Vocabulary",
+    subcategory: "Phrasal Verbs / Prepositions",
+    type: "vocabulary",
+    difficulty: "advanced",
+    toeicLevel: 750,
+    vocabulary: [
+      {
+        word: "compliance",
+        ipa: "/kəmˈplaɪəns/",
+        pos: "noun",
+        meaning: "sự tuân thủ",
+        example: "Ensure strict compliance with the rules.",
+      },
+    ],
+    tags: ["prepositions", "collocation"],
+  },
+  {
+    id: "q131",
+    sentence:
+      "The employee manual ______ by the legal department before it is printed.",
+    options: [
+      "must revise",
+      "must be revised",
+      "must have revised",
+      "must be revising",
+    ],
+    correctAnswer: 1,
+    translation:
+      "Sổ tay nhân viên phải được bộ phận pháp lý chỉnh sửa trước khi nó được in.",
+    explanation: {
+      correctAnswer: "must be revised",
+      grammarRule: "Passive Voice with Modals",
+      sentenceStructure: "Subject + modal + be + past participle + by + Agent",
+      whyCorrect:
+        "The subject 'employee manual' cannot revise itself. It must receive the action. Passive voice is required.",
+      whyOthersWrong: [
+        "A. must revise: Active voice.",
+        "C. must have revised: Active, past possibility.",
+        "D. must be revising: Active continuous.",
+      ],
+      toeicTip:
+        "If the subject is a non-living thing (manual, report, email) and there is a 'by' phrase, it's a 99% chance you need the passive voice (be + V3/ed).",
+    },
+    category: "Grammar",
+    subcategory: "Passive Voice",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 500,
+    vocabulary: [
+      {
+        word: "revise",
+        ipa: "/rɪˈvaɪz/",
+        pos: "verb",
+        meaning: "chỉnh sửa, duyệt lại",
+        example: "Please revise this document.",
+      },
+    ],
+    tags: ["passive", "modals"],
+  },
+  {
+    id: "q132",
+    sentence:
+      "The conference center ______ the annual convention is held has recently been renovated.",
+    options: ["which", "that", "where", "when"],
+    correctAnswer: 2,
+    translation:
+      "Trung tâm hội nghị nơi tổ chức hội nghị thường niên gần đây đã được cải tạo.",
+    explanation: {
+      correctAnswer: "where",
+      grammarRule: "Relative Adverbs",
+      sentenceStructure: "Noun of Place + where + Subject + Verb",
+      whyCorrect:
+        "'Where' refers to the location (conference center) and acts as a preposition + relative pronoun (in which). It is followed by a full clause.",
+      whyOthersWrong: [
+        "A. which: Would require a preposition (in which) because the clause 'the convention is held' is complete.",
+        "B. that: Same issue as 'which'.",
+        "D. when: Used for time.",
+      ],
+      toeicTip: "Place + where + S + V. Place + which/that + V.",
+    },
+    category: "Grammar",
+    subcategory: "Relative Clauses",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 650,
+    vocabulary: [
+      {
+        word: "convention",
+        ipa: "/kənˈvenʃn/",
+        pos: "noun",
+        meaning: "hội nghị",
+        example: "He attended a political convention.",
+      },
+    ],
+    tags: ["relative adverbs", "places"],
+  },
+  {
+    id: "q133",
+    sentence:
+      "The keynote speaker will arrive ______, so please take your seats.",
+    options: ["short", "shorten", "shortage", "shortly"],
+    correctAnswer: 3,
+    translation:
+      "Diễn giả chính sẽ đến ngay, vì vậy vui lòng ổn định chỗ ngồi.",
+    explanation: {
+      correctAnswer: "shortly",
+      grammarRule: "Adverbs of Time",
+      sentenceStructure: "Subject + will arrive + Adverb",
+      whyCorrect:
+        "The adverb 'shortly' means 'soon' and modifies the verb 'arrive'.",
+      whyOthersWrong: [
+        "A. short: Adjective.",
+        "B. shorten: Verb.",
+        "C. shortage: Noun.",
+      ],
+      toeicTip:
+        "'Shortly' is a highly tested time adverb in TOEIC, meaning 'soon' (will happen shortly = will happen soon).",
+    },
+    category: "Vocabulary",
+    subcategory: "Word Form",
+    type: "vocabulary",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "keynote speaker",
+        ipa: "/ˈkiːnoʊt ˈspiːkər/",
+        pos: "noun",
+        meaning: "diễn giả chính",
+        example: "She is the keynote speaker at the event.",
+      },
+    ],
+    tags: ["adverbs", "time"],
+  },
+  {
+    id: "q134",
+    sentence:
+      "City officials will ______ an inspection of the construction site next Tuesday.",
+    options: ["conduct", "commit", "produce", "behave"],
+    correctAnswer: 0,
+    translation:
+      "Các quan chức thành phố sẽ tiến hành một cuộc kiểm tra công trường xây dựng vào thứ Ba tới.",
+    explanation: {
+      correctAnswer: "conduct",
+      grammarRule: "Vocabulary - Collocations",
+      sentenceStructure: "conduct + an inspection / a survey",
+      whyCorrect:
+        "'Conduct' is the standard verb used with words like inspection, survey, interview, and study.",
+      whyOthersWrong: [
+        "B. commit: Used with crimes or promises.",
+        "C. produce: To make something physical.",
+        "D. behave: Intransitive verb regarding actions.",
+      ],
+      toeicTip:
+        "Memorize collocations: conduct a survey, conduct an inspection, conduct an interview.",
+    },
+    category: "Vocabulary",
+    subcategory: "Collocations",
+    type: "vocabulary",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "inspection",
+        ipa: "/ɪnˈspekʃn/",
+        pos: "noun",
+        meaning: "cuộc kiểm tra, thanh tra",
+        example: "The building passed the fire inspection.",
+      },
+    ],
+    tags: ["verbs", "collocation"],
+  },
+  {
+    id: "q135",
+    sentence:
+      "Had the management known about the supply chain issues, they ______ another vendor.",
+    options: ["chose", "will choose", "would choose", "would have chosen"],
+    correctAnswer: 3,
+    translation:
+      "Nếu ban quản lý biết về các vấn đề của chuỗi cung ứng, họ đã chọn một nhà cung cấp khác.",
+    explanation: {
+      correctAnswer: "would have chosen",
+      grammarRule: "Conditional Type 3 (Inversion)",
+      sentenceStructure: "Had + S + V3, S + would have + V3",
+      whyCorrect:
+        "'Had the management known' is an inverted Type 3 conditional (If the management had known). The main clause needs 'would have + V3'.",
+      whyOthersWrong: [
+        "A. chose: Past simple.",
+        "B. will choose: Future simple.",
+        "C. would choose: Type 2 conditional.",
+      ],
+      toeicTip:
+        "When a sentence starts with 'Had + Subject + Past Participle', the other half is always 'would/could/might have + Past Participle'.",
+    },
+    category: "Grammar",
+    subcategory: "Conditionals",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 750,
+    vocabulary: [
+      {
+        word: "vendor",
+        ipa: "/ˈvendər/",
+        pos: "noun",
+        meaning: "nhà cung cấp, người bán",
+        example: "We are looking for a new software vendor.",
+      },
+    ],
+    tags: ["conditionals", "inversion"],
+  },
+  {
+    id: "q136",
+    sentence:
+      "If you have any complaints ______ the new catering service, please email the HR department.",
+    options: ["towards", "regarding", "between", "next to"],
+    correctAnswer: 1,
+    translation:
+      "Nếu bạn có bất kỳ phàn nàn nào liên quan đến dịch vụ ăn uống mới, vui lòng gửi email cho phòng nhân sự.",
+    explanation: {
+      correctAnswer: "regarding",
+      grammarRule: "Prepositions",
+      sentenceStructure: "complaints + regarding + Noun Phrase",
+      whyCorrect:
+        "'Regarding' means 'concerning' or 'about', which logically links the complaints to the catering service.",
+      whyOthersWrong: [
+        "A. towards: Indicates direction.",
+        "C. between: Indicates relation between two items.",
+        "D. next to: Indicates physical location.",
+      ],
+      toeicTip:
+        "'Regarding' and 'concerning' are formal TOEIC synonyms for 'about'.",
+    },
+    category: "Vocabulary",
+    subcategory: "Prepositions",
+    type: "vocabulary",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "catering",
+        ipa: "/ˈkeɪtərɪŋ/",
+        pos: "noun",
+        meaning: "dịch vụ ăn uống",
+        example: "Who is doing the catering for the wedding?",
+      },
+    ],
+    tags: ["prepositions", "formal"],
+  },
+  {
+    id: "q137",
+    sentence:
+      "The merger between the two airlines is expected to be mutually ______.",
+    options: ["benefit", "benefits", "beneficial", "beneficially"],
+    correctAnswer: 2,
+    translation:
+      "Việc sáp nhập giữa hai hãng hàng không dự kiến sẽ mang lại lợi ích chung.",
+    explanation: {
+      correctAnswer: "beneficial",
+      grammarRule: "Adjective after 'be' verb",
+      sentenceStructure: "be (be) + Adverb (mutually) + Adjective",
+      whyCorrect:
+        "An adjective is required after the 'be' verb. The adverb 'mutually' modifies this adjective.",
+      whyOthersWrong: [
+        "A. benefit: Noun / Verb.",
+        "B. benefits: Noun plural / Verb present.",
+        "D. beneficially: Adverb.",
+      ],
+      toeicTip:
+        "'Mutually beneficial' is a standard business phrase in TOEIC meaning good for both sides.",
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "mutually",
+        ipa: "/ˈmjuːtʃuəli/",
+        pos: "adv",
+        meaning: "lẫn nhau, chung",
+        example: "They reached a mutually acceptable agreement.",
+      },
+    ],
+    tags: ["adjectives", "word form"],
+  },
+  {
+    id: "q138",
+    sentence:
+      "______ hiring external consultants, the firm decided to train its own staff.",
+    options: ["Rather than", "In case of", "According to", "Except for"],
+    correctAnswer: 0,
+    translation:
+      "Thay vì thuê các nhà tư vấn bên ngoài, công ty đã quyết định đào tạo nhân viên của chính mình.",
+    explanation: {
+      correctAnswer: "Rather than",
+      grammarRule: "Prepositions of Preference",
+      sentenceStructure: "Rather than + V-ing, S + V",
+      whyCorrect:
+        "'Rather than' shows preference or alternatives (Instead of). It makes logical sense: choosing to train internal staff instead of hiring externally.",
+      whyOthersWrong: [
+        "B. In case of: Used for precautions.",
+        "C. According to: Used for citing sources.",
+        "D. Except for: Used for exclusion.",
+      ],
+      toeicTip:
+        "'Rather than' and 'Instead of' are frequently followed by V-ing.",
+    },
+    category: "Grammar",
+    subcategory: "Prepositions",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 650,
+    vocabulary: [
+      {
+        word: "consultant",
+        ipa: "/kənˈsʌltənt/",
+        pos: "noun",
+        meaning: "nhà tư vấn",
+        example: "She works as a financial consultant.",
+      },
+    ],
+    tags: ["prepositions", "preference"],
+  },
+  {
+    id: "q139",
+    sentence:
+      "Management must ______ that all safety protocols are strictly followed.",
+    options: ["insure", "assure", "ensure", "reassure"],
+    correctAnswer: 2,
+    translation:
+      "Ban quản lý phải đảm bảo rằng tất cả các quy trình an toàn được tuân thủ nghiêm ngặt.",
+    explanation: {
+      correctAnswer: "ensure",
+      grammarRule: "Vocabulary - Confusing Verbs",
+      sentenceStructure: "ensure + that clause",
+      whyCorrect:
+        "'Ensure' means to make certain that something happens. It is followed by a 'that' clause.",
+      whyOthersWrong: [
+        "A. insure: To protect against financial loss (insurance).",
+        "B. assure: To tell someone confidently to remove doubt (assure SOMEONE that...).",
+        "D. reassure: To comfort someone.",
+      ],
+      toeicTip:
+        "Ensure + that... / Assure + PERSON + that... / Insure + a car/house.",
+    },
+    category: "Vocabulary",
+    subcategory: "Word Choice",
+    type: "vocabulary",
+    difficulty: "advanced",
+    toeicLevel: 700,
+    vocabulary: [
+      {
+        word: "protocol",
+        ipa: "/ˈproʊtəkɑːl/",
+        pos: "noun",
+        meaning: "quy trình, giao thức",
+        example: "Safety protocols must be observed.",
+      },
+    ],
+    tags: ["verbs", "confusing words"],
+  },
+  {
+    id: "q140",
+    sentence:
+      "The number of complaints regarding the new software ______ decreased significantly.",
+    options: ["has", "have", "are", "is"],
+    correctAnswer: 0,
+    translation:
+      "Số lượng khiếu nại liên quan đến phần mềm mới đã giảm đáng kể.",
+    explanation: {
+      correctAnswer: "has",
+      grammarRule: "Subject-Verb Agreement",
+      sentenceStructure: "The number of + Plural Noun + Singular Verb",
+      whyCorrect:
+        "The phrase 'The number of' acts as a singular subject, so it takes a singular verb. The past participle 'decreased' requires 'has'.",
+      whyOthersWrong: [
+        "B. have: Plural auxiliary verb (used for 'A number of').",
+        "C. are: Plural 'be' verb.",
+        "D. is: Cannot be followed by 'decreased' in active voice (would mean passive).",
+      ],
+      toeicTip: "'The number of' + Singular Verb. 'A number of' + Plural Verb.",
+    },
+    category: "Grammar",
+    subcategory: "Subject-Verb Agreement",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 650,
+    vocabulary: [
+      {
+        word: "significantly",
+        ipa: "/sɪɡˈnɪfɪkəntli/",
+        pos: "adv",
+        meaning: "đáng kể",
+        example: "Prices have dropped significantly.",
+      },
+    ],
+    tags: ["verbs", "agreement"],
+  },
+  port const QUESTION_BANK_PART_5 = [
+  {
+    id: "q141",
+    sentence: "The board of directors is expected to approve the ______ for the new facility next week.",
+    options: ["propose", "proposal", "proposed", "proposing"],
+    correctAnswer: 1,
+    translation: "Hội đồng quản trị dự kiến sẽ phê duyệt bản đề xuất cho cơ sở mới vào tuần tới.",
+    explanation: {
+      correctAnswer: "proposal",
+      grammarRule: "Noun Form",
+      sentenceStructure: "the + Noun",
+      whyCorrect: "The article 'the' requires a noun. 'Proposal' is the noun form meaning a formal suggestion/plan.",
+      whyOthersWrong: [
+        "A. propose: Verb.",
+        "C. proposed: Adjective / Past Participle.",
+        "D. proposing: Present Participle."
+      ],
+      toeicTip: "Common noun endings include -al (proposal, approval), -tion, -ment, -ance."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "proposal",
+        ipa: "/prəˈpoʊzl/",
+        pos: "noun",
+        meaning: "bản đề xuất",
+        example: "The proposal was accepted."
+      }
+    ],
+    tags: ["nouns", "word form"]
+  },
+  {
+    id: "q142",
+    sentence: "Passengers must show their boarding passes ______ entering the security checkpoint.",
+    options: ["prior to", "so that", "in order", "as well as"],
+    correctAnswer: 0,
+    translation: "Hành khách phải xuất trình thẻ lên máy bay trước khi vào trạm kiểm tra an ninh.",
+    explanation: {
+      correctAnswer: "prior to",
+      grammarRule: "Prepositions",
+      sentenceStructure: "prior to + V-ing",
+      whyCorrect: "'Prior to' is a formal preposition meaning 'before', correctly followed by a gerund.",
+      whyOthersWrong: [
+        "B. so that: Indicates purpose, followed by a clause.",
+        "C. in order: Followed by 'to + Verb'.",
+        "D. as well as: Means 'and', illogical here."
+      ],
+      toeicTip: "'Prior to' is a very common TOEIC synonym for 'before'."
+    },
+    category: "Grammar",
+    subcategory: "Prepositions",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "checkpoint",
+        ipa: "/ˈtʃekpɔɪnt/",
+        pos: "noun",
+        meaning: "trạm kiểm tra",
+        example: "Have your ID ready at the checkpoint."
+      }
+    ],
+    tags: ["prepositions", "travel"]
+  },
+  {
+    id: "q143",
+    sentence: "The software development team is ______ working on a patch for the security vulnerability.",
+    options: ["current", "currently", "currency", "currents"],
+    correctAnswer: 1,
+    translation: "Nhóm phát triển phần mềm hiện đang làm việc để tạo ra một bản vá cho lỗ hổng an ninh.",
+    explanation: {
+      correctAnswer: "currently",
+      grammarRule: "Adverb Placement",
+      sentenceStructure: "be + Adverb + V-ing",
+      whyCorrect: "An adverb is needed between the auxiliary verb 'is' and the main verb 'working'.",
+      whyOthersWrong: [
+        "A. current: Adjective.",
+        "C. currency: Noun.",
+        "D. currents: Noun plural."
+      ],
+      toeicTip: "The pattern 'be + ___ + V-ing/V-ed' always takes an adverb."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 500,
+    vocabulary: [
+      {
+        word: "vulnerability",
+        ipa: "/ˌvʌlnərəˈbɪləti/",
+        pos: "noun",
+        meaning: "lỗ hổng, sự yếu kém",
+        example: "They fixed a security vulnerability."
+      }
+    ],
+    tags: ["adverbs", "word form"]
+  },
+  {
+    id: "q144",
+    sentence: "By this time next year, Ms. Robertson ______ as the regional manager for a decade.",
+    options: ["will serve", "serves", "will have served", "has served"],
+    correctAnswer: 2,
+    translation: "Vào thời điểm này năm tới, bà Robertson sẽ đã đảm nhiệm chức vụ quản lý khu vực được một thập kỷ.",
+    explanation: {
+      correctAnswer: "will have served",
+      grammarRule: "Future Perfect Tense",
+      sentenceStructure: "By + future time, S + will have + V3",
+      whyCorrect: "The phrase 'By this time next year' indicates an action that will be completed at a specific point in the future.",
+      whyOthersWrong: [
+        "A. will serve: Simple future (does not show completion over a period).",
+        "B. serves: Present tense.",
+        "D. has served: Present perfect."
+      ],
+      toeicTip: "Always pair 'By + [future time]' with the Future Perfect (will have + V3)."
+    },
+    category: "Grammar",
+    subcategory: "Verb Tenses",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 700,
+    vocabulary: [
+      {
+        word: "decade",
+        ipa: "/ˈdekeɪd/",
+        pos: "noun",
+        meaning: "thập kỷ (10 năm)",
+        example: "She has lived here for a decade."
+      }
+    ],
+    tags: ["verbs", "future perfect"]
+  },
+  {
+    id: "q145",
+    sentence: "All department heads must make an ______ to attend the leadership seminar.",
+    options: ["effect", "affect", "effort", "afford"],
+    correctAnswer: 2,
+    translation: "Tất cả trưởng phòng phải nỗ lực tham dự hội thảo lãnh đạo.",
+    explanation: {
+      correctAnswer: "effort",
+      grammarRule: "Collocations",
+      sentenceStructure: "make + an + effort + to do something",
+      whyCorrect: "'Make an effort' is a fixed phrase meaning to try hard to do something.",
+      whyOthersWrong: [
+        "A. effect: Used in 'have an effect on'.",
+        "B. affect: Verb.",
+        "D. afford: Verb."
+      ],
+      toeicTip: "Memorize: 'make an effort', 'make a decision', 'make an appointment'."
+    },
+    category: "Vocabulary",
+    subcategory: "Collocations",
+    type: "vocabulary",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "effort",
+        ipa: "/ˈefərt/",
+        pos: "noun",
+        meaning: "sự nỗ lực",
+        example: "Please make an effort to be on time."
+      }
+    ],
+    tags: ["nouns", "collocation"]
+  },
+  {
+    id: "q146",
+    sentence: "______ you require additional assistance with your account, please press zero to speak to an operator.",
+    options: ["Should", "Could", "Would", "Might"],
+    correctAnswer: 0,
+    translation: "Nếu bạn cần thêm hỗ trợ với tài khoản của mình, vui lòng bấm số 0 để nói chuyện với tổng đài viên.",
+    explanation: {
+      correctAnswer: "Should",
+      grammarRule: "Inverted Conditionals",
+      sentenceStructure: "Should + S + base verb, Clause",
+      whyCorrect: "'Should' replaces 'If' in formal conditional sentences (Should you require = If you require).",
+      whyOthersWrong: [
+        "B. Could: Modal of ability.",
+        "C. Would: Modal of intention/habit.",
+        "D. Might: Modal of possibility."
+      ],
+      toeicTip: "'Should you [verb]...' is one of the most heavily tested conditional structures in TOEIC Part 5."
+    },
+    category: "Grammar",
+    subcategory: "Conditionals",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 700,
+    vocabulary: [
+      {
+        word: "operator",
+        ipa: "/ˈɑːpəreɪtər/",
+        pos: "noun",
+        meaning: "tổng đài viên, người điều hành",
+        example: "The operator will transfer your call."
+      }
+    ],
+    tags: ["conditionals", "formal"]
+  },
+  {
+    id: "q147",
+    sentence: "The company's new line of eco-friendly products has proven to be highly ______.",
+    options: ["profit", "profitable", "profitably", "profitability"],
+    correctAnswer: 1,
+    translation: "Dòng sản phẩm thân thiện với môi trường mới của công ty đã được chứng minh là mang lại lợi nhuận cao.",
+    explanation: {
+      correctAnswer: "profitable",
+      grammarRule: "Adjective after Linking Verb",
+      sentenceStructure: "prove to be + Adverb + Adjective",
+      whyCorrect: "The phrase 'prove to be' acts as a linking verb requiring an adjective. 'Highly' modifies it.",
+      whyOthersWrong: [
+        "A. profit: Noun.",
+        "C. profitably: Adverb.",
+        "D. profitability: Noun."
+      ],
+      toeicTip: "prove to be / turn out to be + Adjective."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "eco-friendly",
+        ipa: "/ˌiːkoʊ ˈfrendli/",
+        pos: "adj",
+        meaning: "thân thiện với môi trường",
+        example: "They sell eco-friendly cleaning supplies."
+      }
+    ],
+    tags: ["adjectives", "word form"]
+  },
+  {
+    id: "q148",
+    sentence: "The printer ______ we purchased last week is already malfunctioning.",
+    options: ["who", "whom", "whose", "which"],
+    correctAnswer: 3,
+    translation: "Chiếc máy in mà chúng ta đã mua tuần trước đã bị trục trặc.",
+    explanation: {
+      correctAnswer: "which",
+      grammarRule: "Relative Pronouns",
+      sentenceStructure: "Noun (Thing) + which + Clause",
+      whyCorrect: "'Which' is used as the relative pronoun to replace a thing (the printer).",
+      whyOthersWrong: [
+        "A. who: Used for people.",
+        "B. whom: Used for people (object).",
+        "C. whose: Indicates possession."
+      ],
+      toeicTip: "When referring to objects or animals, use 'which' or 'that'."
+    },
+    category: "Grammar",
+    subcategory: "Relative Clauses",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "malfunction",
+        ipa: "/ˌmælˈfʌŋkʃn/",
+        pos: "verb/noun",
+        meaning: "trục trặc, hoạt động sai",
+        example: "The equipment started to malfunction."
+      }
+    ],
+    tags: ["relative pronouns"]
+  },
+  {
+    id: "q149",
+    sentence: "The cafeteria will be closed ______ the summer holidays for renovation.",
+    options: ["while", "during", "since", "until"],
+    correctAnswer: 1,
+    translation: "Căn tin sẽ đóng cửa trong suốt kỳ nghỉ hè để cải tạo.",
+    explanation: {
+      correctAnswer: "during",
+      grammarRule: "Prepositions of Time",
+      sentenceStructure: "during + Noun Phrase",
+      whyCorrect: "'During' is followed by a noun phrase to indicate when an event happens.",
+      whyOthersWrong: [
+        "A. while: Followed by a clause (S + V) or V-ing.",
+        "C. since: Indicates a starting point.",
+        "D. until: Indicates the end point of an action."
+      ],
+      toeicTip: "During + Noun (during the meeting, during the holidays). While + Clause."
+    },
+    category: "Grammar",
+    subcategory: "Prepositions",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 400,
+    vocabulary: [
+      {
+        word: "renovation",
+        ipa: "/ˌrenəˈveɪʃn/",
+        pos: "noun",
+        meaning: "sự cải tạo",
+        example: "The hotel is closed for renovation."
+      }
+    ],
+    tags: ["prepositions", "time"]
+  },
+  {
+    id: "q150",
+    sentence: "The new automated system is much ______ efficient than the manual process we used before.",
+    options: ["more", "most", "very", "too"],
+    correctAnswer: 0,
+    translation: "Hệ thống tự động mới hiệu quả hơn nhiều so với quy trình thủ công mà chúng ta đã sử dụng trước đây.",
+    explanation: {
+      correctAnswer: "more",
+      grammarRule: "Comparative Adjectives",
+      sentenceStructure: "much + more + Adjective + than",
+      whyCorrect: "The word 'than' requires a comparative structure. Since 'efficient' is a long adjective, we use 'more'.",
+      whyOthersWrong: [
+        "B. most: Superlative.",
+        "C. very: Cannot be used with comparatives.",
+        "D. too: Expresses excess, not comparison."
+      ],
+      toeicTip: "Modifiers for comparatives: much more, far more, even more, slightly more."
+    },
+    category: "Grammar",
+    subcategory: "Comparisons",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "automated",
+        ipa: "/ˈɔːtəmeɪtɪd/",
+        pos: "adj",
+        meaning: "tự động hóa",
+        example: "The factory uses an automated system."
+      }
+    ],
+    tags: ["comparisons", "adjectives"]
+  },
+  {
+    id: "q151",
+    sentence: "Mr. Thompson has requested a ______ of the meeting minutes by the end of the day.",
+    options: ["summarize", "summary", "summarized", "summarizing"],
+    correctAnswer: 1,
+    translation: "Ông Thompson đã yêu cầu một bản tóm tắt biên bản cuộc họp vào cuối ngày.",
+    explanation: {
+      correctAnswer: "summary",
+      grammarRule: "Noun Form",
+      sentenceStructure: "a + Noun + of",
+      whyCorrect: "The article 'a' indicates that a noun is needed. 'Summary' is the noun form.",
+      whyOthersWrong: [
+        "A. summarize: Verb.",
+        "C. summarized: Adjective/Past Tense.",
+        "D. summarizing: Gerund."
+      ],
+      toeicTip: "The pattern 'a/an/the + ___ + of' strictly requires a noun."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 500,
+    vocabulary: [
+      {
+        word: "minutes",
+        ipa: "/ˈmɪnɪts/",
+        pos: "noun",
+        meaning: "biên bản cuộc họp",
+        example: "Who will take the minutes today?"
+      }
+    ],
+    tags: ["nouns", "word form"]
+  },
+  {
+    id: "q152",
+    sentence: "Employees are not permitted to use company equipment for ______ purposes.",
+    options: ["person", "personality", "personally", "personal"],
+    correctAnswer: 3,
+    translation: "Nhân viên không được phép sử dụng thiết bị của công ty cho mục đích cá nhân.",
+    explanation: {
+      correctAnswer: "personal",
+      grammarRule: "Adjective modifying Noun",
+      sentenceStructure: "Adjective + Noun (purposes)",
+      whyCorrect: "We need an adjective to modify 'purposes'.",
+      whyOthersWrong: [
+        "A. person: Noun.",
+        "B. personality: Noun.",
+        "C. personally: Adverb."
+      ],
+      toeicTip: "'For personal use' and 'for personal purposes' are standard business regulations."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "permit",
+        ipa: "/pərˈmɪt/",
+        pos: "verb",
+        meaning: "cho phép",
+        example: "Smoking is not permitted here."
+      }
+    ],
+    tags: ["adjectives", "word form"]
+  },
+  {
+    id: "q153",
+    sentence: "The marketing director ______ suggested increasing the advertising budget.",
+    options: ["strong", "strength", "strongly", "strengthen"],
+    correctAnswer: 2,
+    translation: "Giám đốc tiếp thị đã kịch liệt đề nghị tăng ngân sách quảng cáo.",
+    explanation: {
+      correctAnswer: "strongly",
+      grammarRule: "Adverb Placement",
+      sentenceStructure: "Subject + Adverb + Verb",
+      whyCorrect: "An adverb is needed between the subject and the main verb to modify the action.",
+      whyOthersWrong: [
+        "A. strong: Adjective.",
+        "B. strength: Noun.",
+        "D. strengthen: Verb."
+      ],
+      toeicTip: "Words like strongly, highly, and repeatedly often precede verbs like recommend, suggest, advise."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "suggest",
+        ipa: "/səɡˈdʒest/",
+        pos: "verb",
+        meaning: "đề nghị, gợi ý",
+        example: "I suggest we leave early."
+      }
+    ],
+    tags: ["adverbs", "word form"]
+  },
+  {
+    id: "q154",
+    sentence: "All candidates must undergo a rigorous background check ______ they can be officially hired.",
+    options: ["before", "so that", "because of", "during"],
+    correctAnswer: 0,
+    translation: "Tất cả ứng viên phải trải qua một cuộc kiểm tra lý lịch nghiêm ngặt trước khi họ có thể chính thức được tuyển dụng.",
+    explanation: {
+      correctAnswer: "before",
+      grammarRule: "Time Clauses",
+      sentenceStructure: "Action 1 + before + Clause (Action 2)",
+      whyCorrect: "'Before' logically establishes the correct sequence of events.",
+      whyOthersWrong: [
+        "B. so that: Indicates purpose.",
+        "C. because of: Requires a noun phrase.",
+        "D. during: Requires a noun phrase."
+      ],
+      toeicTip: "Before and After can be followed by a clause (S + V) or a V-ing."
+    },
+    category: "Grammar",
+    subcategory: "Conjunctions",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "rigorous",
+        ipa: "/ˈrɪɡərəs/",
+        pos: "adj",
+        meaning: "nghiêm ngặt, khắt khe",
+        example: "The athletes undergo rigorous training."
+      }
+    ],
+    tags: ["conjunctions", "time"]
+  },
+  {
+    id: "q155",
+    sentence: "To be considered for the scholarship, applications must be ______ by March 15th.",
+    options: ["receive", "receives", "received", "receiving"],
+    correctAnswer: 2,
+    translation: "Để được xem xét cấp học bổng, các đơn đăng ký phải được nhận trước ngày 15 tháng 3.",
+    explanation: {
+      correctAnswer: "received",
+      grammarRule: "Passive Voice",
+      sentenceStructure: "must be + past participle",
+      whyCorrect: "Applications cannot receive themselves; they are received. Therefore, the passive form (be + V3) is required.",
+      whyOthersWrong: [
+        "A. receive: Base form.",
+        "B. receives: Present singular.",
+        "D. receiving: Active continuous."
+      ],
+      toeicTip: "Modal + be + V-ed is the standard passive structure for rules and deadlines."
+    },
+    category: "Grammar",
+    subcategory: "Passive Voice",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "scholarship",
+        ipa: "/ˈskɑːlərʃɪp/",
+        pos: "noun",
+        meaning: "học bổng",
+        example: "He won a scholarship to Harvard."
+      }
+    ],
+    tags: ["passive", "modals"]
+  },
+  {
+    id: "q156",
+    sentence: "The company’s decision to open a new branch in Europe proved to be highly ______.",
+    options: ["success", "succeed", "successful", "successfully"],
+    correctAnswer: 2,
+    translation: "Quyết định mở chi nhánh mới tại Châu Âu của công ty đã được chứng minh là rất thành công.",
+    explanation: {
+      correctAnswer: "successful",
+      grammarRule: "Adjective after Linking Verb",
+      sentenceStructure: "prove to be + Adverb (highly) + Adjective",
+      whyCorrect: "'Prove to be' acts as a linking structure requiring an adjective.",
+      whyOthersWrong: [
+        "A. success: Noun.",
+        "B. succeed: Verb.",
+        "D. successfully: Adverb."
+      ],
+      toeicTip: "Linking verb + adverb + ADJECTIVE."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "branch",
+        ipa: "/bræntʃ/",
+        pos: "noun",
+        meaning: "chi nhánh",
+        example: "We opened a new branch in London."
+      }
+    ],
+    tags: ["adjectives", "word form"]
+  },
+  {
+    id: "q157",
+    sentence: "Customers are advised to retain their receipts ______ they need to return an item.",
+    options: ["in case", "so that", "unless", "but"],
+    correctAnswer: 0,
+    translation: "Khách hàng được khuyên nên giữ lại biên lai phòng trường hợp họ cần trả lại một món hàng.",
+    explanation: {
+      correctAnswer: "in case",
+      grammarRule: "Conditional Conjunctions",
+      sentenceStructure: "Clause + in case + Clause",
+      whyCorrect: "'In case' is used to express preparation for a possible future situation.",
+      whyOthersWrong: [
+        "B. so that: Expresses purpose, but 'so that they need' is illogical.",
+        "C. unless: Means 'if not'.",
+        "D. but: Conjunction of contrast."
+      ],
+      toeicTip: "'In case' is frequently used with precautions (keep the receipt, take an umbrella)."
+    },
+    category: "Grammar",
+    subcategory: "Conjunctions",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "retain",
+        ipa: "/rɪˈteɪn/",
+        pos: "verb",
+        meaning: "giữ lại",
+        example: "Please retain this portion for your records."
+      }
+    ],
+    tags: ["conjunctions", "conditionals"]
+  },
+  {
+    id: "q158",
+    sentence: "The technician ______ the network issue before the staff arrived at the office.",
+    options: ["resolved", "has resolved", "will resolve", "had resolved"],
+    correctAnswer: 3,
+    translation: "Kỹ thuật viên đã giải quyết xong sự cố mạng trước khi nhân viên đến văn phòng.",
+    explanation: {
+      correctAnswer: "had resolved",
+      grammarRule: "Past Perfect Tense",
+      sentenceStructure: "Past Perfect + before + Past Simple",
+      whyCorrect: "The Past Perfect (had + V3) is used to show that an action was completed before another action in the past ('arrived').",
+      whyOthersWrong: [
+        "A. resolved: Past simple (less precise for sequence of past events).",
+        "B. has resolved: Present perfect.",
+        "C. will resolve: Future tense."
+      ],
+      toeicTip: "When you see 'before' or 'by the time' linking two past actions, the earlier action is Past Perfect."
+    },
+    category: "Grammar",
+    subcategory: "Verb Tenses",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 650,
+    vocabulary: [
+      {
+        word: "resolve",
+        ipa: "/rɪˈzɑːlv/",
+        pos: "verb",
+        meaning: "giải quyết",
+        example: "We need to resolve this issue quickly."
+      }
+    ],
+    tags: ["verbs", "past perfect"]
+  },
+  {
+    id: "q159",
+    sentence: "Management is considering ______ a bonus to employees who meet their quarterly targets.",
+    options: ["offer", "offering", "to offer", "offered"],
+    correctAnswer: 1,
+    translation: "Ban quản lý đang xem xét việc thưởng cho những nhân viên đạt mục tiêu hàng quý.",
+    explanation: {
+      correctAnswer: "offering",
+      grammarRule: "Verbs Followed by Gerunds",
+      sentenceStructure: "consider + V-ing",
+      whyCorrect: "The verb 'consider' is always followed by a gerund when an action is the object.",
+      whyOthersWrong: [
+        "A. offer: Base verb.",
+        "C. to offer: Infinitive.",
+        "D. offered: Past tense."
+      ],
+      toeicTip: "Memorize: consider, suggest, avoid, enjoy, mind + V-ing."
+    },
+    category: "Grammar",
+    subcategory: "Gerunds",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "bonus",
+        ipa: "/ˈboʊnəs/",
+        pos: "noun",
+        meaning: "tiền thưởng",
+        example: "Everyone will receive a Christmas bonus."
+      }
+    ],
+    tags: ["gerunds", "verbs"]
+  },
+  {
+    id: "q160",
+    sentence: "The newly updated policy will be distributed to all ______ within the next two days.",
+    options: ["department", "departments", "departmental", "departmentally"],
+    correctAnswer: 1,
+    translation: "Chính sách mới được cập nhật sẽ được phân phát tới tất cả các phòng ban trong vòng hai ngày tới.",
+    explanation: {
+      correctAnswer: "departments",
+      grammarRule: "Noun Plurals",
+      sentenceStructure: "all + Plural Noun",
+      whyCorrect: "The quantifier 'all' must be followed by a plural countable noun.",
+      whyOthersWrong: [
+        "A. department: Singular.",
+        "C. departmental: Adjective.",
+        "D. departmentally: Adverb."
+      ],
+      toeicTip: "All, many, several, a few + Plural Nouns."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "distribute",
+        ipa: "/dɪˈstrɪbjuːt/",
+        pos: "verb",
+        meaning: "phân phát",
+        example: "Please distribute these flyers."
+      }
+    ],
+    tags: ["nouns", "word form"]
+  },
+  {
+    id: "q161",
+    sentence: "Any modifications to the architectural plans must be approved ______ the head engineer.",
+    options: ["by", "with", "from", "at"],
+    correctAnswer: 0,
+    translation: "Bất kỳ sự sửa đổi nào đối với các bản vẽ kiến trúc đều phải được phê duyệt bởi kỹ sư trưởng.",
+    explanation: {
+      correctAnswer: "by",
+      grammarRule: "Passive Voice Agent",
+      sentenceStructure: "be approved + by + person",
+      whyCorrect: "In a passive voice sentence, the doer of the action is introduced with 'by'.",
+      whyOthersWrong: [
+        "B. with: Used for tools.",
+        "C. from: Shows origin.",
+        "D. at: Shows location/time."
+      ],
+      toeicTip: "Passive Verb (be + V3) + BY + Agent."
+    },
+    category: "Grammar",
+    subcategory: "Prepositions",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 400,
+    vocabulary: [
+      {
+        word: "modification",
+        ipa: "/ˌmɑːdɪfɪˈkeɪʃn/",
+        pos: "noun",
+        meaning: "sự sửa đổi",
+        example: "We made some modifications to the design."
+      }
+    ],
+    tags: ["prepositions", "passive"]
+  },
+  {
+    id: "q162",
+    sentence: "Our main competitor has launched a new product; ______, we must accelerate our own release schedule.",
+    options: ["however", "furthermore", "therefore", "instead"],
+    correctAnswer: 2,
+    translation: "Đối thủ cạnh tranh chính của chúng ta đã ra mắt một sản phẩm mới; do đó, chúng ta phải đẩy nhanh tiến độ phát hành của chính mình.",
+    explanation: {
+      correctAnswer: "therefore",
+      grammarRule: "Conjunctive Adverbs",
+      sentenceStructure: "Clause 1; therefore, Clause 2",
+      whyCorrect: "'Therefore' indicates a logical result or consequence of the previous statement.",
+      whyOthersWrong: [
+        "A. however: Shows contrast.",
+        "B. furthermore: Adds information.",
+        "D. instead: Shows an alternative."
+      ],
+      toeicTip: "Read for logical flow. Cause -> Result = therefore, thus, consequently."
+    },
+    category: "Grammar",
+    subcategory: "Transitions",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 650,
+    vocabulary: [
+      {
+        word: "accelerate",
+        ipa: "/əkˈseləreɪt/",
+        pos: "verb",
+        meaning: "đẩy nhanh, tăng tốc",
+        example: "We need to accelerate the process."
+      }
+    ],
+    tags: ["transitions", "logic"]
+  },
+  {
+    id: "q163",
+    sentence: "The director spoke so ______ that people in the back row could hardly hear him.",
+    options: ["soft", "softly", "softness", "softer"],
+    correctAnswer: 1,
+    translation: "Giám đốc nói nhỏ đến nỗi những người ở hàng ghế sau hầu như không thể nghe thấy ông ấy.",
+    explanation: {
+      correctAnswer: "softly",
+      grammarRule: "Adverbs modifying verbs",
+      sentenceStructure: "Verb (spoke) + Adverb",
+      whyCorrect: "An adverb is required to modify the verb 'spoke'.",
+      whyOthersWrong: [
+        "A. soft: Adjective.",
+        "C. softness: Noun.",
+        "D. softer: Comparative adjective."
+      ],
+      toeicTip: "In the 'so...that' structure, an adverb is used if it modifies an action verb."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 500,
+    vocabulary: [
+      {
+        word: "hardly",
+        ipa: "/ˈhɑːrdli/",
+        pos: "adv",
+        meaning: "hầu như không",
+        example: "I could hardly believe my eyes."
+      }
+    ],
+    tags: ["adverbs", "word form"]
+  },
+  {
+    id: "q164",
+    sentence: "Please arrange the documents in ______ order before placing them in the filing cabinet.",
+    options: ["alphabet", "alphabetize", "alphabetical", "alphabetically"],
+    correctAnswer: 2,
+    translation: "Vui lòng sắp xếp các tài liệu theo thứ tự bảng chữ cái trước khi đặt chúng vào tủ hồ sơ.",
+    explanation: {
+      correctAnswer: "alphabetical",
+      grammarRule: "Adjective modifying Noun",
+      sentenceStructure: "Preposition (in) + Adjective + Noun (order)",
+      whyCorrect: "We need an adjective to modify 'order'. 'Alphabetical order' is the standard phrase.",
+      whyOthersWrong: [
+        "A. alphabet: Noun.",
+        "B. alphabetize: Verb.",
+        "D. alphabetically: Adverb."
+      ],
+      toeicTip: "Memorize collocations: in alphabetical order, in chronological order."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "cabinet",
+        ipa: "/ˈkæbɪnət/",
+        pos: "noun",
+        meaning: "tủ (có ngăn kéo)",
+        example: "The files are in the filing cabinet."
+      }
+    ],
+    tags: ["adjectives", "collocation"]
+  },
+  {
+    id: "q165",
+    sentence: "The warranty is valid for two years, ______ covers parts and labor.",
+    options: ["who", "whom", "which", "whose"],
+    correctAnswer: 2,
+    translation: "Bảo hành có giá trị trong hai năm, bao gồm (chi phí) phụ tùng và nhân công.",
+    explanation: {
+      correctAnswer: "which",
+      grammarRule: "Relative Pronouns",
+      sentenceStructure: ", + which + Verb",
+      whyCorrect: "'Which' is used in a non-defining relative clause to refer back to the preceding noun clause/thing (the warranty).",
+      whyOthersWrong: [
+        "A. who: For people.",
+        "B. whom: For people (object).",
+        "D. whose: Indicates possession."
+      ],
+      toeicTip: "After a comma, referring to a thing, use 'which' (never use 'that' after a comma in this context)."
+    },
+    category: "Grammar",
+    subcategory: "Relative Clauses",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "warranty",
+        ipa: "/ˈwɔːrənti/",
+        pos: "noun",
+        meaning: "giấy bảo hành",
+        example: "The TV comes with a one-year warranty."
+      }
+    ],
+    tags: ["relative pronouns"]
+  },
+  {
+    id: "q166",
+    sentence: "If the venue is too small, we ______ the event to a larger conference center.",
+    options: ["move", "moved", "will move", "would move"],
+    correctAnswer: 2,
+    translation: "Nếu địa điểm quá nhỏ, chúng ta sẽ chuyển sự kiện đến một trung tâm hội nghị lớn hơn.",
+    explanation: {
+      correctAnswer: "will move",
+      grammarRule: "Conditionals Type 1",
+      sentenceStructure: "If + S + V(present), S + will + V0",
+      whyCorrect: "The 'if' clause uses present tense ('is'), indicating a Type 1 conditional. The main clause requires 'will' + base verb.",
+      whyOthersWrong: [
+        "A. move: Present tense.",
+        "B. moved: Past tense.",
+        "D. would move: Used for Type 2 (unreal present)."
+      ],
+      toeicTip: "If + Present -> Will + Base Verb."
+    },
+    category: "Grammar",
+    subcategory: "Conditionals",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 400,
+    vocabulary: [
+      {
+        word: "venue",
+        ipa: "/ˈvenjuː/",
+        pos: "noun",
+        meaning: "địa điểm (tổ chức sự kiện)",
+        example: "They are looking for a wedding venue."
+      }
+    ],
+    tags: ["conditionals", "verbs"]
+  },
+  {
+    id: "q167",
+    sentence: "The CEO was impressed with the presentation, ______ it was prepared at the last minute.",
+    options: ["because", "even though", "in spite of", "however"],
+    correctAnswer: 1,
+    translation: "Giám đốc điều hành rất ấn tượng với bài thuyết trình, mặc dù nó được chuẩn bị vào phút chót.",
+    explanation: {
+      correctAnswer: "even though",
+      grammarRule: "Conjunctions of Contrast",
+      sentenceStructure: "Clause + even though + Clause",
+      whyCorrect: "'Even though' introduces a contrasting clause.",
+      whyOthersWrong: [
+        "A. because: Shows reason (illogical).",
+        "C. in spite of: Must be followed by a noun phrase or V-ing.",
+        "D. however: Adverb, requires semicolon/comma."
+      ],
+      toeicTip: "Even though / Although + Subject + Verb."
+    },
+    category: "Grammar",
+    subcategory: "Conjunctions",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "impressed",
+        ipa: "/ɪmˈprest/",
+        pos: "adj",
+        meaning: "bị ấn tượng",
+        example: "I am very impressed with your work."
+      }
+    ],
+    tags: ["conjunctions", "contrast"]
+  },
+  {
+    id: "q168",
+    sentence: "The accounting department will issue reimbursement checks ______ all receipts are verified.",
+    options: ["once", "despite", "so that", "during"],
+    correctAnswer: 0,
+    translation: "Phòng kế toán sẽ phát hành séc hoàn tiền một khi tất cả các biên lai được xác minh.",
+    explanation: {
+      correctAnswer: "once",
+      grammarRule: "Conjunctions of Time",
+      sentenceStructure: "Clause + once + Clause",
+      whyCorrect: "'Once' functions as a conjunction meaning 'as soon as'.",
+      whyOthersWrong: [
+        "B. despite: Preposition.",
+        "C. so that: Indicates purpose.",
+        "D. during: Preposition."
+      ],
+      toeicTip: "'Once' is heavily tested in TOEIC to mean 'after/as soon as'."
+    },
+    category: "Grammar",
+    subcategory: "Conjunctions",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "reimbursement",
+        ipa: "/ˌriːɪmˈbɜːrsmənt/",
+        pos: "noun",
+        meaning: "sự hoàn trả, bồi hoàn",
+        example: "Submit your expenses for reimbursement."
+      }
+    ],
+    tags: ["conjunctions", "time"]
+  },
+  {
+    id: "q169",
+    sentence: "Staff members are expected to conduct ______ professionally when interacting with clients.",
+    options: ["them", "their", "theirs", "themselves"],
+    correctAnswer: 3,
+    translation: "Nhân viên được kỳ vọng sẽ cư xử chuyên nghiệp khi tương tác với khách hàng.",
+    explanation: {
+      correctAnswer: "themselves",
+      grammarRule: "Reflexive Pronouns",
+      sentenceStructure: "conduct + reflexive pronoun",
+      whyCorrect: "When the subject (Staff members) and object are the same, a reflexive pronoun is used. 'Conduct oneself' means to behave.",
+      whyOthersWrong: [
+        "A. them: Object pronoun (implies other people).",
+        "B. their: Possessive adjective.",
+        "C. theirs: Possessive pronoun."
+      ],
+      toeicTip: "Verbs like conduct, pride, absent often take reflexive pronouns (myself, themselves, etc.)."
+    },
+    category: "Grammar",
+    subcategory: "Pronouns",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 650,
+    vocabulary: [
+      {
+        word: "interact",
+        ipa: "/ˌɪntərˈækt/",
+        pos: "verb",
+        meaning: "tương tác",
+        example: "He interacts well with other children."
+      }
+    ],
+    tags: ["pronouns", "reflexive"]
+  },
+  {
+    id: "q170",
+    sentence: "The factory's new machinery operates much more ______ than the older models.",
+    options: ["quiet", "quietly", "quietness", "quieter"],
+    correctAnswer: 1,
+    translation: "Máy móc mới của nhà máy hoạt động êm ái hơn nhiều so với các mẫu cũ.",
+    explanation: {
+      correctAnswer: "quietly",
+      grammarRule: "Adverbs in Comparisons",
+      sentenceStructure: "Verb + more + Adverb + than",
+      whyCorrect: "An adverb is needed to modify the action verb 'operates'. The comparative form is 'more quietly'.",
+      whyOthersWrong: [
+        "A. quiet: Adjective.",
+        "C. quietness: Noun.",
+        "D. quieter: Comparative adjective."
+      ],
+      toeicTip: "Always look at the verb. If it's an action verb (operates), you need an adverb (quietly) not an adjective (quiet)."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "machinery",
+        ipa: "/məˈʃiːnəri/",
+        pos: "noun",
+        meaning: "máy móc",
+        example: "The factory uses advanced machinery."
+      }
+    ],
+    tags: ["adverbs", "comparisons"]
+  },
+  {
+    id: "q171",
+    sentence: "Applicants must provide three letters of ______ from previous employers.",
+    options: ["refer", "refers", "reference", "referred"],
+    correctAnswer: 2,
+    translation: "Ứng viên phải cung cấp ba thư giới thiệu từ các nhà tuyển dụng trước đây.",
+    explanation: {
+      correctAnswer: "reference",
+      grammarRule: "Noun Form",
+      sentenceStructure: "letters of + Noun",
+      whyCorrect: "'Letters of reference' is a fixed compound noun/phrase meaning recommendation letters.",
+      whyOthersWrong: [
+        "A. refer: Verb.",
+        "B. refers: Verb.",
+        "D. referred: Past tense / Participle."
+      ],
+      toeicTip: "Memorize business phrases: letters of reference, letters of recommendation."
+    },
+    category: "Vocabulary",
+    subcategory: "Word Form",
+    type: "vocabulary",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "applicant",
+        ipa: "/ˈæplɪkənt/",
+        pos: "noun",
+        meaning: "người nộp đơn",
+        example: "We had many applicants for the job."
+      }
+    ],
+    tags: ["nouns", "business"]
+  },
+  {
+    id: "q172",
+    sentence: "The ______ to upgrade the software system was made by the IT director.",
+    options: ["decide", "decision", "decisive", "decisively"],
+    correctAnswer: 1,
+    translation: "Quyết định nâng cấp hệ thống phần mềm được đưa ra bởi giám đốc CNTT.",
+    explanation: {
+      correctAnswer: "decision",
+      grammarRule: "Noun placement",
+      sentenceStructure: "The + Noun + to verb",
+      whyCorrect: "The article 'The' requires a noun as the subject of the sentence.",
+      whyOthersWrong: [
+        "A. decide: Verb.",
+        "C. decisive: Adjective.",
+        "D. decisively: Adverb."
+      ],
+      toeicTip: "The pattern 'The ______ to [verb]' always takes a noun (e.g., The decision to go, The ability to speak)."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 400,
+    vocabulary: [
+      {
+        word: "upgrade",
+        ipa: "/ˈʌpɡreɪd/",
+        pos: "verb",
+        meaning: "nâng cấp",
+        example: "We need to upgrade our computers."
+      }
+    ],
+    tags: ["nouns", "word form"]
+  },
+  {
+    id: "q173",
+    sentence: "______ his lack of experience, he learned the duties of the job very quickly.",
+    options: ["Because of", "Although", "Despite", "However"],
+    correctAnswer: 2,
+    translation: "Mặc dù thiếu kinh nghiệm, anh ấy đã học các nhiệm vụ của công việc rất nhanh chóng.",
+    explanation: {
+      correctAnswer: "Despite",
+      grammarRule: "Prepositions of Concession",
+      sentenceStructure: "Despite + Noun Phrase",
+      whyCorrect: "'Despite' shows contrast and is correctly followed by the noun phrase 'his lack of experience'.",
+      whyOthersWrong: [
+        "A. Because of: Indicates cause, illogical here.",
+        "B. Although: Must be followed by a full clause.",
+        "D. However: Adverb requiring a comma."
+      ],
+      toeicTip: "Despite + Noun Phrase. Although + Clause."
+    },
+    category: "Grammar",
+    subcategory: "Prepositions",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "duty",
+        ipa: "/ˈduːti/",
+        pos: "noun",
+        meaning: "nhiệm vụ",
+        example: "It is my duty to protect the building."
+      }
+    ],
+    tags: ["prepositions", "contrast"]
+  },
+  {
+    id: "q174",
+    sentence: "Please make sure to sign the contract ______ blue or black ink.",
+    options: ["by", "in", "with", "at"],
+    correctAnswer: 1,
+    translation: "Vui lòng đảm bảo ký hợp đồng bằng mực xanh hoặc đen.",
+    explanation: {
+      correctAnswer: "in",
+      grammarRule: "Prepositions",
+      sentenceStructure: "in + ink/color",
+      whyCorrect: "In English, the correct preposition to use with 'ink' or colors is 'in'.",
+      whyOthersWrong: [
+        "A. by: Incorrect.",
+        "C. with: Used for instruments (with a pen) but not the ink itself.",
+        "D. at: Incorrect."
+      ],
+      toeicTip: "Memorize: Write IN ink. Write WITH a pen."
+    },
+    category: "Grammar",
+    subcategory: "Prepositions",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "contract",
+        ipa: "/ˈkɑːntrækt/",
+        pos: "noun",
+        meaning: "hợp đồng",
+        example: "Please sign the contract."
+      }
+    ],
+    tags: ["prepositions", "tools"]
+  },
+  {
+    id: "q175",
+    sentence: "The marketing team worked ______ to launch the campaign ahead of schedule.",
+    options: ["diligence", "diligent", "diligently", "more diligent"],
+    correctAnswer: 2,
+    translation: "Nhóm tiếp thị đã làm việc siêng năng để ra mắt chiến dịch trước tiến độ.",
+    explanation: {
+      correctAnswer: "diligently",
+      grammarRule: "Adverbs modifying verbs",
+      sentenceStructure: "Verb (worked) + Adverb",
+      whyCorrect: "An adverb is needed to describe how the team worked.",
+      whyOthersWrong: [
+        "A. diligence: Noun.",
+        "B. diligent: Adjective.",
+        "D. more diligent: Comparative adjective."
+      ],
+      toeicTip: "Verbs like work, study, try are followed by -ly adverbs (diligently, hard is an exception)."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "diligently",
+        ipa: "/ˈdɪlɪdʒəntli/",
+        pos: "adv",
+        meaning: "một cách siêng năng",
+        example: "She worked diligently on her project."
+      }
+    ],
+    tags: ["adverbs", "word form"]
+  },
+  {
+    id: "q176",
+    sentence: "______ that the highway is closed, we will have to take an alternate route.",
+    options: ["Given", "Provide", "Unless", "Because of"],
+    correctAnswer: 0,
+    translation: "Căn cứ vào việc đường cao tốc bị đóng cửa, chúng ta sẽ phải đi một tuyến đường thay thế.",
+    explanation: {
+      correctAnswer: "Given",
+      grammarRule: "Prepositions / Conjunctions",
+      sentenceStructure: "Given that + Clause",
+      whyCorrect: "'Given that' means 'considering the fact that' and perfectly fits the context.",
+      whyOthersWrong: [
+        "B. Provide: Incorrect form (Provided that would mean 'if').",
+        "C. Unless: Means 'if not'.",
+        "D. Because of: Must be followed by a noun, not 'that + clause'."
+      ],
+      toeicTip: "'Given that' + clause is a common formal expression meaning 'because/considering'."
+    },
+    category: "Vocabulary",
+    subcategory: "Conjunctions",
+    type: "vocabulary",
+    difficulty: "advanced",
+    toeicLevel: 750,
+    vocabulary: [
+      {
+        word: "alternate",
+        ipa: "/ˈɔːltərnət/",
+        pos: "adj",
+        meaning: "thay thế",
+        example: "We took an alternate route to avoid traffic."
+      }
+    ],
+    tags: ["conjunctions", "formal"]
+  },
+  {
+    id: "q177",
+    sentence: "Employees who accumulate too many absences will face disciplinary ______.",
+    options: ["act", "acts", "acting", "action"],
+    correctAnswer: 3,
+    translation: "Những nhân viên tích lũy quá nhiều ngày vắng mặt sẽ phải đối mặt với biện pháp kỷ luật.",
+    explanation: {
+      correctAnswer: "action",
+      grammarRule: "Noun Collocations",
+      sentenceStructure: "Adjective (disciplinary) + Noun",
+      whyCorrect: "'Disciplinary action' is a fixed corporate term meaning punishment for breaking rules.",
+      whyOthersWrong: [
+        "A. act: A single deed, not used in this collocation.",
+        "B. acts: Plural deed.",
+        "C. acting: Present participle."
+      ],
+      toeicTip: "Memorize the phrase 'take disciplinary action'."
+    },
+    category: "Vocabulary",
+    subcategory: "Collocations",
+    type: "vocabulary",
+    difficulty: "intermediate",
+    toeicLevel: 650,
+    vocabulary: [
+      {
+        word: "disciplinary",
+        ipa: "/ˈdɪsəplɪneri/",
+        pos: "adj",
+        meaning: "thuộc về kỷ luật",
+        example: "The committee will take disciplinary action."
+      }
+    ],
+    tags: ["nouns", "collocation"]
+  },
+  {
+    id: "q178",
+    sentence: "The project manager is responsible for ______ the budget and ensuring deadlines are met.",
+    options: ["monitor", "monitors", "monitored", "monitoring"],
+    correctAnswer: 3,
+    translation: "Quản lý dự án chịu trách nhiệm theo dõi ngân sách và đảm bảo đáp ứng đúng thời hạn.",
+    explanation: {
+      correctAnswer: "monitoring",
+      grammarRule: "Prepositions followed by Gerunds",
+      sentenceStructure: "for + V-ing",
+      whyCorrect: "The preposition 'for' must be followed by a gerund.",
+      whyOthersWrong: [
+        "A. monitor: Base verb.",
+        "B. monitors: 3rd person singular.",
+        "C. monitored: Past tense."
+      ],
+      toeicTip: "Prepositions (in, on, at, of, for, about) are followed by V-ing."
+    },
+    category: "Grammar",
+    subcategory: "Gerunds",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 500,
+    vocabulary: [
+      {
+        word: "monitor",
+        ipa: "/ˈmɑːnɪtər/",
+        pos: "verb",
+        meaning: "theo dõi, giám sát",
+        example: "We are monitoring the situation."
+      }
+    ],
+    tags: ["gerunds", "prepositions"]
+  },
+  {
+    id: "q179",
+    sentence: "______ any questions arise during the installation, please consult the user manual.",
+    options: ["If", "Should", "Would", "When"],
+    correctAnswer: 1,
+    translation: "Nếu có bất kỳ câu hỏi nào phát sinh trong quá trình cài đặt, vui lòng tham khảo hướng dẫn sử dụng.",
+    explanation: {
+      correctAnswer: "Should",
+      grammarRule: "Inverted Conditionals (Type 1)",
+      sentenceStructure: "Should + Subject + Base Verb",
+      whyCorrect: "'Should' acts as 'If' in this formal inversion structure (Should any questions arise).",
+      whyOthersWrong: [
+        "A. If: Would require 'If any questions arise', but 'Should' is the classic TOEIC test point for this exact formal phrasing.",
+        "C. Would: Incorrect modal.",
+        "D. When: Logically possible, but 'Should' is standard for 'in the event that'."
+      ],
+      toeicTip: "'Should [subject] [base verb]...' is the inverted form of 'If [subject] [verb]'."
+    },
+    category: "Grammar",
+    subcategory: "Conditionals",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 700,
+    vocabulary: [
+      {
+        word: "arise",
+        ipa: "/əˈraɪz/",
+        pos: "verb",
+        meaning: "phát sinh",
+        example: "Problems may arise during the project."
+      }
+    ],
+    tags: ["conditionals", "inversion"]
+  },
+  {
+    id: "q180",
+    sentence: "The CEO thanked everyone for their ______ contributions to the company's success.",
+    options: ["value", "valuable", "valuably", "valuation"],
+    correctAnswer: 1,
+    translation: "Giám đốc điều hành cảm ơn mọi người vì những đóng góp quý giá của họ cho thành công của công ty.",
+    explanation: {
+      correctAnswer: "valuable",
+      grammarRule: "Adjective modifying Noun",
+      sentenceStructure: "Adjective + Noun (contributions)",
+      whyCorrect: "An adjective is needed to describe 'contributions'.",
+      whyOthersWrong: [
+        "A. value: Noun.",
+        "C. valuably: Adverb.",
+        "D. valuation: Noun."
+      ],
+      toeicTip: "The pattern 'their + ______ + Noun' requires an adjective."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "contribution",
+        ipa: "/ˌkɑːntrɪˈbjuːʃn/",
+        pos: "noun",
+        meaning: "sự đóng góp",
+        example: "He made a significant contribution to the team."
+      }
+    ],
+    tags: ["adjectives", "word form"]
+  },
+  {
+    id: "q181",
+    sentence: "All visitors are asked to sign in at the front desk ______ they can enter the facility.",
+    options: ["before", "during", "soon", "yet"],
+    correctAnswer: 0,
+    translation: "Tất cả khách tham quan được yêu cầu đăng ký tại quầy lễ tân trước khi họ có thể vào cơ sở.",
+    explanation: {
+      correctAnswer: "before",
+      grammarRule: "Conjunctions of Time",
+      sentenceStructure: "Clause + before + Clause",
+      whyCorrect: "'Before' logically links the two clauses, establishing the required order of events.",
+      whyOthersWrong: [
+        "B. during: Preposition, followed by a noun.",
+        "C. soon: Adverb.",
+        "D. yet: Conjunction (meaning but) or Adverb."
+      ],
+      toeicTip: "Before and After can be followed by a full clause (Subject + Verb)."
+    },
+    category: "Grammar",
+    subcategory: "Conjunctions",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 400,
+    vocabulary: [
+      {
+        word: "facility",
+        ipa: "/fəˈsɪləti/",
+        pos: "noun",
+        meaning: "cơ sở, tiện ích",
+        example: "The sports facility is open to the public."
+      }
+    ],
+    tags: ["conjunctions", "time"]
+  },
+  {
+    id: "q182",
+    sentence: "The new tax laws will affect small businesses ______, forcing many to cut costs.",
+    options: ["adverse", "adversely", "adversity", "adversaries"],
+    correctAnswer: 1,
+    translation: "Các luật thuế mới sẽ ảnh hưởng bất lợi đến các doanh nghiệp nhỏ, buộc nhiều bên phải cắt giảm chi phí.",
+    explanation: {
+      correctAnswer: "adversely",
+      grammarRule: "Adverb modifying Verb",
+      sentenceStructure: "Verb (affect) + Object + Adverb",
+      whyCorrect: "An adverb is required to describe how the laws will affect the businesses.",
+      whyOthersWrong: [
+        "A. adverse: Adjective.",
+        "C. adversity: Noun.",
+        "D. adversaries: Plural noun (enemies)."
+      ],
+      toeicTip: "'Adversely affect' is a highly common TOEIC collocation."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 750,
+    vocabulary: [
+      {
+        word: "adversely",
+        ipa: "/ədˈvɜːrsli/",
+        pos: "adv",
+        meaning: "một cách bất lợi",
+        example: "The weather adversely affected the crops."
+      }
+    ],
+    tags: ["adverbs", "word form"]
+  },
+  {
+    id: "q183",
+    sentence: "______ the increase in raw material costs, the company has decided not to raise its prices.",
+    options: ["Because", "Although", "In spite of", "Even though"],
+    correctAnswer: 2,
+    translation: "Mặc dù chi phí nguyên liệu thô tăng, công ty vẫn quyết định không tăng giá.",
+    explanation: {
+      correctAnswer: "In spite of",
+      grammarRule: "Prepositions of Concession",
+      sentenceStructure: "In spite of + Noun Phrase",
+      whyCorrect: "'In spite of' is used to show contrast and is followed by the noun phrase 'the increase in raw material costs'.",
+      whyOthersWrong: [
+        "A. Because: Indicates cause, requires a clause.",
+        "B. Although: Requires a clause (Subject + Verb).",
+        "D. Even though: Requires a clause."
+      ],
+      toeicTip: "In spite of / Despite + Noun Phrase."
+    },
+    category: "Grammar",
+    subcategory: "Prepositions",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "raw material",
+        ipa: "/rɔː məˈtɪriəl/",
+        pos: "noun",
+        meaning: "nguyên liệu thô",
+        example: "The factory needs more raw materials."
+      }
+    ],
+    tags: ["prepositions", "contrast"]
+  },
+  {
+    id: "q184",
+    sentence: "Mr. Davis will remain in London until the contract negotiations are ______.",
+    options: ["complete", "completes", "completely", "completeness"],
+    correctAnswer: 0,
+    translation: "Ông Davis sẽ ở lại London cho đến khi các cuộc đàm phán hợp đồng hoàn tất.",
+    explanation: {
+      correctAnswer: "complete",
+      grammarRule: "Adjective after Linking Verb",
+      sentenceStructure: "are + Adjective",
+      whyCorrect: "'Complete' functions as an adjective here, describing the state of the negotiations.",
+      whyOthersWrong: [
+        "B. completes: Verb.",
+        "C. completely: Adverb.",
+        "D. completeness: Noun."
+      ],
+      toeicTip: "The verb 'be' (are) is followed by an adjective or past participle."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "negotiation",
+        ipa: "/nɪˌɡoʊʃiˈeɪʃn/",
+        pos: "noun",
+        meaning: "sự đàm phán",
+        example: "The contract is under negotiation."
+      }
+    ],
+    tags: ["adjectives", "word form"]
+  },
+  {
+    id: "q185",
+    sentence: "The committee has yet ______ a decision regarding the new office location.",
+    options: ["make", "making", "to make", "made"],
+    correctAnswer: 2,
+    translation: "Ủy ban vẫn chưa đưa ra quyết định liên quan đến địa điểm văn phòng mới.",
+    explanation: {
+      correctAnswer: "to make",
+      grammarRule: "Have yet to",
+      sentenceStructure: "have/has yet + to-infinitive",
+      whyCorrect: "'Have yet to do something' is a formal structure meaning something has not been done yet but is expected to be done.",
+      whyOthersWrong: [
+        "A. make: Base verb.",
+        "B. making: Gerund.",
+        "D. made: Past tense."
+      ],
+      toeicTip: "Memorize the phrase: 'have yet to + verb' (vẫn chưa làm gì)."
+    },
+    category: "Grammar",
+    subcategory: "Infinitives",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 700,
+    vocabulary: [
+      {
+        word: "regarding",
+        ipa: "/rɪˈɡɑːrdɪŋ/",
+        pos: "prep",
+        meaning: "liên quan đến",
+        example: "I have a question regarding my order."
+      }
+    ],
+    tags: ["infinitives", "structures"]
+  },
+  {
+    id: "q186",
+    sentence: "Employees are reminded that all files stored on company servers are the ______ of the corporation.",
+    options: ["proper", "property", "properly", "properties"],
+    correctAnswer: 1,
+    translation: "Nhân viên được nhắc nhở rằng tất cả các tệp được lưu trữ trên máy chủ của công ty đều là tài sản của tập đoàn.",
+    explanation: {
+      correctAnswer: "property",
+      grammarRule: "Noun Form",
+      sentenceStructure: "the + Noun",
+      whyCorrect: "The article 'the' requires a noun. 'Property' (uncountable) means something owned.",
+      whyOthersWrong: [
+        "A. proper: Adjective.",
+        "C. properly: Adverb.",
+        "D. properties: Plural form (usually refers to real estate)."
+      ],
+      toeicTip: "The phrase 'is the property of' is standard in legal and corporate contexts."
+    },
+    category: "Vocabulary",
+    subcategory: "Word Form",
+    type: "vocabulary",
+    difficulty: "elementary",
+    toeicLevel: 500,
+    vocabulary: [
+      {
+        word: "property",
+        ipa: "/ˈprɑːpərti/",
+        pos: "noun",
+        meaning: "tài sản",
+        example: "This laptop is company property."
+      }
+    ],
+    tags: ["nouns", "word form"]
+  },
+  {
+    id: "q187",
+    sentence: "If the delivery ______ by noon tomorrow, we will have to cancel the order.",
+    options: ["does not arrive", "did not arrive", "will not arrive", "had not arrived"],
+    correctAnswer: 0,
+    translation: "Nếu hàng giao không đến trước buổi trưa ngày mai, chúng ta sẽ phải hủy đơn hàng.",
+    explanation: {
+      correctAnswer: "does not arrive",
+      grammarRule: "Conditionals Type 1",
+      sentenceStructure: "If + Present Simple, Future Simple",
+      whyCorrect: "The main clause uses 'will have to' (future), making this a Type 1 conditional. The 'if' clause requires the present simple tense.",
+      whyOthersWrong: [
+        "B. did not arrive: Past tense (Type 2).",
+        "C. will not arrive: 'Will' is not used in the 'if' clause.",
+        "D. had not arrived: Past perfect (Type 3)."
+      ],
+      toeicTip: "In real future conditionals, the 'if' clause takes the present tense."
+    },
+    category: "Grammar",
+    subcategory: "Conditionals",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "cancel",
+        ipa: "/ˈkænsəl/",
+        pos: "verb",
+        meaning: "hủy bỏ",
+        example: "I need to cancel my reservation."
+      }
+    ],
+    tags: ["conditionals", "verbs"]
+  },
+  {
+    id: "q188",
+    sentence: "The technician worked ______ on the server to ensure the system was restored before morning.",
+    options: ["continual", "continuous", "continuation", "continuously"],
+    correctAnswer: 3,
+    translation: "Kỹ thuật viên đã làm việc liên tục trên máy chủ để đảm bảo hệ thống được khôi phục trước buổi sáng.",
+    explanation: {
+      correctAnswer: "continuously",
+      grammarRule: "Adverbs modifying verbs",
+      sentenceStructure: "Verb (worked) + Adverb",
+      whyCorrect: "An adverb is required to describe how the technician worked.",
+      whyOthersWrong: [
+        "A. continual: Adjective.",
+        "B. continuous: Adjective.",
+        "C. continuation: Noun."
+      ],
+      toeicTip: "Action verbs are modified by adverbs (-ly)."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "restore",
+        ipa: "/rɪˈstɔːr/",
+        pos: "verb",
+        meaning: "khôi phục",
+        example: "Power has been fully restored."
+      }
+    ],
+    tags: ["adverbs", "word form"]
+  },
+  {
+    id: "q189",
+    sentence: "Participants in the survey were selected ______ from across different regions of the country.",
+    options: ["random", "randomly", "randomness", "randomize"],
+    correctAnswer: 1,
+    translation: "Những người tham gia khảo sát được chọn ngẫu nhiên từ các khu vực khác nhau trên cả nước.",
+    explanation: {
+      correctAnswer: "randomly",
+      grammarRule: "Adverbs modifying verbs",
+      sentenceStructure: "Passive Verb (were selected) + Adverb",
+      whyCorrect: "An adverb is needed to describe how the participants were selected.",
+      whyOthersWrong: [
+        "A. random: Adjective.",
+        "C. randomness: Noun.",
+        "D. randomize: Verb."
+      ],
+      toeicTip: "When a sentence is structurally complete (Subject + Passive Verb), add an adverb."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "participant",
+        ipa: "/pɑːrˈtɪsɪpənt/",
+        pos: "noun",
+        meaning: "người tham gia",
+        example: "The seminar had 50 participants."
+      }
+    ],
+    tags: ["adverbs", "word form"]
+  },
+  {
+    id: "q190",
+    sentence: "The board of directors is dedicated to ______ a safe and inclusive workplace for everyone.",
+    options: ["maintain", "maintained", "maintaining", "maintenance"],
+    correctAnswer: 2,
+    translation: "Hội đồng quản trị luôn cống hiến hết mình trong việc duy trì một nơi làm việc an toàn và hòa nhập cho mọi người.",
+    explanation: {
+      correctAnswer: "maintaining",
+      grammarRule: "Prepositions followed by Gerunds",
+      sentenceStructure: "be dedicated to + V-ing",
+      whyCorrect: "In the phrase 'be dedicated to', 'to' is a preposition, not an infinitive marker. Therefore, it must be followed by a noun or gerund (V-ing).",
+      whyOthersWrong: [
+        "A. maintain: Base verb.",
+        "B. maintained: Past tense.",
+        "D. maintenance: Noun (Logically less direct than 'maintaining' followed by an object)."
+      ],
+      toeicTip: "Memorize phrases where 'to' is a preposition: look forward to, be dedicated to, be committed to, be used to + V-ing."
+    },
+    category: "Grammar",
+    subcategory: "Gerunds",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 700,
+    vocabulary: [
+      {
+        word: "inclusive",
+        ipa: "/ɪnˈkluːsɪv/",
+        pos: "adj",
+        meaning: "hòa nhập, bao gồm",
+        example: "We aim for an inclusive society."
+      }
+    ],
+    tags: ["gerunds", "prepositions"]
+  }
 ];
