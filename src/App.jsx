@@ -2,32 +2,25 @@ import React, { useState, useEffect, useReducer } from "react";
 import { Menu, Flame, Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { AppContext, initialState, appReducer } from "./context/AppContext";
+// Import thêm hàm init
+import {
+  AppContext,
+  initialState,
+  appReducer,
+  init,
+} from "./context/AppContext";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/toeicpartfive/Dashboard";
 import PracticeMode from "./pages/toeicpartfive/PracticeMode";
 import MistakesView from "./pages/toeicpartfive/MistakesView";
 import BookmarksView from "./pages/toeicpartfive/BookmarksView";
 import SettingsView from "./pages/toeicpartfive/SettingsView";
-
 export default function App() {
-  const [state, dispatch] = useReducer(appReducer, initialState);
+  // Truyền init làm tham số thứ 3 để state được tải ngay từ localStorage
+  const [state, dispatch] = useReducer(appReducer, initialState, init);
   const [isSidebarOpen, setSidebarOpen] = useState(true);
 
-  // Load from LocalStorage
-  useEffect(() => {
-    const saved = localStorage.getItem("toeicMasterState");
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        dispatch({ type: "LOAD_STATE", payload: parsed });
-      } catch (e) {
-        console.error("Failed to parse local storage", e);
-      }
-    }
-  }, []);
-
-  // Save to LocalStorage
+  // Lưu state vào LocalStorage mỗi khi có các thông tin quan trọng thay đổi
   useEffect(() => {
     localStorage.setItem(
       "toeicMasterState",
@@ -39,7 +32,7 @@ export default function App() {
       }),
     );
 
-    // Apply dark mode class to HTML body
+    // Cập nhật giao diện Dark mode ngay lập tức
     if (state.settings.darkMode) {
       document.documentElement.classList.add("dark");
     } else {

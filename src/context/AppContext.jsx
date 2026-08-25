@@ -22,6 +22,27 @@ export const initialState = {
   currentPracticeParams: null,
 };
 
+// Hàm này chạy MỘT LẦN duy nhất khi ứng dụng vừa bật lên
+export function init(initialState) {
+  try {
+    const saved = localStorage.getItem("toeicMasterState");
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      // Gộp state mặc định với dữ liệu đã lưu để không bị lỗi nếu thiếu field mới
+      return {
+        ...initialState,
+        stats: parsed.stats || initialState.stats,
+        bookmarks: parsed.bookmarks || initialState.bookmarks,
+        mistakes: parsed.mistakes || initialState.mistakes,
+        settings: parsed.settings || initialState.settings,
+      };
+    }
+  } catch (e) {
+    console.error("Lỗi khi tải dữ liệu từ localStorage:", e);
+  }
+  return initialState;
+}
+
 export function appReducer(state, action) {
   switch (action.type) {
     case "SET_VIEW":
@@ -90,8 +111,6 @@ export function appReducer(state, action) {
         mistakes: newMistakes,
       };
     }
-    case "LOAD_STATE":
-      return { ...state, ...action.payload };
     case "RESET_DATA":
       return { ...initialState, settings: state.settings };
     default:
