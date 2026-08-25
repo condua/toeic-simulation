@@ -33,7 +33,6 @@ export default function SettingsView() {
         <h3 className="font-bold text-lg text-gray-700 dark:text-gray-300 uppercase tracking-wider text-sm mb-4">
           Preferences
         </h3>
-
         <Toggle
           label="Dark Mode"
           desc="Easier on the eyes in low light"
@@ -42,7 +41,6 @@ export default function SettingsView() {
             dispatch({ type: "UPDATE_SETTINGS", payload: { darkMode: v } })
           }
         />
-
         <Toggle
           label="Auto-show Translation"
           desc="Show Vietnamese translation immediately when explanation appears"
@@ -54,7 +52,6 @@ export default function SettingsView() {
             })
           }
         />
-
         <Toggle
           label="Auto Pronunciation"
           desc="Automatically read the full sentence after answering correctly"
@@ -67,6 +64,14 @@ export default function SettingsView() {
           }
         />
 
+        <Toggle
+          label="Sound Effects (SFX)"
+          desc="Play sounds for clicks, correct, and incorrect answers"
+          checked={s.sfxEnabled}
+          onChange={(v) =>
+            dispatch({ type: "UPDATE_SETTINGS", payload: { sfxEnabled: v } })
+          }
+        />
         <div className="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
           <div className="mb-4">
             <h4 className="font-medium">Daily Goal</h4>

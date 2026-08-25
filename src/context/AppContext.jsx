@@ -18,6 +18,7 @@ export const initialState = {
     showTranslationDefault: false,
     autoPronunciation: false,
     dailyGoal: 20,
+    sfxEnabled: true, // <--- THÊM DÒNG NÀY (Bật hiệu ứng âm thanh mặc định)
   },
   currentPracticeParams: null,
 };

@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { AppContext } from "../../context/AppContext";
 import { QUESTION_BANK } from "../../data/questions";
-
+import { playSound } from "../../utils/sound";
 export default function PracticeMode() {
   const { state, dispatch } = useContext(AppContext);
   const [questions, setQuestions] = useState([]);
@@ -48,6 +48,7 @@ export default function PracticeMode() {
   };
 
   const handleNext = () => {
+    playSound("click", state.settings.sfxEnabled);
     if (currentIndex < questions.length - 1) {
       setCurrentIndex((prev) => prev + 1);
       resetQuestionState();
@@ -58,7 +59,7 @@ export default function PracticeMode() {
 
   const handleSelectAnswer = (index) => {
     if (selectedAnswer !== null) return;
-
+    playSound("click", state.settings.sfxEnabled);
     setSelectedAnswer(index);
     setShowExplanation(true);
 
@@ -72,7 +73,10 @@ export default function PracticeMode() {
       type: "ANSWER_QUESTION",
       payload: { question: currentQuestion, isCorrect },
     });
-
+    // Chạy âm thanh Đúng/Sai (delay 1 chút xíu để nghe tách biệt với tiếng click)
+    setTimeout(() => {
+      playSound(isCorrect ? "correct" : "incorrect", state.settings.sfxEnabled);
+    }, 100);
     if (state.settings.autoPronunciation) {
       speakText(
         currentQuestion.sentence.replace(
