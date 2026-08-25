@@ -19,8 +19,8 @@ import {
   ResponsiveContainer,
   Cell,
 } from "recharts";
-import { AppContext } from "../context/AppContext";
-import StatCard from "../components/StatCard";
+import { AppContext } from "../../context/AppContext";
+import StatCard from "../../components/StatCard";
 
 export default function Dashboard() {
   const { state, dispatch } = useContext(AppContext);

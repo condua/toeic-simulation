@@ -13,8 +13,8 @@ import {
   BookOpen,
   Star,
 } from "lucide-react";
-import { AppContext } from "../context/AppContext";
-import { QUESTION_BANK } from "../data/questions";
+import { AppContext } from "../../context/AppContext";
+import { QUESTION_BANK } from "../../data/questions";
 
 export default function PracticeMode() {
   const { state, dispatch } = useContext(AppContext);

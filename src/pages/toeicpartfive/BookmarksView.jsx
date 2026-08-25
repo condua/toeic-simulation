@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Bookmark } from "lucide-react";
-import { AppContext } from "../context/AppContext";
-import { QUESTION_BANK } from "../data/questions";
-import EmptyState from "../components/EmptyState";
+import { AppContext } from "../../context/AppContext";
+import { QUESTION_BANK } from "../../data/questions";
+import EmptyState from "../../components/EmptyState";
 
 export default function BookmarksView() {
   const { state } = useContext(AppContext);
