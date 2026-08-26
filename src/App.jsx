@@ -15,6 +15,7 @@ import PracticeMode from "./pages/toeicpartfive/PracticeMode";
 import MistakesView from "./pages/toeicpartfive/MistakesView";
 import BookmarksView from "./pages/toeicpartfive/BookmarksView";
 import SettingsView from "./pages/toeicpartfive/SettingsView";
+import LevelView from "./pages/toeicpartfive/LevelView";
 export default function App() {
   // Truyền init làm tham số thứ 3 để state được tải ngay từ localStorage
   const [state, dispatch] = useReducer(appReducer, initialState, init);
@@ -93,6 +94,7 @@ export default function App() {
                   className="max-w-6xl mx-auto h-full"
                 >
                   {state.view === "dashboard" && <Dashboard />}
+                  {state.view === "levels" && <LevelView />}
                   {state.view === "practice" && <PracticeMode />}
                   {state.view === "mistakes" && <MistakesView />}
                   {state.view === "bookmarks" && <BookmarksView />}

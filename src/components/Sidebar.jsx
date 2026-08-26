@@ -6,6 +6,7 @@ import {
   Bookmark,
   Settings,
   Target,
+  TrendingUp,
 } from "lucide-react";
 import { AppContext } from "../context/AppContext";
 
@@ -15,6 +16,7 @@ export default function Sidebar({ isOpen, setOpen, currentView }) {
 
   const navItems = [
     { id: "dashboard", label: "Dashboard", icon: Home },
+    { id: "levels", label: "By Level", icon: TrendingUp }, // <--- THÊM DÒNG NÀY VÀO VỊ TRÍ THỨ 2
     { id: "practice", label: "Practice", icon: BookOpen },
     { id: "mistakes", label: "My Mistakes", icon: XCircle },
     { id: "bookmarks", label: "Bookmarks", icon: Bookmark },

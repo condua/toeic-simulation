@@ -27,18 +27,6 @@ export default function PracticeMode() {
   );
   const [sessionStats, setSessionStats] = useState({ correct: 0, total: 0 });
 
-  useEffect(() => {
-    let pool = [...QUESTION_BANK];
-    if (state.currentPracticeParams?.mode === "mistakes") {
-      const mistakeIds = Object.keys(state.mistakes);
-      pool = pool.filter((q) => mistakeIds.includes(q.id));
-    }
-    pool.sort(() => Math.random() - 0.5);
-    setQuestions(pool);
-    setCurrentIndex(0);
-    resetQuestionState();
-  }, [state.currentPracticeParams]);
-
   const currentQuestion = questions[currentIndex];
 
   const resetQuestionState = () => {
@@ -46,6 +34,30 @@ export default function PracticeMode() {
     setShowExplanation(false);
     setShowTranslation(state.settings.showTranslationDefault);
   };
+
+  useEffect(() => {
+    let pool = [...QUESTION_BANK];
+
+    if (state.currentPracticeParams?.mode === "mistakes") {
+      const mistakeIds = Object.keys(state.mistakes);
+      pool = pool.filter((q) => mistakeIds.includes(q.id));
+    }
+    // THÊM ĐOẠN NÀY ĐỂ LỌC THEO LEVEL
+    else if (state.currentPracticeParams?.mode === "level") {
+      const { min, max } = state.currentPracticeParams;
+      pool = pool.filter((q) => q.toeicLevel >= min && q.toeicLevel <= max);
+    }
+
+    // Shuffle
+    pool.sort(() => Math.random() - 0.5);
+
+    // Cắt lấy số lượng câu theo Daily Goal (tuỳ chọn, hoặc giữ nguyên cả pool)
+    // pool = pool.slice(0, state.settings.dailyGoal);
+
+    setQuestions(pool);
+    setCurrentIndex(0);
+    resetQuestionState();
+  }, [state.currentPracticeParams]);
 
   const handleNext = () => {
     playSound("click", state.settings.sfxEnabled);
