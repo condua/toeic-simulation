@@ -9,6 +9,7 @@ import {
   Trophy,
   BarChart3,
 } from "lucide-react";
+
 import {
   BarChart,
   Bar,
@@ -19,12 +20,17 @@ import {
   ResponsiveContainer,
   Cell,
 } from "recharts";
+
 import { AppContext } from "../../context/AppContext";
 import StatCard from "../../components/StatCard";
 
 export default function Dashboard() {
   const { state, dispatch } = useContext(AppContext);
+
   const stats = state.stats;
+  const isDark = state.settings.darkMode;
+
+  const mistakesCount = Object.keys(state.mistakes).length;
 
   const accuracy =
     stats.totalAnswered === 0
@@ -40,142 +46,446 @@ export default function Dashboard() {
       ),
       total: stats.categoryStats[cat].total,
     }))
-    .filter((d) => d.total > 0);
+    .filter((item) => item.total > 0);
+
+  /* =========================================================
+     DESIGN SYSTEM
+  ========================================================= */
+
+  const cardClass = `
+    rounded-2xl
+    border
+    transition-all duration-200
+    ${
+      isDark
+        ? "bg-slate-900/70 border-slate-700/70 hover:border-slate-600"
+        : "bg-white border-slate-200 hover:border-slate-300"
+    }
+  `;
+
+  const headingClass = `
+    text-lg font-bold
+    ${isDark ? "text-slate-100" : "text-slate-800"}
+  `;
+
+  const secondaryTextClass = `
+    ${isDark ? "text-slate-400" : "text-slate-500"}
+  `;
+
+  /* =========================================================
+     ACTIONS
+  ========================================================= */
+
+  const startPractice = (mode) => {
+    dispatch({
+      type: "START_PRACTICE",
+      payload: { mode },
+    });
+  };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-7 pb-10">
+      {/* =====================================================
+          HEADER
+      ====================================================== */}
       <div>
-        <h2 className="text-2xl font-bold mb-1">Welcome back! 👋</h2>
-        <p className="text-gray-500 dark:text-gray-400">
+        <h2
+          className={`
+            text-2xl font-bold tracking-tight
+            ${isDark ? "text-white" : "text-slate-900"}
+          `}
+        >
+          Welcome back! 👋
+        </h2>
+
+        <p className={`mt-1 text-sm ${secondaryTextClass}`}>
           Ready to master TOEIC Part 5?
         </p>
       </div>
 
+      {/* =====================================================
+          STAT CARDS
+      ====================================================== */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
           title="Questions Answered"
           value={stats.totalAnswered.toString()}
           icon={<BookOpen className="text-blue-500" />}
-          color="bg-blue-50 dark:bg-blue-900/20"
+          color={isDark ? "bg-blue-500/10" : "bg-blue-50"}
         />
+
         <StatCard
           title="Average Accuracy"
           value={`${accuracy}%`}
-          icon={<Target className="text-green-500" />}
-          color="bg-green-50 dark:bg-green-900/20"
+          icon={<Target className="text-emerald-500" />}
+          color={isDark ? "bg-emerald-500/10" : "bg-emerald-50"}
         />
+
         <StatCard
           title="Current Streak"
           value={`${stats.currentStreak} Days`}
           icon={<Flame className="text-orange-500" />}
-          color="bg-orange-50 dark:bg-orange-900/20"
+          color={isDark ? "bg-orange-500/10" : "bg-orange-50"}
         />
+
         <StatCard
           title="Mistakes to Review"
-          value={Object.keys(state.mistakes).length.toString()}
+          value={mistakesCount.toString()}
           icon={<AlertCircle className="text-red-500" />}
-          color="bg-red-50 dark:bg-red-900/20"
+          color={isDark ? "bg-red-500/10" : "bg-red-50"}
         />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
+      {/* =====================================================
+          MAIN CONTENT
+      ====================================================== */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* ===================================================
+            LEFT COLUMN
+        ==================================================== */}
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
-            <h3 className="text-lg font-bold mb-4">Smart Practice</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <button
-                onClick={() =>
-                  dispatch({
-                    type: "START_PRACTICE",
-                    payload: { mode: "random" },
-                  })
-                }
-                className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 p-6 text-left hover:shadow-lg transition-all"
-              >
-                <Brain className="text-white/80 w-8 h-8 mb-4 group-hover:scale-110 transition-transform" />
-                <h4 className="text-white font-bold text-lg">Quick Practice</h4>
-                <p className="text-blue-100 text-sm mt-1">
-                  Mixed TOEIC Part 5 questions
+          {/* =================================================
+              SMART PRACTICE
+          ================================================== */}
+          <section className={`${cardClass} p-6`}>
+            <div className="flex items-center justify-between mb-5">
+              <div>
+                <h3 className={headingClass}>Smart Practice</h3>
+
+                <p
+                  className={`
+                    text-xs mt-1
+                    ${secondaryTextClass}
+                  `}
+                >
+                  Choose how you want to practice today.
                 </p>
-                <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Quick Practice */}
+              <button
+                type="button"
+                onClick={() => startPractice("random")}
+                className="
+                  group relative
+                  overflow-hidden
+                  rounded-2xl
+                  bg-gradient-to-br
+                  from-blue-500
+                  via-blue-600
+                  to-indigo-700
+                  p-6
+                  text-left
+                  transition-all duration-300
+                  hover:-translate-y-0.5
+                  hover:shadow-xl
+                  hover:shadow-blue-500/20
+                  focus:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-blue-500
+                "
+              >
+                {/* Glow */}
+                <div
+                  className="
+                    absolute
+                    -right-10
+                    -bottom-10
+                    w-32 h-32
+                    rounded-full
+                    bg-white/10
+                    blur-3xl
+                    transition-transform duration-500
+                    group-hover:scale-125
+                  "
+                />
+
+                {/* Icon */}
+                <div
+                  className="
+                    relative
+                    flex items-center justify-center
+                    w-11 h-11
+                    rounded-xl
+                    bg-white/10
+                    backdrop-blur-sm
+                    mb-5
+                  "
+                >
+                  <Brain
+                    className="
+                      text-white
+                      w-6 h-6
+                      transition-transform duration-300
+                      group-hover:scale-110
+                    "
+                  />
+                </div>
+
+                <div className="relative">
+                  <h4 className="text-white font-bold text-lg">
+                    Quick Practice
+                  </h4>
+
+                  <p className="text-blue-100 text-sm mt-1">
+                    Mixed TOEIC Part 5 questions
+                  </p>
+                </div>
+
+                <div
+                  className="
+                    absolute
+                    bottom-5
+                    right-5
+                    text-white/50
+                    text-xl
+                    transition-transform duration-300
+                    group-hover:translate-x-1
+                  "
+                >
+                  →
+                </div>
               </button>
 
+              {/* Review Mistakes */}
               <button
-                onClick={() =>
-                  dispatch({
-                    type: "START_PRACTICE",
-                    payload: { mode: "mistakes" },
-                  })
-                }
-                disabled={Object.keys(state.mistakes).length === 0}
-                className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-red-500 to-pink-600 p-6 text-left hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                type="button"
+                onClick={() => startPractice("mistakes")}
+                disabled={mistakesCount === 0}
+                className={`
+                  group relative
+                  overflow-hidden
+                  rounded-2xl
+                  p-6
+                  text-left
+                  transition-all duration-300
+
+                  ${
+                    mistakesCount === 0
+                      ? isDark
+                        ? "bg-slate-800/50 opacity-50 cursor-not-allowed"
+                        : "bg-slate-100 opacity-60 cursor-not-allowed"
+                      : `
+                        bg-gradient-to-br
+                        from-rose-500
+                        via-red-500
+                        to-pink-600
+                        hover:-translate-y-0.5
+                        hover:shadow-xl
+                        hover:shadow-red-500/20
+                      `
+                  }
+
+                  focus:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-red-500
+                `}
               >
-                <RotateCcw className="text-white/80 w-8 h-8 mb-4 group-hover:-rotate-90 transition-transform" />
-                <h4 className="text-white font-bold text-lg">
-                  Review Mistakes
-                </h4>
-                <p className="text-red-100 text-sm mt-1">
-                  {Object.keys(state.mistakes).length === 0
-                    ? "No mistakes yet!"
-                    : `Practice ${Object.keys(state.mistakes).length} difficult questions`}
-                </p>
+                {mistakesCount > 0 && (
+                  <div
+                    className="
+                      absolute
+                      -right-10
+                      -bottom-10
+                      w-32 h-32
+                      rounded-full
+                      bg-white/10
+                      blur-3xl
+                      transition-transform duration-500
+                      group-hover:scale-125
+                    "
+                  />
+                )}
+
+                <div
+                  className={`
+                    relative
+                    flex items-center justify-center
+                    w-11 h-11
+                    rounded-xl
+                    mb-5
+
+                    ${
+                      mistakesCount === 0
+                        ? isDark
+                          ? "bg-slate-700 text-slate-500"
+                          : "bg-slate-200 text-slate-400"
+                        : "bg-white/10 text-white"
+                    }
+                  `}
+                >
+                  <RotateCcw
+                    className={`
+                      w-6 h-6
+                      transition-transform duration-500
+                      ${mistakesCount > 0 ? "group-hover:-rotate-90" : ""}
+                    `}
+                  />
+                </div>
+
+                <div className="relative">
+                  <h4
+                    className={`
+                      font-bold text-lg
+                      ${
+                        mistakesCount === 0
+                          ? isDark
+                            ? "text-slate-400"
+                            : "text-slate-500"
+                          : "text-white"
+                      }
+                    `}
+                  >
+                    Review Mistakes
+                  </h4>
+
+                  <p
+                    className={`
+                      text-sm mt-1
+                      ${
+                        mistakesCount === 0
+                          ? isDark
+                            ? "text-slate-500"
+                            : "text-slate-400"
+                          : "text-red-100"
+                      }
+                    `}
+                  >
+                    {mistakesCount === 0
+                      ? "No mistakes yet!"
+                      : `Practice ${mistakesCount} difficult questions`}
+                  </p>
+                </div>
+
+                {mistakesCount > 0 && (
+                  <div
+                    className="
+                      absolute
+                      bottom-5
+                      right-5
+                      text-white/50
+                      text-xl
+                      transition-transform duration-300
+                      group-hover:translate-x-1
+                    "
+                  >
+                    →
+                  </div>
+                )}
               </button>
             </div>
-          </div>
+          </section>
 
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
-            <h3 className="text-lg font-bold mb-6">Performance by Category</h3>
+          {/* =================================================
+              PERFORMANCE CHART
+          ================================================== */}
+          <section className={`${cardClass} p-6`}>
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h3 className={headingClass}>Performance by Category</h3>
+
+                <p
+                  className={`
+                    text-xs mt-1
+                    ${secondaryTextClass}
+                  `}
+                >
+                  Track your accuracy across different topics.
+                </p>
+              </div>
+
+              <div
+                className={`
+                  flex items-center justify-center
+                  w-9 h-9 rounded-xl
+                  ${
+                    isDark
+                      ? "bg-blue-500/10 text-blue-400"
+                      : "bg-blue-50 text-blue-600"
+                  }
+                `}
+              >
+                <BarChart3 size={18} />
+              </div>
+            </div>
+
             {chartData.length > 0 ? (
               <div className="h-64 w-full">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart
                     data={chartData}
-                    margin={{ top: 10, right: 10, left: -20, bottom: 0 }}
+                    margin={{
+                      top: 10,
+                      right: 10,
+                      left: -20,
+                      bottom: 0,
+                    }}
                   >
                     <CartesianGrid
                       strokeDasharray="3 3"
                       vertical={false}
-                      stroke={state.settings.darkMode ? "#374151" : "#e5e7eb"}
+                      stroke={isDark ? "#334155" : "#e2e8f0"}
                     />
+
                     <XAxis
                       dataKey="name"
                       axisLine={false}
                       tickLine={false}
                       tick={{
-                        fill: state.settings.darkMode ? "#9ca3af" : "#6b7280",
+                        fill: isDark ? "#cbd5e1" : "#64748b",
                         fontSize: 12,
                       }}
                     />
+
                     <YAxis
                       axisLine={false}
                       tickLine={false}
                       tick={{
-                        fill: state.settings.darkMode ? "#9ca3af" : "#6b7280",
+                        fill: isDark ? "#cbd5e1" : "#64748b",
                         fontSize: 12,
                       }}
                       domain={[0, 100]}
                     />
+
                     <RechartsTooltip
                       cursor={{
-                        fill: state.settings.darkMode ? "#374151" : "#f3f4f6",
+                        fill: isDark ? "rgba(59,130,246,0.08)" : "#f8fafc",
                       }}
                       contentStyle={{
-                        backgroundColor: state.settings.darkMode
-                          ? "#1f2937"
-                          : "#fff",
-                        borderRadius: "8px",
-                        border: "none",
-                        boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+                        backgroundColor: isDark ? "#0f172a" : "#ffffff",
+                        border: isDark
+                          ? "1px solid #334155"
+                          : "1px solid #e2e8f0",
+                        borderRadius: "12px",
+                        color: isDark ? "#f1f5f9" : "#0f172a",
+                        boxShadow: isDark
+                          ? "0 10px 30px rgba(0,0,0,0.35)"
+                          : "0 10px 30px rgba(15,23,42,0.08)",
+                      }}
+                      labelStyle={{
+                        color: isDark ? "#f1f5f9" : "#0f172a",
+                        fontWeight: 600,
+                        marginBottom: 4,
+                      }}
+                      itemStyle={{
+                        color: isDark ? "#60a5fa" : "#2563eb",
                       }}
                     />
-                    <Bar dataKey="accuracy" radius={[4, 4, 0, 0]}>
+
+                    <Bar
+                      dataKey="accuracy"
+                      radius={[6, 6, 0, 0]}
+                      maxBarSize={42}
+                    >
                       {chartData.map((entry, index) => (
                         <Cell
                           key={`cell-${index}`}
                           fill={
-                            entry.accuracy > 70
+                            entry.accuracy >= 80
                               ? "#10b981"
-                              : entry.accuracy > 40
+                              : entry.accuracy >= 50
                                 ? "#f59e0b"
                                 : "#ef4444"
                           }
@@ -186,52 +496,188 @@ export default function Dashboard() {
                 </ResponsiveContainer>
               </div>
             ) : (
-              <div className="h-64 flex flex-col items-center justify-center text-gray-400">
-                <BarChart3 size={48} className="mb-4 opacity-50" />
-                <p>Answer more questions to see your statistics.</p>
+              <div
+                className={`
+                  h-64
+                  flex flex-col
+                  items-center justify-center
+                  text-center
+                  ${isDark ? "text-slate-500" : "text-slate-400"}
+                `}
+              >
+                <div
+                  className={`
+                    flex items-center justify-center
+                    w-16 h-16
+                    rounded-2xl
+                    mb-4
+                    ${
+                      isDark
+                        ? "bg-slate-800 text-slate-600"
+                        : "bg-slate-100 text-slate-400"
+                    }
+                  `}
+                >
+                  <BarChart3 size={30} />
+                </div>
+
+                <p className="text-sm">
+                  Answer more questions to see your statistics.
+                </p>
               </div>
             )}
-          </div>
+          </section>
         </div>
 
+        {/* ===================================================
+            RIGHT COLUMN
+        ==================================================== */}
         <div className="space-y-6">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
-            <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-              <Trophy className="text-yellow-500" /> Recent Badges
-            </h3>
-            <div className="space-y-4">
+          {/* =================================================
+              BADGES
+          ================================================== */}
+          <section className={`${cardClass} p-6`}>
+            <div className="flex items-center gap-3 mb-5">
+              <div
+                className="
+                  flex items-center justify-center
+                  w-9 h-9
+                  rounded-xl
+                  bg-yellow-500/10
+                  text-yellow-500
+                "
+              >
+                <Trophy size={18} />
+              </div>
+
+              <div>
+                <h3 className={headingClass}>Recent Badges</h3>
+
+                <p
+                  className={`
+                    text-xs mt-0.5
+                    ${secondaryTextClass}
+                  `}
+                >
+                  Your latest achievements
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              {/* Getting Started */}
               {stats.totalAnswered >= 10 ? (
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-100 dark:border-yellow-900/30">
-                  <div className="w-10 h-10 rounded-full bg-yellow-100 dark:bg-yellow-800 flex items-center justify-center text-xl">
+                <div
+                  className={`
+                    flex items-center gap-3
+                    p-3.5
+                    rounded-xl
+                    border
+
+                    ${
+                      isDark
+                        ? "bg-yellow-500/[0.06] border-yellow-500/15"
+                        : "bg-yellow-50 border-yellow-100"
+                    }
+                  `}
+                >
+                  <div
+                    className={`
+                      flex items-center justify-center
+                      w-10 h-10
+                      rounded-xl
+                      text-lg
+                      ${isDark ? "bg-yellow-500/10" : "bg-yellow-100"}
+                    `}
+                  >
                     🚀
                   </div>
+
                   <div>
-                    <h4 className="font-semibold text-sm">Getting Started</h4>
-                    <p className="text-xs text-gray-500">
+                    <h4
+                      className={`
+                        font-semibold text-sm
+                        ${isDark ? "text-slate-100" : "text-slate-800"}
+                      `}
+                    >
+                      Getting Started
+                    </h4>
+
+                    <p
+                      className={`
+                        text-xs mt-0.5
+                        ${secondaryTextClass}
+                      `}
+                    >
                       Answered 10 questions
                     </p>
                   </div>
                 </div>
               ) : (
-                <p className="text-sm text-gray-500 text-center py-4">
-                  Keep practicing to earn badges!
-                </p>
+                <div
+                  className={`
+                    py-8
+                    text-center
+                    ${isDark ? "text-slate-500" : "text-slate-400"}
+                  `}
+                >
+                  <Trophy size={30} className="mx-auto mb-3 opacity-40" />
+
+                  <p className="text-sm">Keep practicing to earn badges!</p>
+                </div>
               )}
+
+              {/* Sharp Shooter */}
               {accuracy >= 80 && stats.totalAnswered >= 20 && (
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-green-50 dark:bg-green-900/20 border border-green-100 dark:border-green-900/30">
-                  <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-800 flex items-center justify-center text-xl">
+                <div
+                  className={`
+                      flex items-center gap-3
+                      p-3.5
+                      rounded-xl
+                      border
+
+                      ${
+                        isDark
+                          ? "bg-emerald-500/[0.06] border-emerald-500/15"
+                          : "bg-emerald-50 border-emerald-100"
+                      }
+                    `}
+                >
+                  <div
+                    className={`
+                        flex items-center justify-center
+                        w-10 h-10
+                        rounded-xl
+                        text-lg
+                        ${isDark ? "bg-emerald-500/10" : "bg-emerald-100"}
+                      `}
+                  >
                     🎯
                   </div>
+
                   <div>
-                    <h4 className="font-semibold text-sm">Sharp Shooter</h4>
-                    <p className="text-xs text-gray-500">
+                    <h4
+                      className={`
+                          font-semibold text-sm
+                          ${isDark ? "text-slate-100" : "text-slate-800"}
+                        `}
+                    >
+                      Sharp Shooter
+                    </h4>
+
+                    <p
+                      className={`
+                          text-xs mt-0.5
+                          ${secondaryTextClass}
+                        `}
+                    >
                       Maintain 80%+ accuracy
                     </p>
                   </div>
                 </div>
               )}
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </div>
