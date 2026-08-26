@@ -16,8 +16,10 @@ import {
 import { AppContext } from "../../context/AppContext";
 import { QUESTION_BANK } from "../../data/questions";
 import { playSound } from "../../utils/sound";
+
 export default function PracticeMode() {
   const { state, dispatch } = useContext(AppContext);
+
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -25,9 +27,15 @@ export default function PracticeMode() {
   const [showTranslation, setShowTranslation] = useState(
     state.settings.showTranslationDefault,
   );
-  const [sessionStats, setSessionStats] = useState({ correct: 0, total: 0 });
+
+  const [sessionStats, setSessionStats] = useState({
+    correct: 0,
+    total: 0,
+  });
 
   const currentQuestion = questions[currentIndex];
+
+  const isDark = state.settings.darkMode;
 
   const resetQuestionState = () => {
     setSelectedAnswer(null);
@@ -40,19 +48,15 @@ export default function PracticeMode() {
 
     if (state.currentPracticeParams?.mode === "mistakes") {
       const mistakeIds = Object.keys(state.mistakes);
+
       pool = pool.filter((q) => mistakeIds.includes(q.id));
-    }
-    // THÊM ĐOẠN NÀY ĐỂ LỌC THEO LEVEL
-    else if (state.currentPracticeParams?.mode === "level") {
+    } else if (state.currentPracticeParams?.mode === "level") {
       const { min, max } = state.currentPracticeParams;
+
       pool = pool.filter((q) => q.toeicLevel >= min && q.toeicLevel <= max);
     }
 
-    // Shuffle
     pool.sort(() => Math.random() - 0.5);
-
-    // Cắt lấy số lượng câu theo Daily Goal (tuỳ chọn, hoặc giữ nguyên cả pool)
-    // pool = pool.slice(0, state.settings.dailyGoal);
 
     setQuestions(pool);
     setCurrentIndex(0);
@@ -61,41 +65,15 @@ export default function PracticeMode() {
 
   const handleNext = () => {
     playSound("click", state.settings.sfxEnabled);
+
     if (currentIndex < questions.length - 1) {
       setCurrentIndex((prev) => prev + 1);
       resetQuestionState();
     } else {
-      dispatch({ type: "SET_VIEW", payload: "dashboard" });
-    }
-  };
-
-  const handleSelectAnswer = (index) => {
-    if (selectedAnswer !== null) return;
-    playSound("click", state.settings.sfxEnabled);
-    setSelectedAnswer(index);
-    setShowExplanation(true);
-
-    const isCorrect = index === currentQuestion.correctAnswer;
-    setSessionStats((prev) => ({
-      correct: prev.correct + (isCorrect ? 1 : 0),
-      total: prev.total + 1,
-    }));
-
-    dispatch({
-      type: "ANSWER_QUESTION",
-      payload: { question: currentQuestion, isCorrect },
-    });
-    // Chạy âm thanh Đúng/Sai (delay 1 chút xíu để nghe tách biệt với tiếng click)
-    setTimeout(() => {
-      playSound(isCorrect ? "correct" : "incorrect", state.settings.sfxEnabled);
-    }, 100);
-    if (state.settings.autoPronunciation) {
-      speakText(
-        currentQuestion.sentence.replace(
-          "______",
-          currentQuestion.correctAnswer.toString(),
-        ),
-      );
+      dispatch({
+        type: "SET_VIEW",
+        payload: "dashboard",
+      });
     }
   };
 
@@ -107,19 +85,80 @@ export default function PracticeMode() {
     }
   };
 
+  const handleSelectAnswer = (index) => {
+    if (selectedAnswer !== null) return;
+
+    playSound("click", state.settings.sfxEnabled);
+
+    setSelectedAnswer(index);
+    setShowExplanation(true);
+
+    const isCorrect = index === currentQuestion.correctAnswer;
+
+    setSessionStats((prev) => ({
+      correct: prev.correct + (isCorrect ? 1 : 0),
+      total: prev.total + 1,
+    }));
+
+    dispatch({
+      type: "ANSWER_QUESTION",
+      payload: {
+        question: currentQuestion,
+        isCorrect,
+      },
+    });
+
+    setTimeout(() => {
+      playSound(isCorrect ? "correct" : "incorrect", state.settings.sfxEnabled);
+    }, 100);
+
+    if (state.settings.autoPronunciation) {
+      speakText(
+        currentQuestion.sentence.replace(
+          "______",
+          currentQuestion.correctAnswer.toString(),
+        ),
+      );
+    }
+  };
+
   if (questions.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center h-full text-center">
-        <div className="w-24 h-24 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-6">
-          <BookOpen className="text-gray-400 w-12 h-12" />
+      <div className="flex h-full flex-col items-center justify-center text-center">
+        <div
+          className="
+            mb-6 flex h-24 w-24 items-center justify-center rounded-3xl
+            bg-gray-100 text-gray-400
+            dark:bg-white/[0.06] dark:text-zinc-500
+            ring-1 ring-gray-200 dark:ring-white/[0.08]
+          "
+        >
+          <BookOpen className="h-12 w-12" />
         </div>
-        <h2 className="text-2xl font-bold mb-2">No questions found</h2>
-        <p className="text-gray-500 mb-6">
+
+        <h2 className="mb-2 text-2xl font-bold text-gray-900 dark:text-zinc-100">
+          No questions found
+        </h2>
+
+        <p className="mb-6 text-gray-500 dark:text-zinc-400">
           Try changing your practice mode or reviewing later.
         </p>
+
         <button
-          onClick={() => dispatch({ type: "SET_VIEW", payload: "dashboard" })}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+          onClick={() =>
+            dispatch({
+              type: "SET_VIEW",
+              payload: "dashboard",
+            })
+          }
+          className="
+            rounded-xl bg-blue-600 px-6 py-2.5
+            font-semibold text-white
+            shadow-lg shadow-blue-600/20
+            transition-all
+            hover:bg-blue-500
+            hover:shadow-blue-500/30
+          "
         >
           Back to Dashboard
         </button>
@@ -130,67 +169,201 @@ export default function PracticeMode() {
   const isBookmarked = state.bookmarks.includes(currentQuestion?.id);
 
   return (
-    <div className="max-w-3xl mx-auto pb-20">
-      <div className="flex items-center justify-between mb-6">
+    <div className="mx-auto max-w-3xl pb-20">
+      {/* =====================================================
+          TOP BAR
+      ====================================================== */}
+
+      <div className="mb-6 flex items-center justify-between">
         <button
-          onClick={() => dispatch({ type: "SET_VIEW", payload: "dashboard" })}
-          className="flex items-center text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
+          onClick={() =>
+            dispatch({
+              type: "SET_VIEW",
+              payload: "dashboard",
+            })
+          }
+          className="
+            group flex items-center gap-1.5
+            text-sm font-medium
+            text-gray-500
+            transition-colors
+            hover:text-gray-900
+            dark:text-zinc-400
+            dark:hover:text-white
+          "
         >
-          <ChevronLeft size={20} /> Back
+          <ChevronLeft
+            size={19}
+            className="transition-transform group-hover:-translate-x-0.5"
+          />
+          Back
         </button>
-        <div className="text-sm font-medium text-gray-500">
-          Question {currentIndex + 1} of {questions.length}
+
+        <div className="text-sm font-medium text-gray-500 dark:text-zinc-400">
+          Question{" "}
+          <span className="font-semibold text-gray-800 dark:text-zinc-200">
+            {currentIndex + 1}
+          </span>{" "}
+          of {questions.length}
         </div>
-        <div className="text-sm font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full">
-          Session Score: {sessionStats.correct}/{sessionStats.total}
+
+        <div
+          className="
+            rounded-full px-3.5 py-1.5
+            text-xs font-bold
+            bg-blue-50 text-blue-600
+            ring-1 ring-blue-200
+            dark:bg-blue-500/[0.12]
+            dark:text-blue-300
+            dark:ring-blue-400/20
+          "
+        >
+          Score {sessionStats.correct}/{sessionStats.total}
         </div>
       </div>
 
-      <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mb-8 overflow-hidden">
+      {/* =====================================================
+          PROGRESS
+      ====================================================== */}
+
+      <div
+        className="
+          mb-8 h-1.5 w-full overflow-hidden rounded-full
+          bg-gray-200
+          dark:bg-white/[0.08]
+        "
+      >
         <motion.div
-          className="bg-blue-600 h-full"
+          className="
+            h-full rounded-full
+            bg-gradient-to-r from-blue-500 to-indigo-500
+            shadow-[0_0_12px_rgba(59,130,246,0.45)]
+          "
           initial={{ width: 0 }}
-          animate={{ width: `${(currentIndex / questions.length) * 100}%` }}
+          animate={{
+            width: `${((currentIndex + 1) / questions.length) * 100}%`,
+          }}
+          transition={{ duration: 0.4 }}
         />
       </div>
+
+      {/* =====================================================
+          QUESTION CARD
+      ====================================================== */}
 
       {currentQuestion && (
         <motion.div
           key={currentQuestion.id}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -20 }}
-          className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -15 }}
+          transition={{ duration: 0.25 }}
+          className="
+            overflow-hidden rounded-3xl
+
+            bg-white
+            border border-gray-200
+            shadow-sm
+
+            dark:bg-[#15171c]
+            dark:border-white/[0.08]
+            dark:shadow-2xl
+            dark:shadow-black/20
+          "
         >
-          {/* Header */}
-          <div className="p-6 border-b border-gray-100 dark:border-gray-700 flex justify-between items-start">
-            <div className="flex gap-2 flex-wrap">
-              <span className="px-3 py-1 text-xs font-semibold rounded-full bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400">
+          {/* =================================================
+              HEADER
+          ================================================== */}
+
+          <div
+            className="
+              flex items-start justify-between
+              border-b border-gray-100
+              p-6
+
+              dark:border-white/[0.07]
+            "
+          >
+            <div className="flex flex-wrap gap-2">
+              {/* Category */}
+
+              <span
+                className="
+                  rounded-full px-3 py-1
+                  text-xs font-bold
+
+                  bg-indigo-50
+                  text-indigo-600
+                  ring-1 ring-indigo-200
+
+                  dark:bg-indigo-500/[0.12]
+                  dark:text-indigo-300
+                  dark:ring-indigo-400/20
+                "
+              >
                 {currentQuestion.category} • {currentQuestion.subcategory}
               </span>
+
+              {/* Difficulty */}
+
               <span
-                className={`px-3 py-1 text-xs font-semibold rounded-full 
-                ${
-                  currentQuestion.difficulty === "beginner" ||
-                  currentQuestion.difficulty === "elementary"
-                    ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
-                    : currentQuestion.difficulty === "intermediate"
-                      ? "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400"
-                      : "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400"
-                }`}
+                className={`
+                  rounded-full px-3 py-1
+                  text-xs font-bold
+                  ring-1
+
+                  ${
+                    currentQuestion.difficulty === "beginner" ||
+                    currentQuestion.difficulty === "elementary"
+                      ? `
+                        bg-green-50 text-green-600 ring-green-200
+                        dark:bg-emerald-500/[0.10]
+                        dark:text-emerald-300
+                        dark:ring-emerald-400/20
+                      `
+                      : currentQuestion.difficulty === "intermediate"
+                        ? `
+                          bg-yellow-50 text-yellow-600 ring-yellow-200
+                          dark:bg-amber-500/[0.10]
+                          dark:text-amber-300
+                          dark:ring-amber-400/20
+                        `
+                        : `
+                          bg-red-50 text-red-600 ring-red-200
+                          dark:bg-red-500/[0.10]
+                          dark:text-red-300
+                          dark:ring-red-400/20
+                        `
+                  }
+                `}
               >
                 {currentQuestion.difficulty.charAt(0).toUpperCase() +
                   currentQuestion.difficulty.slice(1)}
               </span>
             </div>
-            <div className="flex gap-2">
+
+            {/* Actions */}
+
+            <div className="flex gap-1">
               <button
                 onClick={() => speakText(currentQuestion.sentence)}
-                className="p-2 text-gray-400 hover:text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-full transition-colors"
+                className="
+                  rounded-xl p-2.5
+                  text-gray-400
+                  transition-all
+
+                  hover:bg-blue-50
+                  hover:text-blue-600
+
+                  dark:text-zinc-500
+                  dark:hover:bg-white/[0.06]
+                  dark:hover:text-blue-400
+                "
                 title="Listen"
               >
                 <Volume2 size={20} />
               </button>
+
               <button
                 onClick={() =>
                   dispatch({
@@ -198,7 +371,30 @@ export default function PracticeMode() {
                     payload: currentQuestion.id,
                   })
                 }
-                className={`p-2 rounded-full transition-colors ${isBookmarked ? "text-yellow-500 bg-yellow-50 dark:bg-yellow-900/20" : "text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700"}`}
+                className={`
+                  rounded-xl p-2.5
+                  transition-all
+
+                  ${
+                    isBookmarked
+                      ? `
+                        bg-yellow-50
+                        text-yellow-500
+
+                        dark:bg-yellow-500/[0.12]
+                        dark:text-yellow-400
+                      `
+                      : `
+                        text-gray-400
+                        hover:bg-gray-100
+                        hover:text-gray-700
+
+                        dark:text-zinc-500
+                        dark:hover:bg-white/[0.06]
+                        dark:hover:text-zinc-200
+                      `
+                  }
+                `}
                 title="Bookmark"
               >
                 <Bookmark
@@ -209,54 +405,137 @@ export default function PracticeMode() {
             </div>
           </div>
 
-          {/* Question Body */}
+          {/* =================================================
+              QUESTION BODY
+          ================================================== */}
+
           <div className="p-6 lg:p-8">
-            <h3 className="text-2xl font-medium leading-relaxed mb-8">
+            <h3
+              className="
+                mb-8
+                text-2xl
+                font-semibold
+                leading-[1.8]
+
+                text-gray-900
+                dark:text-zinc-100
+              "
+            >
               {currentQuestion.sentence.split("______").map((part, i, arr) => (
                 <React.Fragment key={i}>
                   {part}
+
                   {i < arr.length - 1 && (
                     <span
-                      className={`inline-block border-b-2 font-bold px-4 mx-1 transition-all
-                      ${
-                        selectedAnswer === null
-                          ? "border-gray-400 min-w-[100px]"
-                          : selectedAnswer === currentQuestion.correctAnswer
-                            ? "border-green-500 text-green-600 dark:text-green-400"
-                            : "border-red-500 text-red-600 dark:text-red-400"
-                      }`}
+                      className={`
+                          mx-1 inline-block
+                          min-w-[100px]
+                          border-b-2
+                          px-4
+                          font-bold
+                          transition-all
+
+                          ${
+                            selectedAnswer === null
+                              ? `
+                                border-gray-300
+                                dark:border-zinc-600
+                              `
+                              : selectedAnswer === currentQuestion.correctAnswer
+                                ? `
+                                  border-emerald-500
+                                  text-emerald-600
+                                  dark:text-emerald-400
+                                `
+                                : `
+                                  border-red-500
+                                  text-red-600
+                                  dark:text-red-400
+                                `
+                          }
+                        `}
                     >
                       {selectedAnswer !== null
                         ? currentQuestion.options[selectedAnswer]
-                        : "        "}
+                        : "\u00A0\u00A0\u00A0\u00A0"}
                     </span>
                   )}
                 </React.Fragment>
               ))}
             </h3>
 
-            {/* Options */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* =================================================
+                ANSWERS
+            ================================================== */}
+
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               {currentQuestion.options.map((option, index) => {
                 const isSelected = selectedAnswer === index;
                 const isCorrect = index === currentQuestion.correctAnswer;
+
                 const showStatus = selectedAnswer !== null;
 
-                let buttonClass =
-                  "flex items-center p-4 border-2 rounded-xl text-left transition-all text-lg font-medium ";
+                let buttonClass = `
+                  group
+                  flex items-center
+                  rounded-2xl
+                  border
+                  p-4
+                  text-left
+                  text-lg
+                  font-medium
+                  transition-all
+                `;
 
                 if (!showStatus) {
-                  buttonClass +=
-                    "border-gray-200 dark:border-gray-700 hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-blue-600";
+                  buttonClass += `
+                    border-gray-200
+                    bg-white
+                    text-gray-800
+
+                    hover:border-blue-400
+                    hover:bg-blue-50
+                    hover:text-blue-700
+
+                    dark:border-white/[0.09]
+                    dark:bg-white/[0.025]
+                    dark:text-zinc-200
+
+                    dark:hover:border-blue-500/50
+                    dark:hover:bg-blue-500/[0.07]
+                    dark:hover:text-blue-300
+                  `;
                 } else if (isCorrect) {
-                  buttonClass +=
-                    "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400";
+                  buttonClass += `
+                    border-emerald-500
+                    bg-emerald-50
+                    text-emerald-700
+
+                    dark:border-emerald-500/50
+                    dark:bg-emerald-500/[0.10]
+                    dark:text-emerald-300
+                  `;
                 } else if (isSelected && !isCorrect) {
-                  buttonClass +=
-                    "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400";
+                  buttonClass += `
+                    border-red-500
+                    bg-red-50
+                    text-red-700
+
+                    dark:border-red-500/50
+                    dark:bg-red-500/[0.10]
+                    dark:text-red-300
+                  `;
                 } else {
-                  buttonClass +=
-                    "border-gray-200 dark:border-gray-700 opacity-50";
+                  buttonClass += `
+                    border-gray-200
+                    bg-gray-50
+                    text-gray-400
+                    opacity-50
+
+                    dark:border-white/[0.06]
+                    dark:bg-white/[0.02]
+                    dark:text-zinc-500
+                  `;
                 }
 
                 return (
@@ -266,15 +545,32 @@ export default function PracticeMode() {
                     disabled={selectedAnswer !== null}
                     className={buttonClass}
                   >
-                    <span className="w-8 h-8 flex items-center justify-center rounded-lg bg-white dark:bg-gray-800 shadow-sm font-bold mr-4 shrink-0 text-gray-500">
+                    <span
+                      className="
+                        mr-4 flex h-9 w-9 shrink-0
+                        items-center justify-center
+                        rounded-xl
+                        text-sm
+                        font-bold
+
+                        bg-gray-100
+                        text-gray-500
+
+                        dark:bg-white/[0.07]
+                        dark:text-zinc-400
+                      "
+                    >
                       {String.fromCharCode(65 + index)}
                     </span>
+
                     <span className="flex-1">{option}</span>
+
                     {showStatus && isCorrect && (
-                      <CheckCircle className="text-green-500 ml-2 shrink-0" />
+                      <CheckCircle className="ml-2 shrink-0 text-emerald-500" />
                     )}
+
                     {showStatus && isSelected && !isCorrect && (
-                      <XCircle className="text-red-500 ml-2 shrink-0" />
+                      <XCircle className="ml-2 shrink-0 text-red-500" />
                     )}
                   </button>
                 );
@@ -282,31 +578,78 @@ export default function PracticeMode() {
             </div>
           </div>
 
-          {/* Explanation Panel */}
+          {/* =================================================
+              EXPLANATION
+          ================================================== */}
+
           <AnimatePresence>
             {showExplanation && (
               <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                className="border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50"
+                initial={{
+                  height: 0,
+                  opacity: 0,
+                }}
+                animate={{
+                  height: "auto",
+                  opacity: 1,
+                }}
+                className="
+                  border-t
+
+                  border-gray-200
+                  bg-gray-50
+
+                  dark:border-white/[0.07]
+                  dark:bg-[#101216]
+                "
               >
-                <div className="p-6 lg:p-8 space-y-6">
-                  {/* Result Header */}
+                <div className="space-y-7 p-6 lg:p-8">
+                  {/* RESULT */}
+
                   <div
-                    className={`flex items-start gap-4 p-4 rounded-xl ${selectedAnswer === currentQuestion.correctAnswer ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" : "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300"}`}
+                    className={`
+                      flex items-start gap-4
+                      rounded-2xl
+                      border
+                      p-5
+
+                      ${
+                        selectedAnswer === currentQuestion.correctAnswer
+                          ? `
+                            border-emerald-200
+                            bg-emerald-50
+                            text-emerald-800
+
+                            dark:border-emerald-500/20
+                            dark:bg-emerald-500/[0.08]
+                            dark:text-emerald-300
+                          `
+                          : `
+                            border-red-200
+                            bg-red-50
+                            text-red-800
+
+                            dark:border-red-500/20
+                            dark:bg-red-500/[0.08]
+                            dark:text-red-300
+                          `
+                      }
+                    `}
                   >
                     {selectedAnswer === currentQuestion.correctAnswer ? (
-                      <CheckCircle size={28} className="shrink-0 mt-1" />
+                      <CheckCircle size={28} className="mt-0.5 shrink-0" />
                     ) : (
-                      <XCircle size={28} className="shrink-0 mt-1" />
+                      <XCircle size={28} className="mt-0.5 shrink-0" />
                     )}
+
                     <div>
-                      <h4 className="font-bold text-lg mb-1">
+                      <h4 className="mb-1 text-lg font-bold">
                         {selectedAnswer === currentQuestion.correctAnswer
                           ? "Correct!"
                           : "Incorrect"}
                       </h4>
-                      <p>
+
+                      <p className="text-sm">
                         The correct answer is{" "}
                         <strong>
                           {String.fromCharCode(
@@ -323,48 +666,96 @@ export default function PracticeMode() {
                     </div>
                   </div>
 
-                  {/* Core Explanation */}
+                  {/* WHY CORRECT */}
+
                   <div>
-                    <h4 className="font-bold flex items-center gap-2 mb-2 text-blue-600 dark:text-blue-400">
-                      <Lightbulb size={20} /> Why is this correct?
+                    <h4
+                      className="
+                        mb-3 flex items-center gap-2
+                        font-bold
+                        text-blue-600
+                        dark:text-blue-400
+                      "
+                    >
+                      <Lightbulb size={20} />
+                      Why is this correct?
                     </h4>
-                    <div className="p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
-                      <p className="mb-2">
-                        <span className="font-semibold text-gray-700 dark:text-gray-300">
+
+                    <div
+                      className="
+                        space-y-3
+                        rounded-2xl
+                        border
+                        p-5
+
+                        bg-white
+                        border-gray-200
+
+                        dark:bg-[#181a20]
+                        dark:border-white/[0.07]
+                      "
+                    >
+                      <p className="text-gray-700 dark:text-zinc-200">
+                        <span className="font-bold text-gray-900 dark:text-zinc-100">
                           Rule:
                         </span>{" "}
                         {currentQuestion.explanation.grammarRule}
                       </p>
-                      <p className="mb-2">
-                        <span className="font-semibold text-gray-700 dark:text-gray-300">
+
+                      <p className="text-gray-700 dark:text-zinc-200">
+                        <span className="font-bold text-gray-900 dark:text-zinc-100">
                           Structure:
                         </span>{" "}
-                        <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-sm text-pink-600 dark:text-pink-400">
+                        <code
+                          className="
+                            rounded-lg
+                            bg-gray-100
+                            px-2.5
+                            py-1
+                            text-sm
+                            text-pink-600
+
+                            dark:bg-pink-500/[0.10]
+                            dark:text-pink-300
+                          "
+                        >
                           {currentQuestion.explanation.sentenceStructure}
                         </code>
                       </p>
-                      <p className="text-gray-700 dark:text-gray-300">
+
+                      <p className="leading-7 text-gray-700 dark:text-zinc-300">
                         {currentQuestion.explanation.whyCorrect}
                       </p>
                     </div>
                   </div>
 
-                  {/* Why others wrong */}
+                  {/* WRONG OPTIONS */}
+
                   <div>
-                    <h4 className="font-bold mb-3">
+                    <h4 className="mb-3 font-bold text-gray-900 dark:text-zinc-100">
                       Why other options are wrong:
                     </h4>
-                    <ul className="space-y-2">
+
+                    <ul className="space-y-2.5">
                       {currentQuestion.explanation.whyOthersWrong.map(
                         (reason, i) => (
                           <li
                             key={i}
-                            className="flex gap-2 text-gray-600 dark:text-gray-400"
+                            className="
+                              flex gap-2
+                              text-gray-600
+                              dark:text-zinc-300
+                            "
                           >
                             <X
                               size={18}
-                              className="text-red-400 shrink-0 mt-0.5"
+                              className="
+                                mt-0.5
+                                shrink-0
+                                text-red-400
+                              "
                             />
+
                             <span>{reason}</span>
                           </li>
                         ),
@@ -372,24 +763,57 @@ export default function PracticeMode() {
                     </ul>
                   </div>
 
-                  {/* Translation Toggle */}
+                  {/* TRANSLATION */}
+
                   <div>
                     <button
                       onClick={() => setShowTranslation(!showTranslation)}
-                      className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold mb-2 hover:underline"
+                      className="
+                        flex items-center gap-2
+                        font-semibold
+                        text-indigo-600
+
+                        dark:text-indigo-300
+                        hover:underline
+                      "
                     >
                       <Languages size={18} />
+
                       {showTranslation
                         ? "Hide Translation"
                         : "Show Vietnamese Translation"}
                     </button>
+
                     <AnimatePresence>
                       {showTranslation && (
                         <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          exit={{ opacity: 0, height: 0 }}
-                          className="p-4 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-900 dark:text-indigo-200 rounded-xl italic"
+                          initial={{
+                            opacity: 0,
+                            height: 0,
+                          }}
+                          animate={{
+                            opacity: 1,
+                            height: "auto",
+                          }}
+                          exit={{
+                            opacity: 0,
+                            height: 0,
+                          }}
+                          className="
+                            mt-3
+                            rounded-2xl
+                            border
+                            p-4
+                            italic
+
+                            bg-indigo-50
+                            border-indigo-100
+                            text-indigo-900
+
+                            dark:bg-indigo-500/[0.08]
+                            dark:border-indigo-400/10
+                            dark:text-indigo-200
+                          "
                         >
                           "{currentQuestion.translation}"
                         </motion.div>
@@ -397,40 +821,95 @@ export default function PracticeMode() {
                     </AnimatePresence>
                   </div>
 
-                  {/* Vocabulary Section */}
+                  {/* VOCABULARY */}
+
                   {currentQuestion.vocabulary.length > 0 && (
                     <div>
-                      <h4 className="font-bold mb-3 flex items-center gap-2">
-                        <BookOpen size={18} /> Important Vocabulary
+                      <h4
+                        className="
+                          mb-3
+                          flex items-center gap-2
+                          font-bold
+                          text-gray-900
+                          dark:text-zinc-100
+                        "
+                      >
+                        <BookOpen size={18} />
+                        Important Vocabulary
                       </h4>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
+                      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                         {currentQuestion.vocabulary.map((vocab, i) => (
                           <div
                             key={i}
-                            className="bg-white dark:bg-gray-800 p-3 rounded-lg border border-gray-100 dark:border-gray-700 shadow-sm flex items-start justify-between group cursor-pointer hover:border-blue-300 transition-colors"
+                            className="
+                                group
+                                flex items-start justify-between
+                                rounded-2xl
+                                border
+                                p-4
+                                transition-all
+
+                                bg-white
+                                border-gray-200
+
+                                hover:border-blue-300
+
+                                dark:bg-[#181a20]
+                                dark:border-white/[0.07]
+
+                                dark:hover:border-blue-500/30
+                                dark:hover:bg-blue-500/[0.03]
+                              "
                           >
                             <div>
                               <div className="flex items-baseline gap-2">
-                                <span className="font-bold text-lg text-blue-600 dark:text-blue-400">
+                                <span
+                                  className="
+                                      text-lg
+                                      font-bold
+                                      text-blue-600
+                                      dark:text-blue-400
+                                    "
+                                >
                                   {vocab.word}
                                 </span>
-                                <span className="text-xs text-gray-500 italic">
+
+                                <span className="text-xs italic text-gray-400 dark:text-zinc-500">
                                   {vocab.pos}
                                 </span>
                               </div>
-                              <span className="text-sm text-gray-500 block mb-1">
+
+                              <span className="mb-1 block text-sm text-gray-500 dark:text-zinc-500">
                                 {vocab.ipa}
                               </span>
-                              <span className="text-sm font-medium">
+
+                              <span className="text-sm font-semibold text-gray-700 dark:text-zinc-200">
                                 {vocab.meaning}
                               </span>
                             </div>
+
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
                                 speakText(vocab.word);
                               }}
-                              className="text-gray-400 hover:text-blue-500 p-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                              className="
+                                  rounded-lg
+                                  p-1.5
+
+                                  text-gray-400
+
+                                  opacity-0
+                                  transition-all
+
+                                  group-hover:opacity-100
+
+                                  hover:text-blue-500
+
+                                  dark:text-zinc-500
+                                  dark:hover:text-blue-400
+                                "
                             >
                               <Volume2 size={16} />
                             </button>
@@ -440,31 +919,100 @@ export default function PracticeMode() {
                     </div>
                   )}
 
-                  {/* TOEIC Tip */}
-                  <div className="bg-gradient-to-r from-amber-100 to-yellow-100 dark:from-yellow-900/30 dark:to-amber-900/20 p-4 rounded-xl border border-yellow-200 dark:border-yellow-800/50 flex gap-4 items-start">
-                    <div className="bg-yellow-400 text-yellow-900 p-2 rounded-lg shrink-0">
+                  {/* TOEIC TIP */}
+
+                  <div
+                    className="
+                      flex items-start gap-4
+                      rounded-2xl
+                      border
+                      p-5
+
+                      bg-gradient-to-r
+                      from-amber-50
+                      to-yellow-50
+                      border-yellow-200
+
+                      dark:from-amber-500/[0.08]
+                      dark:to-yellow-500/[0.04]
+                      dark:border-yellow-500/15
+                    "
+                  >
+                    <div
+                      className="
+                        flex h-10 w-10 shrink-0
+                        items-center justify-center
+                        rounded-xl
+
+                        bg-yellow-400
+                        text-yellow-900
+
+                        dark:bg-yellow-400
+                        dark:text-yellow-950
+                      "
+                    >
                       <Star size={20} className="fill-current" />
                     </div>
+
                     <div>
-                      <h4 className="font-bold text-yellow-900 dark:text-yellow-400 mb-1">
+                      <h4
+                        className="
+                          mb-1
+                          font-bold
+                          text-yellow-800
+
+                          dark:text-yellow-300
+                        "
+                      >
                         PRO TIP
                       </h4>
-                      <p className="text-yellow-800 dark:text-yellow-200 text-sm">
+
+                      <p
+                        className="
+                          text-sm leading-6
+                          text-yellow-800
+
+                          dark:text-yellow-200/90
+                        "
+                      >
                         {currentQuestion.explanation.toeicTip}
                       </p>
                     </div>
                   </div>
 
-                  {/* Next Button */}
-                  <div className="pt-6 flex justify-end">
+                  {/* NEXT */}
+
+                  <div className="flex justify-end border-t border-gray-200 pt-6 dark:border-white/[0.07]">
                     <button
                       onClick={handleNext}
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-bold text-lg transition-all flex items-center gap-2 shadow-lg shadow-blue-600/30 hover:scale-105"
+                      className="
+                        flex items-center gap-2
+                        rounded-2xl
+                        bg-gradient-to-r
+                        from-blue-600
+                        to-indigo-600
+                        px-7
+                        py-3.5
+                        text-lg
+                        font-bold
+                        text-white
+
+                        shadow-lg
+                        shadow-blue-600/20
+
+                        transition-all
+
+                        hover:-translate-y-0.5
+                        hover:from-blue-500
+                        hover:to-indigo-500
+                        hover:shadow-blue-500/30
+                      "
                     >
                       {currentIndex < questions.length - 1
                         ? "Next Question"
-                        : "Finish Session"}{" "}
-                      <ChevronRight />
+                        : "Finish Session"}
+
+                      <ChevronRight size={21} />
                     </button>
                   </div>
                 </div>
