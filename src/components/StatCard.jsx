@@ -186,16 +186,16 @@ export default function StatCard({ title, value, icon, color = "blue" }) {
 
           ${
             normalizedColor === "green"
-              ? "bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent"
+              ? "bg-linear-to-r from-transparent via-emerald-400/40 to-transparent"
               : normalizedColor === "orange"
-                ? "bg-gradient-to-r from-transparent via-orange-400/40 to-transparent"
+                ? "bg-linear-to-r from-transparent via-orange-400/40 to-transparent"
                 : normalizedColor === "red"
-                  ? "bg-gradient-to-r from-transparent via-rose-400/40 to-transparent"
+                  ? "bg-linear-to-r from-transparent via-rose-400/40 to-transparent"
                   : normalizedColor === "purple"
-                    ? "bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"
+                    ? "bg-linear-to-r from-transparent via-purple-400/40 to-transparent"
                     : normalizedColor === "yellow"
-                      ? "bg-gradient-to-r from-transparent via-amber-400/40 to-transparent"
-                      : "bg-gradient-to-r from-transparent via-blue-400/40 to-transparent"
+                      ? "bg-linear-to-r from-transparent via-amber-400/40 to-transparent"
+                      : "bg-linear-to-r from-transparent via-blue-400/40 to-transparent"
           }
         `}
       />
