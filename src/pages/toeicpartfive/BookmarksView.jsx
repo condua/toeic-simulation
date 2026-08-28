@@ -587,7 +587,7 @@ export default function BookmarksView() {
               </div>
             </div>
 
-            {/* Bottom accent */}
+            {/* Bottom accent---- */}
 
             <div
               className="
