@@ -44,19 +44,27 @@ export default function PracticeMode() {
   };
 
   useEffect(() => {
-    let pool = [...QUESTION_BANK];
+    let pool = [];
 
-    if (state.currentPracticeParams?.mode === "mistakes") {
-      const mistakeIds = Object.keys(state.mistakes);
-
-      pool = pool.filter((q) => mistakeIds.includes(q.id));
-    } else if (state.currentPracticeParams?.mode === "level") {
-      const { min, max } = state.currentPracticeParams;
-
-      pool = pool.filter((q) => q.toeicLevel >= min && q.toeicLevel <= max);
+    // Nếu là mode package, lấy luôn danh sách câu hỏi đã chuẩn bị sẵn từ payload
+    if (state.currentPracticeParams?.mode === "package") {
+      pool = state.currentPracticeParams.questions || [];
     }
+    // Các mode khác tự xử lý lọc dữ liệu
+    else {
+      pool = [...QUESTION_BANK];
 
-    pool.sort(() => Math.random() - 0.5);
+      if (state.currentPracticeParams?.mode === "mistakes") {
+        const mistakeIds = Object.keys(state.mistakes);
+        pool = pool.filter((q) => mistakeIds.includes(q.id));
+      } else if (state.currentPracticeParams?.mode === "level") {
+        const { min, max } = state.currentPracticeParams;
+        pool = pool.filter((q) => q.toeicLevel >= min && q.toeicLevel <= max);
+      }
+
+      // Trộn ngẫu nhiên cho mode level và mistakes
+      pool.sort(() => Math.random() - 0.5);
+    }
 
     setQuestions(pool);
     setCurrentIndex(0);

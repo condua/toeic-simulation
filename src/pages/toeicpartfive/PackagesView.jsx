@@ -147,17 +147,17 @@ const PACKAGES = [
 
 const LEVEL_RANGES = {
   basic: {
-    min: 450,
+    min: 0,
     max: 699,
   },
 
   advanced: {
     min: 700,
-    max: 899,
+    max: 799,
   },
 
   expert: {
-    min: 900,
+    min: 800,
     max: 990,
   },
 };

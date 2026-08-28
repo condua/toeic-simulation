@@ -8,6 +8,7 @@ import {
   Target,
   TrendingUp,
   ChevronRight,
+  Package,
 } from "lucide-react";
 import { AppContext } from "../context/AppContext";
 
@@ -18,6 +19,7 @@ export default function Sidebar({ isOpen, setOpen, currentView }) {
   const navItems = [
     { id: "dashboard", label: "Dashboard", icon: Home },
     { id: "levels", label: "By Level", icon: TrendingUp },
+    { id: "packages", label: "By Package", icon: Package },
     { id: "practice", label: "Practice", icon: BookOpen },
     { id: "mistakes", label: "My Mistakes", icon: XCircle },
     { id: "bookmarks", label: "Bookmarks", icon: Bookmark },
