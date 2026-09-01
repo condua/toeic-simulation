@@ -36005,5 +36005,1365 @@ export const QUESTION_BANK = [
       }
     ],
     tags: ["participles", "reduced clauses", "logistics"]
+  },
+  {
+    id: "q961",
+    sentence: "The new software allows remote employees to collaborate ______ on 3D design projects from anywhere in the world.",
+    options: ["seamlessly", "seamless", "seamlessness", "seams"],
+    correctAnswer: 0,
+    translation: "Phần mềm mới cho phép nhân viên làm việc từ xa cộng tác một cách liền mạch trên các dự án thiết kế 3D từ bất kỳ đâu trên thế giới.",
+    explanation: {
+      correctAnswer: "seamlessly",
+      grammarRule: "Adverbs modifying Verbs",
+      sentenceStructure: "Verb (collaborate) + Adverb",
+      whyCorrect: "Cần một trạng từ để bổ nghĩa cho động từ hành động 'collaborate' (cộng tác như thế nào? -> cộng tác một cách liền mạch/trơn tru).",
+      whyOthersWrong: [
+        "B. seamless: Tính từ.",
+        "C. seamlessness: Danh từ.",
+        "D. seams: Danh từ số nhiều (đường may)."
+      ],
+      toeicTip: "Collaborate seamlessly / Work seamlessly (Cộng tác/làm việc liền mạch)."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "collaborate",
+        ipa: "/kəˈlæbəreɪt/",
+        pos: "verb",
+        meaning: "cộng tác, hợp tác",
+        example: "The two teams collaborated on the research."
+      }
+    ],
+    tags: ["adverbs", "word form", "technology"]
+  },
+  {
+    id: "q962",
+    sentence: "Due to the high ______ of orders during the holiday season, delivery times may be longer than usual.",
+    options: ["capacity", "volume", "majority", "extent"],
+    correctAnswer: 1,
+    translation: "Do khối lượng đơn đặt hàng lớn trong mùa lễ, thời gian giao hàng có thể lâu hơn bình thường.",
+    explanation: {
+      correctAnswer: "volume",
+      grammarRule: "Vocabulary - Collocations",
+      sentenceStructure: "high + Noun + of orders",
+      whyCorrect: "'Volume of orders/sales' là cụm từ kinh doanh mang nghĩa 'khối lượng/số lượng đơn hàng/doanh số'.",
+      whyOthersWrong: [
+        "A. capacity: Sức chứa, công suất.",
+        "C. majority: Đa số (the majority of).",
+        "D. extent: Mức độ."
+      ],
+      toeicTip: "A high volume of (Khối lượng lớn cái gì). Từ vựng Logistics cực kỳ phổ biến."
+    },
+    category: "Vocabulary",
+    subcategory: "Collocations",
+    type: "vocabulary",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "volume",
+        ipa: "/ˈvɑːljuːm/",
+        pos: "noun",
+        meaning: "khối lượng, số lượng",
+        example: "The sheer volume of traffic caused a delay."
+      }
+    ],
+    tags: ["nouns", "logistics", "collocation"]
+  },
+  {
+    id: "q963",
+    sentence: "The executive board was thrilled to report a 25% increase ______ annual revenue for the fiscal year.",
+    options: ["on", "to", "in", "at"],
+    correctAnswer: 2,
+    translation: "Ban điều hành rất vui mừng báo cáo mức tăng 25% doanh thu hàng năm trong năm tài chính.",
+    explanation: {
+      correctAnswer: "in",
+      grammarRule: "Noun + Preposition Collocations",
+      sentenceStructure: "an increase + in",
+      whyCorrect: "Các danh từ chỉ sự tăng/giảm (increase, decrease, rise, drop, decline) luôn luôn đi kèm với giới từ 'in' khi chỉ lĩnh vực bị thay đổi.",
+      whyOthersWrong: [
+        "A. on: Sai giới từ.",
+        "B. to: Sai giới từ.",
+        "D. at: Sai giới từ."
+      ],
+      toeicTip: "An increase IN / A decrease IN / A drop IN."
+    },
+    category: "Vocabulary",
+    subcategory: "Prepositions",
+    type: "vocabulary",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "revenue",
+        ipa: "/ˈrevənuː/",
+        pos: "noun",
+        meaning: "doanh thu",
+        example: "The company's revenue doubled."
+      }
+    ],
+    tags: ["prepositions", "collocation", "finance"]
+  },
+  {
+    id: "q964",
+    sentence: "By the time the CEO arrives in Berlin, the development team ______ the beta version of the application.",
+    options: ["finishes", "finished", "is finishing", "will have finished"],
+    correctAnswer: 3,
+    translation: "Vào thời điểm Giám đốc điều hành đến Berlin, nhóm phát triển sẽ đã hoàn thành phiên bản beta của ứng dụng.",
+    explanation: {
+      correctAnswer: "will have finished",
+      grammarRule: "Future Perfect Tense",
+      sentenceStructure: "By the time + Present Simple, S + will have + V3",
+      whyCorrect: "Cụm 'By the time + arrives' (hiện tại đơn) chỉ một mốc thời gian trong tương lai. Hành động hoàn thành trước mốc đó phải chia thì Tương lai hoàn thành.",
+      whyOthersWrong: [
+        "A. finishes: Hiện tại đơn.",
+        "B. finished: Quá khứ đơn.",
+        "C. is finishing: Hiện tại tiếp diễn."
+      ],
+      toeicTip: "By the time (hiện tại) -> Will have + V3/ed."
+    },
+    category: "Grammar",
+    subcategory: "Verb Tenses",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 650,
+    vocabulary: [
+      {
+        word: "beta version",
+        ipa: "/ˈbeɪtə ˈvɜːrʒn/",
+        pos: "noun phrase",
+        meaning: "phiên bản thử nghiệm (phần mềm)",
+        example: "Users can test the beta version now."
+      }
+    ],
+    tags: ["verbs", "future perfect", "technology"]
+  },
+  {
+    id: "q965",
+    sentence: "The agency recruited a senior consultant ______ previous experience includes managing global supply chains.",
+    options: ["whose", "who", "whom", "which"],
+    correctAnswer: 0,
+    translation: "Cơ quan đã tuyển dụng một cố vấn cấp cao mà kinh nghiệm trước đây của người đó bao gồm việc quản lý chuỗi cung ứng toàn cầu.",
+    explanation: {
+      correctAnswer: "whose",
+      grammarRule: "Relative Pronouns - Possession",
+      sentenceStructure: "Noun (consultant) + whose + Noun (experience) + Verb",
+      whyCorrect: "Cần một đại từ quan hệ chỉ sở hữu để nối người ('consultant') với vật bị sở hữu ('experience').",
+      whyOthersWrong: [
+        "B. who: Làm chủ ngữ, theo sau phải là động từ.",
+        "C. whom: Làm tân ngữ.",
+        "D. which: Dùng cho vật."
+      ],
+      toeicTip: "Chỗ trống nằm giữa 2 danh từ -> Điền WHOSE."
+    },
+    category: "Grammar",
+    subcategory: "Relative Clauses",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "consultant",
+        ipa: "/kənˈsʌltənt/",
+        pos: "noun",
+        meaning: "cố vấn, nhà tư vấn",
+        example: "We hired a financial consultant."
+      }
+    ],
+    tags: ["relative pronouns", "possession", "business"]
+  },
+  {
+    id: "q966",
+    sentence: "To conserve electricity, the smart lighting system automatically ______ when the conference room is empty.",
+    options: ["turns up", "shuts off", "looks into", "breaks down"],
+    correctAnswer: 1,
+    translation: "Để tiết kiệm điện, hệ thống chiếu sáng thông minh tự động tắt khi phòng họp trống.",
+    explanation: {
+      correctAnswer: "shuts off",
+      grammarRule: "Phrasal Verbs",
+      sentenceStructure: "shuts off (tự động tắt)",
+      whyCorrect: "'Shut off' mang nghĩa 'tắt, ngừng hoạt động' (thiết bị điện, nước). Rất phù hợp với ngữ cảnh 'tiết kiệm điện' (conserve electricity) khi phòng trống.",
+      whyOthersWrong: [
+        "A. turns up: Vặn to lên (âm lượng) / xuất hiện.",
+        "C. looks into: Điều tra.",
+        "D. breaks down: Hỏng hóc."
+      ],
+      toeicTip: "Shut off / Turn off (Tắt thiết bị)."
+    },
+    category: "Vocabulary",
+    subcategory: "Phrasal Verbs",
+    type: "vocabulary",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "conserve",
+        ipa: "/kənˈsɜːrv/",
+        pos: "verb",
+        meaning: "bảo tồn, tiết kiệm",
+        example: "We must conserve energy."
+      }
+    ],
+    tags: ["phrasal verbs", "environment"]
+  },
+  {
+    id: "q967",
+    sentence: "The legal department strongly advises that the vendor contract ______ revised before the final signing.",
+    options: ["is", "was", "be", "has been"],
+    correctAnswer: 2,
+    translation: "Bộ phận pháp lý đặc biệt khuyên rằng hợp đồng với nhà cung cấp phải được sửa đổi trước khi ký kết cuối cùng.",
+    explanation: {
+      correctAnswer: "be",
+      grammarRule: "Subjunctive Mood",
+      sentenceStructure: "advises that + Subject + be + V3",
+      whyCorrect: "Động từ 'advises' (khuyên) yêu cầu mệnh đề 'that' sử dụng thể giả định. Động từ to be phải ở dạng nguyên mẫu không 'to' (be), bất kể chủ ngữ là số ít.",
+      whyOthersWrong: [
+        "A. is: Hiện tại đơn (lỗi bẫy rất phổ biến).",
+        "B. was: Quá khứ đơn.",
+        "D. has been: Hiện tại hoàn thành."
+      ],
+      toeicTip: "Advise / Suggest / Recommend / Demand that + S + BE + V3/ed."
+    },
+    category: "Grammar",
+    subcategory: "Subjunctive",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 750,
+    vocabulary: [
+      {
+        word: "vendor",
+        ipa: "/ˈvendər/",
+        pos: "noun",
+        meaning: "nhà cung cấp",
+        example: "The vendor will deliver the goods today."
+      }
+    ],
+    tags: ["subjunctive", "verbs", "law"]
+  },
+  {
+    id: "q968",
+    sentence: "______ the marketing team foreseen the sudden shift in consumer trends, they would have altered the campaign.",
+    options: ["If", "Were", "Should", "Had"],
+    correctAnswer: 3,
+    translation: "Nếu nhóm tiếp thị lường trước được sự thay đổi đột ngột trong xu hướng của người tiêu dùng, họ đã thay đổi chiến dịch.",
+    explanation: {
+      correctAnswer: "Had",
+      grammarRule: "Inverted Conditionals (Type 3)",
+      sentenceStructure: "Had + S + V3, S + would have + V3",
+      whyCorrect: "Mệnh đề chính dùng 'would have altered' -> Điều kiện loại 3. Mệnh đề điều kiện bị khuyết 'If' nên phải dùng 'Had' đứng đầu để tạo đảo ngữ.",
+      whyOthersWrong: [
+        "A. If: Thiếu trợ động từ 'had' (If the team HAD foreseen).",
+        "B. Were: Đảo ngữ Loại 2.",
+        "C. Should: Đảo ngữ Loại 1."
+      ],
+      toeicTip: "Thấy 'would have + V3' ở mệnh đề sau -> Điền 'Had' vào đầu câu."
+    },
+    category: "Grammar",
+    subcategory: "Conditionals",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 800,
+    vocabulary: [
+      {
+        word: "alter",
+        ipa: "/ˈɔːltər/",
+        pos: "verb",
+        meaning: "thay đổi",
+        example: "We had to alter our travel plans."
+      }
+    ],
+    tags: ["conditionals", "inversion", "business"]
+  },
+  {
+    id: "q969",
+    sentence: "______ with state-of-the-art encryption, the new messaging application guarantees complete user privacy.",
+    options: ["Equipped", "Equipping", "To equip", "Equip"],
+    correctAnswer: 0,
+    translation: "Được trang bị mã hóa hiện đại nhất, ứng dụng nhắn tin mới đảm bảo quyền riêng tư hoàn toàn cho người dùng.",
+    explanation: {
+      correctAnswer: "Equipped",
+      grammarRule: "Reduced Participle Clauses (Passive)",
+      sentenceStructure: "Past Participle (Equipped) + with..., Subject + Verb",
+      whyCorrect: "Mệnh đề rút gọn mang nghĩa bị động (Because it is equipped...). Ứng dụng 'được trang bị' nên phải dùng phân từ hai (V-ed) đứng đầu câu.",
+      whyOthersWrong: [
+        "B. Equipping: Mang nghĩa chủ động (Tự ứng dụng đi trang bị -> sai).",
+        "C. To equip: Chỉ mục đích.",
+        "D. Equip: Động từ nguyên thể."
+      ],
+      toeicTip: "Vật (app/car/building) đứng làm chủ ngữ -> Đầu câu rút gọn dùng V-ed/V3. Cụm 'Equipped with' rất quen thuộc."
+    },
+    category: "Grammar",
+    subcategory: "Participles",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "encryption",
+        ipa: "/ɪnˈkrɪpʃn/",
+        pos: "noun",
+        meaning: "sự mã hóa",
+        example: "Data encryption is vital for security."
+      }
+    ],
+    tags: ["participles", "reduced clauses", "security"]
+  },
+  {
+    id: "q970",
+    sentence: "______ the initial cost of electric vehicles is high, the long-term savings on fuel and maintenance are substantial.",
+    options: ["Because", "Although", "Despite", "Instead of"],
+    correctAnswer: 1,
+    translation: "Mặc dù chi phí ban đầu của xe điện là cao, khoản tiết kiệm nhiên liệu và bảo trì về lâu dài là rất đáng kể.",
+    explanation: {
+      correctAnswer: "Although",
+      grammarRule: "Conjunctions of Contrast",
+      sentenceStructure: "Although + Clause (S+V), Main Clause",
+      whyCorrect: "Khoảng trống đứng trước một mệnh đề ('the initial cost... is high'). Ý nghĩa câu mang tính tương phản (Phí đầu đắt >< Về sau tiết kiệm). 'Although' là liên từ phù hợp.",
+      whyOthersWrong: [
+        "A. Because: Vì (sai logic).",
+        "C. Despite: Giới từ (phải đi với cụm danh từ).",
+        "D. Instead of: Giới từ (Thay vì)."
+      ],
+      toeicTip: "Although / Even though / Though + Mệnh đề (S + V)."
+    },
+    category: "Grammar",
+    subcategory: "Conjunctions",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "substantial",
+        ipa: "/səbˈstænʃl/",
+        pos: "adj",
+        meaning: "đáng kể, to lớn",
+        example: "The new strategy led to substantial profits."
+      }
+    ],
+    tags: ["conjunctions", "contrast", "environment"]
+  },
+  {
+    id: "q971",
+    sentence: "The company's new zero-waste initiative is a ______ step toward complete corporate sustainability.",
+    options: ["reluctant", "redundant", "commendable", "defective"],
+    correctAnswer: 2,
+    translation: "Sáng kiến không rác thải mới của công ty là một bước đi đáng khen ngợi hướng tới sự bền vững hoàn toàn của doanh nghiệp.",
+    explanation: {
+      correctAnswer: "commendable",
+      grammarRule: "Vocabulary - Adjectives",
+      sentenceStructure: "a + Adjective + Noun (step)",
+      whyCorrect: "Ngữ cảnh của câu là tích cực (zero-waste initiative, corporate sustainability). 'Commendable' (đáng khen ngợi, tuyên dương) là tính từ hoàn toàn phù hợp.",
+      whyOthersWrong: [
+        "A. reluctant: Miễn cưỡng.",
+        "B. redundant: Dư thừa.",
+        "D. defective: Bị lỗi, có khuyết điểm."
+      ],
+      toeicTip: "A commendable effort / step (Một nỗ lực/bước đi đáng khen ngợi)."
+    },
+    category: "Vocabulary",
+    subcategory: "Word Choice",
+    type: "vocabulary",
+    difficulty: "advanced",
+    toeicLevel: 700,
+    vocabulary: [
+      {
+        word: "commendable",
+        ipa: "/kəˈmendəbl/",
+        pos: "adj",
+        meaning: "đáng khen ngợi",
+        example: "Her dedication to the work is commendable."
+      }
+    ],
+    tags: ["adjectives", "business", "environment"]
+  },
+  {
+    id: "q972",
+    sentence: "The processing capability of our latest smartwatch is far superior to ______ of our direct competitors.",
+    options: ["these", "those", "this", "that"],
+    correctAnswer: 3,
+    translation: "Khả năng xử lý của chiếc đồng hồ thông minh mới nhất của chúng tôi vượt trội hơn nhiều so với (khả năng xử lý) của các đối thủ cạnh tranh trực tiếp.",
+    explanation: {
+      correctAnswer: "that",
+      grammarRule: "Pronouns of Comparison",
+      sentenceStructure: "superior to + that + of",
+      whyCorrect: "'That' được sử dụng để thay thế cho cụm danh từ số ít / không đếm được 'The processing capability' để tránh lặp từ trong cấu trúc so sánh.",
+      whyOthersWrong: [
+        "A. these: Không dùng thay thế.",
+        "B. those: Thay thế cho danh từ số nhiều.",
+        "C. this: Không dùng thay thế."
+      ],
+      toeicTip: "So sánh Danh từ số ít -> THAT OF. Danh từ số nhiều -> THOSE OF."
+    },
+    category: "Grammar",
+    subcategory: "Pronouns",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 650,
+    vocabulary: [
+      {
+        word: "capability",
+        ipa: "/ˌkeɪpəˈbɪləti/",
+        pos: "noun",
+        meaning: "khả năng, năng lực",
+        example: "The system has the capability to process large files."
+      }
+    ],
+    tags: ["pronouns", "comparisons", "technology"]
+  },
+  {
+    id: "q973",
+    sentence: "The executive committee is currently considering ______ the company's operations to the thriving Southeast Asian market.",
+    options: ["expanding", "expand", "expanded", "to expand"],
+    correctAnswer: 0,
+    translation: "Ủy ban điều hành hiện đang cân nhắc việc mở rộng hoạt động của công ty sang thị trường Đông Nam Á đang phát triển mạnh mẽ.",
+    explanation: {
+      correctAnswer: "expanding",
+      grammarRule: "Gerunds after Specific Verbs",
+      sentenceStructure: "consider + V-ing",
+      whyCorrect: "Động từ 'consider' (cân nhắc, xem xét) luôn luôn đi kèm với một danh động từ (V-ing) khi nói về một hành động/kế hoạch.",
+      whyOthersWrong: [
+        "B. expand: Động từ nguyên thể.",
+        "C. expanded: V-ed.",
+        "D. to expand: Động từ có 'to'."
+      ],
+      toeicTip: "Consider / Suggest / Recommend / Postpone + V-ing."
+    },
+    category: "Grammar",
+    subcategory: "Gerunds",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "thriving",
+        ipa: "/ˈθraɪvɪŋ/",
+        pos: "adj",
+        meaning: "phát triển mạnh mẽ, thịnh vượng",
+        example: "The city has a thriving economy."
+      }
+    ],
+    tags: ["gerunds", "verbs", "business"]
+  },
+  {
+    id: "q974",
+    sentence: "The ______ of blockchain technology into the banking sector has drastically improved international transaction security.",
+    options: ["integrate", "integration", "integrating", "integrates"],
+    correctAnswer: 1,
+    translation: "Việc tích hợp công nghệ blockchain vào lĩnh vực ngân hàng đã cải thiện mạnh mẽ tính bảo mật của các giao dịch quốc tế.",
+    explanation: {
+      correctAnswer: "integration",
+      grammarRule: "Word Form (Nouns)",
+      sentenceStructure: "The + Noun + of",
+      whyCorrect: "Cần một danh từ đứng sau mạo từ 'The' để làm chủ ngữ cho câu. 'Integration' (sự tích hợp) là danh từ gốc và hoàn toàn chuẩn xác.",
+      whyOthersWrong: [
+        "A. integrate: Động từ.",
+        "C. integrating: Danh động từ (không ưu tiên bằng danh từ gốc).",
+        "D. integrates: Động từ số ít."
+      ],
+      toeicTip: "The integration of A into B (Việc tích hợp A vào B). Blockchain (Công nghệ chuỗi khối)."
+    },
+    category: "Vocabulary",
+    subcategory: "Word Form",
+    type: "vocabulary",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "integration",
+        ipa: "/ˌɪntɪˈɡreɪʃn/",
+        pos: "noun",
+        meaning: "sự tích hợp",
+        example: "System integration will take a few weeks."
+      }
+    ],
+    tags: ["nouns", "word form", "finance"]
+  },
+  {
+    id: "q975",
+    sentence: "Not only ______ the laboratory's overall budget, but they also hired three more lead scientists for the project.",
+    options: ["the board increased", "increased the board", "did the board increase", "the board did increase"],
+    correctAnswer: 2,
+    translation: "Ban quản trị không chỉ tăng tổng ngân sách của phòng thí nghiệm mà họ còn thuê thêm ba nhà khoa học chính cho dự án.",
+    explanation: {
+      correctAnswer: "did the board increase",
+      grammarRule: "Inversion with Negative Adverbs",
+      sentenceStructure: "Not only + Auxiliary + Subject + V, but + S + also + V",
+      whyCorrect: "Cấu trúc 'Not only' đứng đầu câu bắt buộc vế đầu tiên phải đảo ngữ (Trợ động từ + S + V). Mệnh đề sau dùng quá khứ đơn (hired), nên mệnh đề trước dùng trợ động từ 'did'.",
+      whyOthersWrong: [
+        "A. the board increased: Không đảo ngữ.",
+        "B. increased the board: Đảo ngữ sai quy tắc (không dùng trợ động từ).",
+        "D. the board did increase: Không phải đảo ngữ."
+      ],
+      toeicTip: "Not only / Never / Hardly đứng đầu -> Cấu trúc câu hỏi (Trợ động từ đứng trước Chủ ngữ)."
+    },
+    category: "Grammar",
+    subcategory: "Inversion",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 800,
+    vocabulary: [
+      {
+        word: "budget",
+        ipa: "/ˈbʌdʒɪt/",
+        pos: "noun",
+        meaning: "ngân sách",
+        example: "We must stay within the project budget."
+      }
+    ],
+    tags: ["inversion", "structures"]
+  },
+  {
+    id: "q976",
+    sentence: "Our brand is fully committed to providing an exceptional shopping ______ to all of our loyal customers.",
+    options: ["experiment", "expectancy", "expectation", "experience"],
+    correctAnswer: 3,
+    translation: "Thương hiệu của chúng tôi hoàn toàn cam kết mang đến trải nghiệm mua sắm đặc biệt cho tất cả các khách hàng trung thành của chúng tôi.",
+    explanation: {
+      correctAnswer: "experience",
+      grammarRule: "Vocabulary - Collocations",
+      sentenceStructure: "an exceptional shopping + Noun",
+      whyCorrect: "Cần một danh từ. 'Shopping experience' (trải nghiệm mua sắm) là một cụm danh từ kinh doanh cực kỳ phổ biến.",
+      whyOthersWrong: [
+        "A. experiment: Thí nghiệm.",
+        "B. expectancy: Tuổi thọ / Sự mong đợi.",
+        "C. expectation: Sự kỳ vọng (thường dùng meet/exceed expectations)."
+      ],
+      toeicTip: "Customer experience / Shopping experience / Dining experience (Trải nghiệm khách hàng/mua sắm/ăn uống)."
+    },
+    category: "Vocabulary",
+    subcategory: "Word Choice",
+    type: "vocabulary",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "exceptional",
+        ipa: "/ɪkˈsepʃənl/",
+        pos: "adj",
+        meaning: "đặc biệt xuất sắc, xuất chúng",
+        example: "The hotel offers exceptional service."
+      }
+    ],
+    tags: ["nouns", "business", "collocation"]
+  },
+  {
+    id: "q977",
+    sentence: "According to the updated corporate policy, neither the department managers ______ the regular employees can park in the visitor zone.",
+    options: ["nor", "or", "and", "but"],
+    correctAnswer: 0,
+    translation: "Theo chính sách công ty đã được cập nhật, cả người quản lý bộ phận lẫn nhân viên bình thường đều không được đỗ xe trong khu vực dành cho khách.",
+    explanation: {
+      correctAnswer: "nor",
+      grammarRule: "Correlative Conjunctions",
+      sentenceStructure: "Neither X nor Y",
+      whyCorrect: "Liên từ tương quan 'Neither' luôn bắt cặp với 'nor' (Không cái này cũng không cái kia).",
+      whyOthersWrong: [
+        "B. or: Đi với 'Either'.",
+        "C. and: Đi với 'Both'.",
+        "D. but: Đi với 'Not only (...but also)'."
+      ],
+      toeicTip: "Neither... nor / Either... or."
+    },
+    category: "Grammar",
+    subcategory: "Conjunctions",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 400,
+    vocabulary: [
+      {
+        word: "corporate",
+        ipa: "/ˈkɔːrpərət/",
+        pos: "adj",
+        meaning: "thuộc về công ty, tập đoàn",
+        example: "Corporate taxes will be increased."
+      }
+    ],
+    tags: ["conjunctions", "pairs", "rules"]
+  },
+  {
+    id: "q978",
+    sentence: "All financial disclosure forms must be submitted directly to the audit committee ______ Friday at noon.",
+    options: ["in", "by", "on", "until"],
+    correctAnswer: 1,
+    translation: "Tất cả các biểu mẫu công khai tài chính phải được nộp trực tiếp cho ủy ban kiểm toán trước buổi trưa thứ Sáu.",
+    explanation: {
+      correctAnswer: "by",
+      grammarRule: "Prepositions of Time (Deadlines)",
+      sentenceStructure: "submitted + by + Deadline",
+      whyCorrect: "Giới từ 'by' được sử dụng để chỉ mốc hạn chót (muộn nhất là lúc đó phải làm xong). Động từ 'submit' (nộp) luôn đi với 'by'.",
+      whyOthersWrong: [
+        "A. in: Không đi với Thứ (Friday).",
+        "C. on: Vào (đúng ngày đó), tuy nhiên với 'submit' thì 'by' mang nghĩa hạn chót mạnh hơn và đúng chuẩn văn phong hơn.",
+        "D. until: Cho đến khi (chỉ hành động kéo dài liên tục, không đi với 'submit')."
+      ],
+      toeicTip: "Submit BY, Complete BY, Finish BY the deadline."
+    },
+    category: "Grammar",
+    subcategory: "Prepositions",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "disclosure",
+        ipa: "/dɪsˈkloʊʒər/",
+        pos: "noun",
+        meaning: "sự tiết lộ, công khai (tài chính)",
+        example: "The bank requires full financial disclosure."
+      }
+    ],
+    tags: ["prepositions", "time", "finance"]
+  },
+  {
+    id: "q979",
+    sentence: "The remote software engineers are highly encouraged to familiarize ______ with the updated agile coding guidelines.",
+    options: ["them", "their", "themselves", "theirs"],
+    correctAnswer: 2,
+    translation: "Các kỹ sư phần mềm làm việc từ xa được đặc biệt khuyến khích tự làm quen với các hướng dẫn lập trình agile đã được cập nhật.",
+    explanation: {
+      correctAnswer: "themselves",
+      grammarRule: "Reflexive Pronouns",
+      sentenceStructure: "familiarize + Reflexive Pronoun + with",
+      whyCorrect: "Cấu trúc 'familiarize oneself with' (tự làm quen với). Chủ ngữ là 'engineers' (số nhiều) nên dùng đại từ phản thân 'themselves'.",
+      whyOthersWrong: [
+        "A. them: Tân ngữ (chỉ người khác).",
+        "B. their: Tính từ sở hữu (cần danh từ).",
+        "D. theirs: Đại từ sở hữu."
+      ],
+      toeicTip: "Familiarize oneself with (Tự làm quen với). Agile coding (phương pháp lập trình linh hoạt - từ vựng IT)."
+    },
+    category: "Grammar",
+    subcategory: "Pronouns",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "agile",
+        ipa: "/ˈædʒl/",
+        pos: "adj",
+        meaning: "linh hoạt (phương pháp quản lý dự án/lập trình)",
+        example: "Our team uses agile methodology."
+      }
+    ],
+    tags: ["pronouns", "reflexive", "technology"]
+  },
+  {
+    id: "q980",
+    sentence: "The national inflation rate has dropped ______ over the past six months, boosting both consumer and investor confidence.",
+    options: ["significant", "significance", "signify", "significantly"],
+    correctAnswer: 3,
+    translation: "Tỷ lệ lạm phát quốc gia đã giảm đáng kể trong sáu tháng qua, thúc đẩy niềm tin của cả người tiêu dùng và nhà đầu tư.",
+    explanation: {
+      correctAnswer: "significantly",
+      grammarRule: "Adverbs modifying Verbs",
+      sentenceStructure: "Verb (has dropped) + Adverb",
+      whyCorrect: "Cần một trạng từ (adverb) để bổ nghĩa cho động từ 'has dropped' (giảm như thế nào? -> giảm một cách đáng kể).",
+      whyOthersWrong: [
+        "A. significant: Tính từ.",
+        "B. significance: Danh từ.",
+        "C. signify: Động từ."
+      ],
+      toeicTip: "Drop / Decrease / Fall + significantly / drastically / dramatically."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "inflation",
+        ipa: "/ɪnˈfleɪʃn/",
+        pos: "noun",
+        meaning: "sự lạm phát",
+        example: "The government is trying to control inflation."
+      }
+    ],
+    tags: ["adverbs", "word form", "finance"]
+  },
+  {
+    id: "q981",
+    sentence: "Since its initial launch in Tokyo, the autonomous drone delivery service ______ a massive success in congested urban areas.",
+    options: ["has been", "is", "was", "will be"],
+    correctAnswer: 0,
+    translation: "Kể từ lần ra mắt đầu tiên tại Tokyo, dịch vụ giao hàng bằng máy bay không người lái tự trị đã là một thành công lớn ở các khu vực đô thị đông đúc.",
+    explanation: {
+      correctAnswer: "has been",
+      grammarRule: "Present Perfect Tense",
+      sentenceStructure: "Since + Time, S + has/have + V3",
+      whyCorrect: "Dấu hiệu 'Since its initial launch' (Kể từ khi ra mắt) yêu cầu mệnh đề chính phải sử dụng thì Hiện tại hoàn thành (has been).",
+      whyOthersWrong: [
+        "B. is: Hiện tại đơn.",
+        "C. was: Quá khứ đơn.",
+        "D. will be: Tương lai đơn."
+      ],
+      toeicTip: "Since + Mốc quá khứ -> Hiện tại hoàn thành. Autonomous drone (máy bay không người lái tự trị)."
+    },
+    category: "Grammar",
+    subcategory: "Verb Tenses",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "congested",
+        ipa: "/kənˈdʒestɪd/",
+        pos: "adj",
+        meaning: "đông đúc, tắc nghẽn",
+        example: "The city streets are heavily congested."
+      }
+    ],
+    tags: ["verbs", "present perfect", "technology"]
+  },
+  {
+    id: "q982",
+    sentence: "The cutting-edge medical startup expects to gain regulatory ______ for its new AI-driven diagnostic device by next week.",
+    options: ["approve", "approval", "approving", "approved"],
+    correctAnswer: 1,
+    translation: "Công ty khởi nghiệp y tế tiên tiến dự kiến sẽ nhận được sự phê duyệt theo quy định đối với thiết bị chẩn đoán điều khiển bằng AI mới của mình trước tuần tới.",
+    explanation: {
+      correctAnswer: "approval",
+      grammarRule: "Word Form (Nouns)",
+      sentenceStructure: "Adjective (regulatory) + Noun",
+      whyCorrect: "Cần một danh từ đứng sau tính từ 'regulatory'. 'Approval' (sự phê duyệt) là danh từ hoàn toàn phù hợp với ngữ cảnh 'cấp phép'.",
+      whyOthersWrong: [
+        "A. approve: Động từ.",
+        "C. approving: V-ing.",
+        "D. approved: V-ed."
+      ],
+      toeicTip: "Gain regulatory approval (Đạt được sự phê duyệt theo quy định/cấp phép)."
+    },
+    category: "Vocabulary",
+    subcategory: "Word Form",
+    type: "vocabulary",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "diagnostic",
+        ipa: "/ˌdaɪəɡˈnɑːstɪk/",
+        pos: "adj",
+        meaning: "chẩn đoán (bệnh)",
+        example: "The hospital bought new diagnostic equipment."
+      }
+    ],
+    tags: ["nouns", "word form", "business"]
+  },
+  {
+    id: "q983",
+    sentence: "To ensure absolute client confidentiality, all sensitive legal documents must be ______ shredded after being digitized.",
+    options: ["secure", "security", "securely", "secures"],
+    correctAnswer: 2,
+    translation: "Để đảm bảo tuyệt đối tính bảo mật của khách hàng, tất cả các tài liệu pháp lý nhạy cảm phải được cắt vụn một cách an toàn sau khi được số hóa.",
+    explanation: {
+      correctAnswer: "securely",
+      grammarRule: "Adverbs modifying Verbs",
+      sentenceStructure: "must be + Adverb + V3 (shredded)",
+      whyCorrect: "Cần một trạng từ (adverb) chen giữa 'be' và động từ 'shredded' để bổ nghĩa cho hành động hủy tài liệu.",
+      whyOthersWrong: [
+        "A. secure: Tính từ.",
+        "B. security: Danh từ.",
+        "D. secures: Động từ."
+      ],
+      toeicTip: "be + ADVERB + V3. Shred (cắt vụn giấy tờ bảo mật). Digitized (số hóa)."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "confidentiality",
+        ipa: "/ˌkɑːnfɪˌdenʃiˈæləti/",
+        pos: "noun",
+        meaning: "tính bảo mật",
+        example: "We guarantee strict confidentiality."
+      }
+    ],
+    tags: ["adverbs", "word form", "security"]
+  },
+  {
+    id: "q984",
+    sentence: "______ the 6G telecom network is fully operational, mobile users can enjoy unprecedented download speeds and zero latency.",
+    options: ["Even though", "Unless", "In spite of", "Now that"],
+    correctAnswer: 3,
+    translation: "Vì giờ đây mạng viễn thông 6G đã đi vào hoạt động hoàn toàn, người dùng di động có thể tận hưởng tốc độ tải xuống chưa từng có và độ trễ bằng không.",
+    explanation: {
+      correctAnswer: "Now that",
+      grammarRule: "Conjunctions of Reason",
+      sentenceStructure: "Now that + Clause, Main Clause",
+      whyCorrect: "'Now that' đóng vai trò là một liên từ, mang nghĩa 'Bởi vì / Vì giờ đây sự việc đã xong, nên...'. Nó kết nối nguyên nhân và hệ quả rất hợp logic.",
+      whyOthersWrong: [
+        "A. Even though: Mặc dù (sai logic).",
+        "B. Unless: Trừ khi (sai logic).",
+        "C. In spite of: Mặc dù (Giới từ, phải đi với Noun phrase)."
+      ],
+      toeicTip: "Now that = Because. Unprecedented (Chưa từng có). Latency (Độ trễ)."
+    },
+    category: "Grammar",
+    subcategory: "Conjunctions",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "unprecedented",
+        ipa: "/ʌnˈpresɪdentɪd/",
+        pos: "adj",
+        meaning: "chưa từng có tiền lệ",
+        example: "The event was an unprecedented success."
+      }
+    ],
+    tags: ["conjunctions", "reason", "technology"]
+  },
+  {
+    id: "q985",
+    sentence: "It is currently completely unclear ______ will be chosen to lead the newly formed artificial intelligence research team.",
+    options: ["who", "whom", "whose", "which"],
+    correctAnswer: 0,
+    translation: "Hiện tại hoàn toàn không rõ ai sẽ được chọn để lãnh đạo nhóm nghiên cứu trí tuệ nhân tạo mới được thành lập.",
+    explanation: {
+      correctAnswer: "who",
+      grammarRule: "Noun Clauses",
+      sentenceStructure: "unclear + who + will be chosen",
+      whyCorrect: "Cần một đại từ để hỏi làm CHỦ NGỮ cho cụm động từ bị động 'will be chosen' trong mệnh đề danh ngữ. 'Who' (ai) là lựa chọn đúng.",
+      whyOthersWrong: [
+        "B. whom: Làm tân ngữ.",
+        "C. whose: Chỉ sở hữu.",
+        "D. which: Dùng cho vật (team leader phải là người)."
+      ],
+      toeicTip: "Phía sau khoảng trống là Động từ -> Dùng WHO."
+    },
+    category: "Grammar",
+    subcategory: "Pronouns",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "artificial intelligence",
+        ipa: "/ˌɑːrtɪˈfɪʃl ɪnˈtelɪdʒəns/",
+        pos: "noun phrase",
+        meaning: "trí tuệ nhân tạo (AI)",
+        example: "Artificial intelligence is changing the world."
+      }
+    ],
+    tags: ["pronouns", "noun clauses"]
+  },
+  {
+    id: "q986",
+    sentence: "The senior project manager takes great ______ in delivering high-quality enterprise software well ahead of schedule.",
+    options: ["proud", "pride", "proudness", "proudly"],
+    correctAnswer: 1,
+    translation: "Người quản lý dự án cấp cao rất tự hào trong việc bàn giao phần mềm doanh nghiệp chất lượng cao trước thời hạn rất nhiều.",
+    explanation: {
+      correctAnswer: "pride",
+      grammarRule: "Idioms / Word Form",
+      sentenceStructure: "take + Adjective (great) + Noun (pride) + in",
+      whyCorrect: "'Take pride in' là một thành ngữ mang nghĩa 'Tự hào về điều gì'. Ta cần một danh từ đứng sau 'great'.",
+      whyOthersWrong: [
+        "A. proud: Tính từ (dùng 'be proud of').",
+        "C. proudness: Danh từ (không phổ biến bằng pride, và không dùng trong idiom này).",
+        "D. proudly: Trạng từ."
+      ],
+      toeicTip: "Take pride IN = Be proud OF (Tự hào về)."
+    },
+    category: "Vocabulary",
+    subcategory: "Idioms",
+    type: "vocabulary",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "enterprise",
+        ipa: "/ˈentərpraɪz/",
+        pos: "noun",
+        meaning: "doanh nghiệp (quy mô lớn)",
+        example: "They sell software to large enterprises."
+      }
+    ],
+    tags: ["idioms", "word form", "workplace"]
+  },
+  {
+    id: "q987",
+    sentence: "______ you experience any technical difficulties during the software migration, please contact the helpdesk immediately.",
+    options: ["Unless", "If", "Should", "Provided"],
+    correctAnswer: 2,
+    translation: "Nếu bạn gặp bất kỳ khó khăn kỹ thuật nào trong quá trình di chuyển phần mềm, vui lòng liên hệ bộ phận trợ giúp ngay lập tức.",
+    explanation: {
+      correctAnswer: "Should",
+      grammarRule: "Inverted Conditionals (Type 1)",
+      sentenceStructure: "Should + Subject + Base Verb, Please + V",
+      whyCorrect: "Cấu trúc đảo ngữ dùng 'Should' thay thế cho 'If' mang sắc thái trang trọng. Nó cực kỳ phổ biến trong TOEIC khi mệnh đề chính là câu mệnh lệnh (please contact).",
+      whyOthersWrong: [
+        "A. Unless: Trừ khi.",
+        "B. If: Nếu dùng 'If' thì mệnh đề chính ít khi dùng 'please' một cách quá trang trọng như cấu trúc Should (dù ngữ pháp không sai, nhưng Should là ưu tiên số 1 của đề thi).",
+        "D. Provided: Đi với 'that'."
+      ],
+      toeicTip: "Should you need help/experience issues, please... (Đảo ngữ Type 1)."
+    },
+    category: "Grammar",
+    subcategory: "Conditionals",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 700,
+    vocabulary: [
+      {
+        word: "migration",
+        ipa: "/maɪˈɡreɪʃn/",
+        pos: "noun",
+        meaning: "sự di chuyển (hệ thống/phần mềm)",
+        example: "Data migration is a complex process."
+      }
+    ],
+    tags: ["conditionals", "inversion", "technology"]
+  },
+  {
+    id: "q988",
+    sentence: "In strict compliance ______ federal environmental laws, the factory installed an advanced carbon filtration system last month.",
+    options: ["to", "for", "on", "with"],
+    correctAnswer: 3,
+    translation: "Tuân thủ nghiêm ngặt các luật môi trường liên bang, nhà máy đã lắp đặt hệ thống lọc carbon tiên tiến vào tháng trước.",
+    explanation: {
+      correctAnswer: "with",
+      grammarRule: "Prepositional Phrases",
+      sentenceStructure: "in compliance with",
+      whyCorrect: "'In compliance with' là cụm giới từ cố định trong văn bản hành chính mang nghĩa 'tuân thủ với'.",
+      whyOthersWrong: [
+        "A. to: Đi với 'adherence to'.",
+        "B. for: Sai giới từ.",
+        "C. on: Sai giới từ."
+      ],
+      toeicTip: "In compliance WITH = In accordance WITH."
+    },
+    category: "Vocabulary",
+    subcategory: "Idioms",
+    type: "vocabulary",
+    difficulty: "elementary",
+    toeicLevel: 500,
+    vocabulary: [
+      {
+        word: "filtration",
+        ipa: "/fɪlˈtreɪʃn/",
+        pos: "noun",
+        meaning: "sự lọc",
+        example: "The water filtration system is broken."
+      }
+    ],
+    tags: ["prepositions", "collocation", "environment"]
+  },
+  {
+    id: "q989",
+    sentence: "The informative brochure ______ the new flexible health benefits package will be distributed during the staff meeting.",
+    options: ["outlining", "outlined", "outline", "outlines"],
+    correctAnswer: 0,
+    translation: "Cuốn sách nhỏ cung cấp thông tin phác thảo gói phúc lợi sức khỏe linh hoạt mới sẽ được phân phát trong cuộc họp nhân viên.",
+    explanation: {
+      correctAnswer: "outlining",
+      grammarRule: "Reduced Relative Clauses (Active)",
+      sentenceStructure: "Noun (brochure) + V-ing + Object, Main Verb (will be)",
+      whyCorrect: "Mệnh đề quan hệ chủ động (The brochure which outlines...) được rút gọn thành V-ing (outlining).",
+      whyOthersWrong: [
+        "B. outlined: Phân từ hai mang nghĩa bị động (bị phác thảo -> sai vì sau nó có tân ngữ 'the new package').",
+        "C. outline: Động từ nguyên thể.",
+        "D. outlines: Động từ chia thì (sẽ tạo thành 2 động từ chính trong câu)."
+      ],
+      toeicTip: "Tài liệu (brochure, manual, report) + V-ing (detailing, outlining, specifying) + Nội dung."
+    },
+    category: "Grammar",
+    subcategory: "Participles",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 700,
+    vocabulary: [
+      {
+        word: "informative",
+        ipa: "/ɪnˈfɔːrmətɪv/",
+        pos: "adj",
+        meaning: "cung cấp nhiều thông tin, hữu ích",
+        example: "The presentation was very informative."
+      }
+    ],
+    tags: ["participles", "reduced clauses", "workplace"]
+  },
+  {
+    id: "q990",
+    sentence: "The number of sophisticated cyberattacks targeting major financial institutions ______ steadily increased this year.",
+    options: ["have", "has", "are", "is"],
+    correctAnswer: 1,
+    translation: "Số lượng các cuộc tấn công mạng tinh vi nhắm vào các tổ chức tài chính lớn đã tăng đều đặn trong năm nay.",
+    explanation: {
+      correctAnswer: "has",
+      grammarRule: "Subject-Verb Agreement",
+      sentenceStructure: "The number of + Plural Noun + Singular Verb",
+      whyCorrect: "Cụm 'The number of' (Số lượng của...) làm chủ ngữ bắt buộc động từ theo sau phải chia ở dạng SỐ ÍT. Dấu hiệu 'this year' kết hợp 'increased' cho thấy cần dùng hiện tại hoàn thành (has increased).",
+      whyOthersWrong: [
+        "A. have: Số nhiều (dùng cho 'A number of').",
+        "C. are: Sẽ tạo thành bị động 'are increased' (sai nghĩa).",
+        "D. is: Sẽ tạo thành bị động 'is increased' (sai nghĩa)."
+      ],
+      toeicTip: "The number of + V(ít). A number of + V(nhiều)."
+    },
+    category: "Grammar",
+    subcategory: "Subject-Verb Agreement",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 600,
+    vocabulary: [
+      {
+        word: "sophisticated",
+        ipa: "/səˈfɪstɪkeɪtɪd/",
+        pos: "adj",
+        meaning: "tinh vi, phức tạp",
+        example: "Hackers use sophisticated methods."
+      }
+    ],
+    tags: ["verbs", "agreement", "security"]
+  },
+  {
+    id: "q991",
+    sentence: "The IT management team needs to ______ a contingency plan in case the primary cloud server goes offline abruptly.",
+    options: ["break out of", "look down on", "come up with", "get away with"],
+    correctAnswer: 2,
+    translation: "Nhóm quản lý CNTT cần nghĩ ra một kế hoạch dự phòng trong trường hợp máy chủ đám mây chính đột ngột ngoại tuyến.",
+    explanation: {
+      correctAnswer: "come up with",
+      grammarRule: "Phrasal Verbs",
+      sentenceStructure: "come up with + an idea/plan",
+      whyCorrect: "'Come up with' có nghĩa là 'nghĩ ra, nảy ra, tìm ra' (một kế hoạch, giải pháp, ý tưởng).",
+      whyOthersWrong: [
+        "A. break out of: Thoát khỏi.",
+        "B. look down on: Coi thường.",
+        "D. get away with: Thoát tội."
+      ],
+      toeicTip: "Come up with a plan / a solution / a strategy."
+    },
+    category: "Vocabulary",
+    subcategory: "Phrasal Verbs",
+    type: "vocabulary",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "abruptly",
+        ipa: "/əˈbrʌptli/",
+        pos: "adv",
+        meaning: "một cách đột ngột",
+        example: "The meeting ended abruptly."
+      }
+    ],
+    tags: ["phrasal verbs", "technology"]
+  },
+  {
+    id: "q992",
+    sentence: "The company invited four distinguished guest speakers, all of ______ are widely recognized experts in quantum computing.",
+    options: ["who", "which", "them", "whom"],
+    correctAnswer: 3,
+    translation: "Công ty đã mời 4 diễn giả khách mời xuất chúng, tất cả trong số họ đều là những chuyên gia được công nhận rộng rãi trong lĩnh vực điện toán lượng tử.",
+    explanation: {
+      correctAnswer: "whom",
+      grammarRule: "Relative Pronouns after Prepositions",
+      sentenceStructure: "Noun (speakers) + , + Quantifier (all) + of + whom",
+      whyCorrect: "Sau giới từ 'of' trong mệnh đề quan hệ, ta chỉ dùng 'which' cho vật hoặc 'whom' cho người. 'Speakers' là người nên 'whom' là đáp án đúng.",
+      whyOthersWrong: [
+        "A. who: Không đứng sau giới từ.",
+        "B. which: Dùng cho vật.",
+        "C. them: Gây ra lỗi dấu phẩy (comma splice) do thiếu đại từ quan hệ nối 2 câu."
+      ],
+      toeicTip: "All of / Most of / Some of + WHOM / WHICH."
+    },
+    category: "Grammar",
+    subcategory: "Relative Clauses",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 800,
+    vocabulary: [
+      {
+        word: "distinguished",
+        ipa: "/dɪˈstɪŋɡwɪʃt/",
+        pos: "adj",
+        meaning: "xuất chúng, ưu tú",
+        example: "He had a distinguished career in science."
+      }
+    ],
+    tags: ["relative pronouns", "quantifiers"]
+  },
+  {
+    id: "q993",
+    sentence: "The user interface of the new mobile banking application is highly ______ and extremely easy for seniors to navigate.",
+    options: ["intuitive", "intuition", "intuitively", "intuitiveness"],
+    correctAnswer: 0,
+    translation: "Giao diện người dùng của ứng dụng ngân hàng di động mới mang tính trực quan cao và cực kỳ dễ điều hướng đối với người cao tuổi.",
+    explanation: {
+      correctAnswer: "intuitive",
+      grammarRule: "Adjective after Linking Verbs",
+      sentenceStructure: "is + Adverb (highly) + Adjective",
+      whyCorrect: "Cần một tính từ đứng sau động từ to be 'is' và trạng từ 'highly'. 'Intuitive' (trực quan, dễ hiểu/dễ dùng) là tính từ.",
+      whyOthersWrong: [
+        "B. intuition: Danh từ.",
+        "C. intuitively: Trạng từ.",
+        "D. intuitiveness: Danh từ."
+      ],
+      toeicTip: "User interface is highly intuitive (Giao diện người dùng cực kỳ trực quan)."
+    },
+    category: "Grammar",
+    subcategory: "Word Form",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "navigate",
+        ipa: "/ˈnævɪɡeɪt/",
+        pos: "verb",
+        meaning: "điều hướng, sử dụng",
+        example: "The app is easy to navigate."
+      }
+    ],
+    tags: ["adjectives", "word form", "design"]
+  },
+  {
+    id: "q994",
+    sentence: "______ the minor delay in overnight shipping, the premium customer was still very satisfied with the product quality.",
+    options: ["Although", "Despite", "Because of", "While"],
+    correctAnswer: 1,
+    translation: "Bất chấp sự chậm trễ nhỏ trong việc vận chuyển qua đêm, khách hàng cao cấp vẫn rất hài lòng với chất lượng sản phẩm.",
+    explanation: {
+      correctAnswer: "Despite",
+      grammarRule: "Prepositions of Concession",
+      sentenceStructure: "Despite + Noun Phrase, Clause",
+      whyCorrect: "Khoảng trống đứng trước cụm danh từ 'the minor delay...'. Ý nghĩa câu mang tính tương phản (Bị trễ >< Vẫn hài lòng). Do đó, 'Despite' là đáp án đúng.",
+      whyOthersWrong: [
+        "A. Although: Liên từ (phải đi với mệnh đề S+V).",
+        "C. Because of: Thể hiện nguyên nhân (sai logic).",
+        "D. While: Liên từ (phải đi với mệnh đề S+V)."
+      ],
+      toeicTip: "Despite / In spite of + Noun Phrase."
+    },
+    category: "Grammar",
+    subcategory: "Prepositions",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "premium",
+        ipa: "/ˈpriːmiəm/",
+        pos: "adj",
+        meaning: "cao cấp",
+        example: "We offer premium services to our best clients."
+      }
+    ],
+    tags: ["prepositions", "contrast", "logistics"]
+  },
+  {
+    id: "q995",
+    sentence: "The national inflation rate surged unexpectedly; ______, the central bank steadfastly refused to lower interest rates.",
+    options: ["instead", "furthermore", "consequently", "moreover"],
+    correctAnswer: 2,
+    translation: "Tỷ lệ lạm phát quốc gia tăng vọt một cách bất ngờ; hậu quả là, ngân hàng trung ương kiên quyết từ chối hạ lãi suất.",
+    explanation: {
+      correctAnswer: "consequently",
+      grammarRule: "Conjunctive Adverbs",
+      sentenceStructure: "Cause Clause; consequently, Result Clause",
+      whyCorrect: "'Consequently' (Do đó, hậu quả là) kết nối một nguyên nhân (lạm phát tăng vọt) với một kết quả/hành động hợp logic sau đó (không hạ lãi suất).",
+      whyOthersWrong: [
+        "A. instead: Thay vào đó.",
+        "B. furthermore: Hơn nữa (bổ sung ý).",
+        "D. moreover: Hơn nữa."
+      ],
+      toeicTip: "Consequently = Therefore = As a result. Steadfastly (Một cách kiên định)."
+    },
+    category: "Grammar",
+    subcategory: "Transitions",
+    type: "grammar",
+    difficulty: "advanced",
+    toeicLevel: 650,
+    vocabulary: [
+      {
+        word: "steadfastly",
+        ipa: "/ˈstedfæstli/",
+        pos: "adv",
+        meaning: "một cách kiên định, không lay chuyển",
+        example: "She steadfastly refused to comment."
+      }
+    ],
+    tags: ["transitions", "logic", "finance"]
+  },
+  {
+    id: "q996",
+    sentence: "The executive board currently intends ______ a new flagship branch in Tokyo by the end of next year.",
+    options: ["opening", "opened", "open", "to open"],
+    correctAnswer: 3,
+    translation: "Ban điều hành hiện dự định mở một chi nhánh hàng đầu mới tại Tokyo vào cuối năm tới.",
+    explanation: {
+      correctAnswer: "to open",
+      grammarRule: "Infinitives",
+      sentenceStructure: "intend + to + base verb",
+      whyCorrect: "Động từ 'intend' (dự định, có ý định) luôn được theo sau bởi một động từ nguyên mẫu có 'to' (to-infinitive).",
+      whyOthersWrong: [
+        "A. opening: V-ing.",
+        "B. opened: V-ed.",
+        "C. open: V0."
+      ],
+      toeicTip: "Intend to V / Plan to V / Decide to V (Dự định/Quyết định làm gì). Flagship branch (chi nhánh chính/quan trọng nhất)."
+    },
+    category: "Grammar",
+    subcategory: "Infinitives",
+    type: "grammar",
+    difficulty: "elementary",
+    toeicLevel: 450,
+    vocabulary: [
+      {
+        word: "flagship",
+        ipa: "/ˈflæɡʃɪp/",
+        pos: "noun/adj",
+        meaning: "sản phẩm/cửa hàng quan trọng nhất, hàng đầu",
+        example: "This is our flagship store."
+      }
+    ],
+    tags: ["verbs", "infinitives", "business"]
+  },
+  {
+    id: "q997",
+    sentence: "The new biometric processing chip operates much ______ than the previous generation of security hardware.",
+    options: ["more efficiently", "efficient", "efficiently", "efficiency"],
+    correctAnswer: 0,
+    translation: "Chip xử lý sinh trắc học mới hoạt động hiệu quả hơn nhiều so với phần cứng bảo mật thế hệ trước.",
+    explanation: {
+      correctAnswer: "more efficiently",
+      grammarRule: "Comparative Adverbs",
+      sentenceStructure: "Verb (operates) + much + Comparative Adverb + than",
+      whyCorrect: "Cần một trạng từ (adverb) để bổ nghĩa cho động từ 'operates'. Vì có 'than' chỉ cấu trúc so sánh hơn, ta dùng 'more efficiently'.",
+      whyOthersWrong: [
+        "B. efficient: Tính từ.",
+        "C. efficiently: Trạng từ nguyên mẫu (thiếu 'more').",
+        "D. efficiency: Danh từ."
+      ],
+      toeicTip: "Much + MORE + Trạng từ (-ly) + THAN."
+    },
+    category: "Grammar",
+    subcategory: "Comparisons",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "hardware",
+        ipa: "/ˈhɑːrdwer/",
+        pos: "noun",
+        meaning: "phần cứng (máy tính/công nghệ)",
+        example: "We need to upgrade the hardware."
+      }
+    ],
+    tags: ["adverbs", "comparisons", "technology"]
+  },
+  {
+    id: "q998",
+    sentence: "The transition to a four-day work week has improved overall employee ______ and significantly reduced turnover.",
+    options: ["moral", "morale", "morally", "morality"],
+    correctAnswer: 1,
+    translation: "Việc chuyển đổi sang tuần làm việc bốn ngày đã cải thiện tinh thần chung của nhân viên và giảm đáng kể tỷ lệ nghỉ việc.",
+    explanation: {
+      correctAnswer: "morale",
+      grammarRule: "Word Form / Vocabulary",
+      sentenceStructure: "improved + Adjective (overall) + Noun (employee) + Noun",
+      whyCorrect: "'Employee morale' (tinh thần làm việc của nhân viên) là một cụm danh từ quen thuộc trong quản trị nhân sự.",
+      whyOthersWrong: [
+        "A. moral: Đạo đức (thường chỉ các bài học đạo đức hoặc tính từ).",
+        "C. morally: Trạng từ.",
+        "D. morality: Đạo lý, luân thường đạo lý."
+      ],
+      toeicTip: "Morale /məˈræl/ (Tinh thần, nhuệ khí). Phân biệt kỹ với 'moral' (đạo đức)."
+    },
+    category: "Vocabulary",
+    subcategory: "Word Choice",
+    type: "vocabulary",
+    difficulty: "advanced",
+    toeicLevel: 700,
+    vocabulary: [
+      {
+        word: "turnover",
+        ipa: "/ˈtɜːrnoʊvər/",
+        pos: "noun",
+        meaning: "tỷ lệ nhân viên nghỉ việc",
+        example: "A good manager reduces staff turnover."
+      }
+    ],
+    tags: ["nouns", "workplace"]
+  },
+  {
+    id: "q999",
+    sentence: "The founder of the trailblazing tech company ______ delivered the keynote speech at the global innovation summit.",
+    options: ["he", "his", "himself", "him"],
+    correctAnswer: 2,
+    translation: "Đích thân người sáng lập công ty công nghệ tiên phong đã trình bày bài phát biểu chính tại hội nghị thượng đỉnh đổi mới toàn cầu.",
+    explanation: {
+      correctAnswer: "himself",
+      grammarRule: "Reflexive Pronouns for Emphasis",
+      sentenceStructure: "Subject + Reflexive Pronoun + Verb",
+      whyCorrect: "Câu đã có đầy đủ Chủ ngữ (The founder) và Động từ (delivered). Việc điền đại từ phản thân 'himself' ngay sau chủ ngữ nhằm nhấn mạnh việc 'chính ông ấy/đích thân ông ấy' thực hiện.",
+      whyOthersWrong: [
+        "A. he: Trùng lặp chủ ngữ.",
+        "B. his: Tính từ sở hữu.",
+        "D. him: Tân ngữ."
+      ],
+      toeicTip: "Đại từ phản thân dùng để NHẤN MẠNH luôn đứng ngay sau Chủ ngữ hoặc ở cuối câu."
+    },
+    category: "Grammar",
+    subcategory: "Pronouns",
+    type: "grammar",
+    difficulty: "intermediate",
+    toeicLevel: 550,
+    vocabulary: [
+      {
+        word: "trailblazing",
+        ipa: "/ˈtreɪlbleɪzɪŋ/",
+        pos: "adj",
+        meaning: "tiên phong, đi đầu",
+        example: "She is a trailblazing scientist."
+      }
+    ],
+    tags: ["pronouns", "reflexive", "business"]
+  },
+  {
+    id: "q1000",
+    sentence: "All independent vendors must strictly ______ with the new safety regulations before entering the automated construction site.",
+    options: ["adhere", "follow", "observe", "comply"],
+    correctAnswer: 3,
+    translation: "Tất cả các nhà cung cấp độc lập phải tuân thủ nghiêm ngặt các quy định an toàn mới trước khi bước vào công trường xây dựng tự động.",
+    explanation: {
+      correctAnswer: "comply",
+      grammarRule: "Prepositional Verbs",
+      sentenceStructure: "Verb + with + regulations",
+      whyCorrect: "Động từ 'comply' mang nghĩa 'tuân thủ' và nó luôn đi kèm với giới từ 'with'.",
+      whyOthersWrong: [
+        "A. adhere: Cũng mang nghĩa tuân thủ nhưng đi với 'to' (adhere to).",
+        "B. follow: Tuân theo (cộng trực tiếp với tân ngữ, không đi với 'with').",
+        "C. observe: Tuân thủ (cộng trực tiếp với tân ngữ, không đi với 'with')."
+      ],
+      toeicTip: "Comply WITH = Adhere TO = Abide BY = Follow/Observe + Tân ngữ trực tiếp."
+    },
+    category: "Vocabulary",
+    subcategory: "Prepositional Verbs",
+    type: "vocabulary",
+    difficulty: "advanced",
+    toeicLevel: 700,
+    vocabulary: [
+      {
+        word: "vendor",
+        ipa: "/ˈvendər/",
+        pos: "noun",
+        meaning: "nhà cung cấp, người bán",
+        example: "The software vendor released an update."
+      }
+    ],
+    tags: ["verbs", "collocation", "rules"]
   }
 ];
