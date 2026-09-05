@@ -321,7 +321,7 @@ export default function LevelView() {
                   {availableQuestions} câu hỏi
                 </span>
 
-                {/* Start button --*/}
+                {/* Start button -----*/}
 
                 <button
                   onClick={() => startLevelPractice(tier.min, tier.max)}
