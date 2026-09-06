@@ -321,7 +321,7 @@ export default function LevelView() {
                   {availableQuestions} câu hỏi
                 </span>
 
-                {/* Start button -------------*/}
+                {/* --------------- Start button -------------*/}
 
                 <button
                   onClick={() => startLevelPractice(tier.min, tier.max)}
@@ -339,9 +339,8 @@ export default function LevelView() {
                     transition-all
                     duration-200
 
-                    ${
-                      availableQuestions > 0
-                        ? `
+                    ${availableQuestions > 0
+                      ? `
                           bg-blue-600
                           text-white
 
@@ -353,7 +352,7 @@ export default function LevelView() {
 
                           group-hover:-translate-y-0.5
                         `
-                        : `
+                      : `
                           cursor-not-allowed
                           bg-gray-100
                           text-gray-400
@@ -387,12 +386,11 @@ export default function LevelView() {
 
                   group-hover:opacity-100
 
-                  ${
-                    tier.id === "beginner"
-                      ? "bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent"
-                      : tier.id === "intermediate"
-                        ? "bg-gradient-to-r from-transparent via-amber-400/50 to-transparent"
-                        : "bg-gradient-to-r from-transparent via-rose-400/50 to-transparent"
+                  ${tier.id === "beginner"
+                    ? "bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent"
+                    : tier.id === "intermediate"
+                      ? "bg-gradient-to-r from-transparent via-amber-400/50 to-transparent"
+                      : "bg-gradient-to-r from-transparent via-rose-400/50 to-transparent"
                   }
                 `}
               />
